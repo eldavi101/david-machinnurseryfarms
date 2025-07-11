@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machin Farms - Plant Nursery in Homestead, FL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .hero-bg {
+            background-image: 
+                linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /* Dark overlay for contrast */
+                url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=2574&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.6); /* bg-gray-900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-glass {
+             background: rgba(17, 24, 39, 0.7); /* More opaque for readability */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px 7px rgba(74, 222, 128, 0.4);
+            transform: translateY(-8px);
+        }
+        .icon-glow:hover {
+            color: #4ade80; /* green-400 */
+            transform: scale(1.1);
+        }
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background: #1f2937; /* gray-800 */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s;
+        }
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+        /* Spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #4ade80; /* green-400 */
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* AI Care Button */
+        .ai-care-btn {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .ai-care-btn:hover {
+            background-color: #2563eb; /* blue-600 */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navigation Menu -->
+    <nav id="navbar" class="nav-glass p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-400">Machin Farms</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navHome">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navAbout">About Us</a>
+                <a href="#products" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navPlants">Plants</a>
+                <a href="#contact-section" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navContact">Contact</a>
+                 <button id="lang-toggle" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full text-sm"></button>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-300 hover:bg-green-800 rounded" data-translate-key="navHome">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-green-800 rounded" data-translate-key="navAbout">About Us</a>
+            <a href="#products" class="block py-2 px-4 text-sm text-gray-300 hover:bg-green-800 rounded" data-translate-key="navPlants">Plants</a>
+            <a href="#contact-section" class="block py-2 px-4 text-sm text-gray-300 hover:bg-green-800 rounded" data-translate-key="navContact">Contact</a>
+            <div class="p-2">
+                 <button id="lang-toggle-mobile" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full text-sm"></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg pt-24">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" alt="Machin Farms Logo" class="mx-auto mb-6 h-36 md:h-48">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" data-translate-key="heroTitle">Welcome to Machin Farms</h1>
+            <p class="text-lg md:text-2xl text-green-300 mb-8" data-translate-key="heroSubtitle">Your trusted nursery in Homestead, Florida.</p>
+            <a href="#contact-section" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105" data-translate-key="heroButton">
+                Contact Us
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Us Section -->
+        <section id="about" class="py-24">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://i.postimg.cc/tJps90wb/Nuestro-Equipo.png" alt="[Imagen del equipo de Machin Farms]" class="rounded-lg shadow-2xl w-full">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-green-400 mb-4" data-translate-key="aboutTitle">Experience and Personalized Attention</h2>
+                    <p class="text-gray-300 leading-relaxed" data-translate-key="aboutText">
+                        At Machin Farms, we pride ourselves on offering not only the highest quality plants, but also exceptional customer service. Our expert staff is always available to help you find exactly what you need and to give you the best care tips.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-green-400 mb-16" data-translate-key="plantsTitle">Our Plants</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Plant Item: Clusias -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/mtRBq556/clusias.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="[Imagen de una planta Clusia]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Clusias</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="clusiaDesc">Ideal for hedges and privacy, with thick, sturdy leaves.</p>
+                        <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Cocoplum Red Tip -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/YGWtKK7T/cocoplum-red-tip.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="[Imagen de una planta Cocoplum Red Tip]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Cocoplum Red Tip</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="cocoplumDesc">Perfect for a touch of color with its reddish new growth and great resilience.</p>
+                        <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Green Island -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/xX1YjbYv/green-island.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="[Imagen de una planta Green Island Ficus]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Green Island</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="greenIslandDesc">Dense, shiny foliage, very low maintenance and ideal for borders.</p>
+                        <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Podocarpus -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/PLBkM3Dy/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="[Imagen de una planta Podocarpus]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Podocarpus</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="podocarpusDesc">Elegant and versatile, it creates a slim and sophisticated privacy screen.</p>
+                        <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Croton Petra -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/0r79Vscw/croton-petra.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="[Imagen de una planta Croton Petra]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Croton Petra</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonPetraDesc">Vibrant leaves with explosive shades of red, yellow, and orange.</p>
+                        <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Croton Mamey -->
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
+                        <img src="https://i.postimg.cc/jn6K2HLX/croton-mamey.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="[Imagen de una planta Croton Mamey]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Croton Mamey</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonMameyDesc">Lush and tropical with twisted leaves, a true focal point.</p>
+                        <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                    <!-- Plant Item: Banana Croton -->
+                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col sm:col-span-2 lg:col-span-1 lg:col-start-2">
+                        <img src="https://i.postimg.cc/crM4LS3S/banana-croton.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="[Imagen de una planta Banana Croton]" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Banana Croton</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="bananaCrotonDesc">Elongated, thin leaves with bright yellow spots.</p>
+                        <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="py-24">
+            <div id="contact" class="container mx-auto px-6 glass-effect rounded-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center text-green-400 mb-8" data-translate-key="contactTitle">Visit or Call Us</h2>
+                <div class="flex flex-wrap justify-around gap-8 text-center">
+                    <!-- Email -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-envelope fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactEmail">Email</h3>
+                        <a href="mailto:machindavid2@gmail.com" class="text-gray-300 hover:text-green-300">machindavid2@gmail.com</a>
+                        <a href="mailto:Machinfarms@gmail.com" class="text-gray-300 hover:text-green-300">Machinfarms@gmail.com</a>
+                    </div>
+                    <!-- Phones -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-phone fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactPhones">Phones</h3>
+                        <!-- Phone Number 1 -->
+                        <div class="flex items-center justify-center space-x-4 mt-2">
+                            <span class="text-gray-300">786-992-6153</span>
+                            <a href="tel:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Call 786-992-6153">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                            <a href="sms:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Message 786-992-6153">
+                                <i class="fas fa-comment-sms"></i>
+                            </a>
+                        </div>
+                        <!-- Phone Number 2 -->
+                        <div class="flex items-center justify-center space-x-4 mt-2">
+                            <span class="text-gray-300">786-775-0816</span>
+                            <a href="tel:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Call 786-775-0816">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                            <a href="sms:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Message 786-775-0816">
+                                <i class="fas fa-comment-sms"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactAddress">Address</h3>
+                        <p class="text-gray-300">30760 SW 212 Ave<br>Homestead, FL 33030</p>
+                    </div>
+                </div>
+                 <!-- Map -->
+                <div class="mt-12 rounded-lg overflow-hidden border-2 border-green-500/30">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.932847620202!2d-80.52857768498308!3d25.5404499837379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9e3a3e6f8e7f1%3A0x4f7b6d5b7d6f6e5e!2s30760%20SW%20212th%20Ave%2C%20Homestead%2C%20FL%2033030%2C%20USA!5e0!3m2!1sen!2s!4v1678886412345!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p data-translate-key="footerRights">&copy; 2024 Machin Farms. All rights reserved.</p>
+            <p class="text-sm mt-2" data-translate-key="footerCredit">Web design and AI features by Gemini.</p>
+        </div>
+    </footer>
+
+    <!-- AI Care Modal -->
+    <div id="ai-care-modal" class="modal-overlay">
+        <div class="modal-content text-gray-300">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-green-400"></h3>
+                <button id="modal-close-btn" class="text-3xl">&times;</button>
+            </div>
+            <div id="modal-body">
+                <!-- AI content will be injected here -->
+            </div>
+            <p id="modal-disclaimer" class="text-xs text-gray-500 mt-4"></p>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            es: {
+                navHome: "Inicio",
+                navAbout: "Nosotros",
+                navPlants: "Plantas",
+                navContact: "Contacto",
+                langToggle: "English",
+                heroTitle: "Bienvenido a Machin Farms",
+                heroSubtitle: "Tu vivero de confianza en Homestead, Florida.",
+                heroButton: "Contáctanos",
+                aboutTitle: "Experiencia y Atención Personalizada",
+                aboutText: "En Machin Farms, nos enorgullece ofrecer no solo plantas de la más alta calidad, sino también un servicio al cliente excepcional. Nuestro personal experto está siempre disponible para ayudarte a encontrar exactamente lo que necesitas y para darte los mejores consejos de cuidado.",
+                plantsTitle: "Nuestras Plantas",
+                clusiaDesc: "Ideales para cercas vivas y privacidad, con hojas gruesas y resistentes.",
+                cocoplumDesc: "Perfectas para un toque de color con sus brotes rojizos y gran resistencia.",
+                greenIslandDesc: "Follaje denso y brillante, de muy bajo mantenimiento e ideal para bordes.",
+                podocarpusDesc: "Elegante y versátil, crea una pantalla de privacidad delgada y sofisticada.",
+                crotonPetraDesc: "Hojas vibrantes con tonos explosivos de rojo, amarillo y naranja.",
+                crotonMameyDesc: "Exuberante y tropical con hojas retorcidas, un verdadero punto focal.",
+                bananaCrotonDesc: "Hojas alargadas y delgadas con brillantes manchas amarillas.",
+                aiCareButton: "✨ Cuidado con IA",
+                contactTitle: "Visítanos o Llámanos",
+                contactEmail: "Email",
+                contactPhones: "Teléfonos",
+                contactAddress: "Dirección",
+                footerRights: "© 2024 Machin Farms. Todos los derechos reservados.",
+                footerCredit: "Diseño web y funciones de IA por Gemini.",
+                modalCareTitle: "Consejos de Cuidado",
+                modalDisclaimer: "Descargo de responsabilidad: La información es generada por IA y debe ser usada como una guía.",
+                apiError: "Lo sentimos, no se pudieron obtener los consejos de cuidado en este momento. Por favor, inténtalo de nuevo más tarde."
+            },
+            en: {
+                navHome: "Home",
+                navAbout: "About Us",
+                navPlants: "Plants",
+                navContact: "Contact",
+                langToggle: "Español",
+                heroTitle: "Welcome to Machin Farms",
+                heroSubtitle: "Your trusted nursery in Homestead, Florida.",
+                heroButton: "Contact Us",
+                aboutTitle: "Experience and Personalized Attention",
+                aboutText: "At Machin Farms, we pride ourselves on offering not only the highest quality plants, but also exceptional customer service. Our expert staff is always available to help you find exactly what you need and to give you the best care tips.",
+                plantsTitle: "Our Plants",
+                clusiaDesc: "Ideal for hedges and privacy, with thick, sturdy leaves.",
+                cocoplumDesc: "Perfect for a touch of color with its reddish new growth and great resilience.",
+                greenIslandDesc: "Dense, shiny foliage, very low maintenance and ideal for borders.",
+                podocarpusDesc: "Elegant and versatile, it creates a slim and sophisticated privacy screen.",
+                crotonPetraDesc: "Vibrant leaves with explosive shades of red, yellow, and orange.",
+                crotonMameyDesc: "Lush and tropical with twisted leaves, a true focal point.",
+                bananaCrotonDesc: "Elongated, thin leaves with bright yellow spots.",
+                aiCareButton: "✨ AI Care Guide",
+                contactTitle: "Visit or Call Us",
+                contactEmail: "Email",
+                contactPhones: "Phones",
+                contactAddress: "Address",
+                footerRights: "© 2024 Machin Farms. All rights reserved.",
+                footerCredit: "Web design and AI features by Gemini.",
+                modalCareTitle: "Care Tips",
+                modalDisclaimer: "Disclaimer: Information is generated by AI and should be used as a guide.",
+                apiError: "Sorry, we could not get the care tips at this moment. Please try again later."
+            }
+        };
+
+        let currentLang = 'en';
+
+        // --- Translation Function ---
+        function translatePage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.title = lang === 'es' ? 'Machin Farms - Venta de Plantas en Homestead, FL' : 'Machin Farms - Plant Nursery in Homestead, FL';
+
+
+            document.querySelectorAll('[data-translate-key]').forEach(el => {
+                const key = el.dataset.translateKey;
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+            
+            // Update language toggle buttons
+            document.getElementById('lang-toggle').innerText = translations[lang].langToggle;
+            document.getElementById('lang-toggle-mobile').innerText = translations[lang].langToggle;
+        }
+
+        // --- Language Toggle Logic ---
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langToggleMobileBtn = document.getElementById('lang-toggle-mobile');
+
+        langToggleBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            translatePage(newLang);
+        });
+        langToggleMobileBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            translatePage(newLang);
+        });
+        
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.getElementsByTagName('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        for (let link of navLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // --- AI Care Modal Logic ---
+        const modal = document.getElementById('ai-care-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalDisclaimer = document.getElementById('modal-disclaimer');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const careButtons = document.querySelectorAll('.ai-care-btn');
+
+        const openModal = () => modal.classList.add('visible');
+        const closeModal = () => modal.classList.remove('visible');
+
+        careButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const plantName = button.dataset.plantName;
+                getPlantCareInfo(plantName);
+            });
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        /**
+         * Fetches plant care info from the Gemini API in the current language.
+         * @param {string} plantName The name of the plant.
+         */
+        async function getPlantCareInfo(plantName) {
+            modalTitle.innerText = `${translations[currentLang].modalCareTitle} for ${plantName}`;
+            modalDisclaimer.innerText = translations[currentLang].modalDisclaimer;
+            modalBody.innerHTML = '<div class="spinner"></div>';
+            openModal();
+
+            const prompt = currentLang === 'es'
+                ? `Dame instrucciones de cuidado detalladas para una planta de ${plantName}. Incluye secciones para 'Luz', 'Riego', 'Humedad' y 'Problemas Comunes'. Usa encabezados <h4> para las secciones y listas <ul> para los puntos. El resultado debe estar en español y no incluyas <html> o <body> tags.`
+                : `Give me detailed care instructions for a ${plantName} plant. Include sections for 'Light', 'Watering', 'Humidity', and 'Common Issues'. Use <h4> headings for the sections and <ul> lists for the points. The output should be in English and do not include <html> or <body> tags.`;
+
+            const apiKey = ""; // Canvas will provide the key
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ role: "user", parts: [{ "text": prompt }] }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error(`API request failed with status ${response.status}`);
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts[0]) {
+                    modalBody.innerHTML = result.candidates[0].content.parts[0].text;
+                } else {
+                    throw new Error("Unexpected API response structure.");
+                }
+
+            } catch (error) {
+                console.error("Error fetching plant care info:", error);
+                modalBody.innerHTML = `<p class="text-red-400">${translations[currentLang].apiError}</p>`;
+            }
+        }
+
+        // --- Initialize Page ---
+        window.addEventListener('DOMContentLoaded', () => {
+            translatePage('en'); // Set initial language to English
+        });
+    </script>
+</body>
+</html>
