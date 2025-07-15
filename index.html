@@ -532,7 +532,7 @@
         });
 
         /**
-         * Fetches plant care info from the Gemini API in the current language.
+         * Fetches plant care info using a free API alternative.
          * @param {string} plantName The name of the plant.
          */
         async function getPlantCareInfo(plantName) {
@@ -541,38 +541,508 @@
             modalBody.innerHTML = '<div class="spinner"></div>';
             openModal();
 
-            const prompt = currentLang === 'es'
-                ? `Dame instrucciones de cuidado detalladas para una planta de ${plantName}. Incluye secciones para 'Luz', 'Riego', 'Humedad' y 'Problemas Comunes'. Usa encabezados <h4> para las secciones y listas <ul> para los puntos. El resultado debe estar en español y no incluyas <html> o <body> tags.`
-                : `Give me detailed care instructions for a ${plantName} plant. Include sections for 'Light', 'Watering', 'Humidity', and 'Common Issues'. Use <h4> headings for the sections and <ul> lists for the points. The output should be in English and do not include <html> or <body> tags.`;
-
-            const apiKey = "AIzaSyD9iDxA9loznYU2JRInOjRwxkjG2Xrur_A"; 
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            // Use a free plant care database or generate static content
+            const careInfo = getStaticPlantCareInfo(plantName, currentLang);
             
-            const payload = {
-                contents: [{ role: "user", parts: [{ "text": prompt }] }]
+            // Simulate loading delay for better UX
+            setTimeout(() => {
+                modalBody.innerHTML = careInfo;
+            }, 1000);
+        }
+
+        /**
+         * Returns static plant care information for common plants.
+         * @param {string} plantName The name of the plant.
+         * @param {string} lang The current language.
+         * @returns {string} HTML formatted care instructions.
+         */
+        function getStaticPlantCareInfo(plantName, lang) {
+            const careDatabase = {
+                'Clusia': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno a sombra parcial</li>
+                            <li>• Tolera muy bien el sol directo</li>
+                            <li>• Mínimo 4-6 horas de luz solar</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Riego moderado, permite que seque entre riegos</li>
+                            <li>• Más frecuente en verano, reducir en invierno</li>
+                            <li>• Evitar encharcamiento</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Tolera alta humedad ambiental</li>
+                            <li>• Perfecta para clima de Florida</li>
+                            <li>• No requiere humedad adicional</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Hojas amarillas: exceso de agua</li>
+                            <li>• Crecimiento lento: falta de luz</li>
+                            <li>• Resistente a plagas y enfermedades</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun to partial shade</li>
+                            <li>• Tolerates direct sunlight very well</li>
+                            <li>• Minimum 4-6 hours of sunlight</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Moderate watering, allow to dry between waterings</li>
+                            <li>• More frequent in summer, reduce in winter</li>
+                            <li>• Avoid waterlogging</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Tolerates high ambient humidity</li>
+                            <li>• Perfect for Florida climate</li>
+                            <li>• No additional humidity required</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Yellow leaves: overwatering</li>
+                            <li>• Slow growth: insufficient light</li>
+                            <li>• Resistant to pests and diseases</li>
+                        </ul>
+                    `
+                },
+                'Cocoplum Red Tip': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno para mejor coloración roja</li>
+                            <li>• Tolera sombra parcial</li>
+                            <li>• 6+ horas de sol directo ideal</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Tolerante a sequía una vez establecida</li>
+                            <li>• Riego regular durante establecimiento</li>
+                            <li>• Evitar suelo constantemente húmedo</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Muy tolerante a humedad alta</li>
+                            <li>• Resistente a vientos salinos</li>
+                            <li>• Ideal para zonas costeras</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Pérdida de color rojo: falta de sol</li>
+                            <li>• Muy resistente a plagas</li>
+                            <li>• Poda regular para mantener forma</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun for best red coloration</li>
+                            <li>• Tolerates partial shade</li>
+                            <li>• 6+ hours of direct sun ideal</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Drought tolerant once established</li>
+                            <li>• Regular watering during establishment</li>
+                            <li>• Avoid constantly moist soil</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Very tolerant of high humidity</li>
+                            <li>• Resistant to salt winds</li>
+                            <li>• Ideal for coastal areas</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Loss of red color: insufficient sun</li>
+                            <li>• Very resistant to pests</li>
+                            <li>• Regular pruning to maintain shape</li>
+                        </ul>
+                    `
+                },
+                'Podocarpus': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno a sombra parcial</li>
+                            <li>• Prefiere ubicaciones protegidas del viento</li>
+                            <li>• Tolera condiciones de poca luz</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Riego regular y consistente</li>
+                            <li>• Mantener suelo ligeramente húmedo</li>
+                            <li>• Evitar períodos secos prolongados</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Prefiere humedad moderada a alta</li>
+                            <li>• Rociar follaje en climas secos</li>
+                            <li>• Buena para climas húmedos tropicales</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Amarillamiento: riego irregular</li>
+                            <li>• Poda ligera para mantener forma</li>
+                            <li>• Susceptible a hongos en suelos mal drenados</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun to partial shade</li>
+                            <li>• Prefers wind-protected locations</li>
+                            <li>• Tolerates low light conditions</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Regular and consistent watering</li>
+                            <li>• Keep soil slightly moist</li>
+                            <li>• Avoid prolonged dry periods</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Prefers moderate to high humidity</li>
+                            <li>• Mist foliage in dry climates</li>
+                            <li>• Good for humid tropical climates</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Yellowing: irregular watering</li>
+                            <li>• Light pruning to maintain shape</li>
+                            <li>• Susceptible to fungi in poorly drained soils</li>
+                        </ul>
+                    `
+                },
+                'Croton Petra': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno para colores vibrantes</li>
+                            <li>• Mínimo 6 horas de luz directa</li>
+                            <li>• La sombra reduce la coloración</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Mantener suelo húmedo pero no encharcado</li>
+                            <li>• Regar cuando superficie esté seca</li>
+                            <li>• Reducir en invierno</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Requiere alta humedad (60% o más)</li>
+                            <li>• Rociar hojas regularmente</li>
+                            <li>• Usar bandeja con guijarros y agua</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Caída de hojas: cambio de ambiente</li>
+                            <li>• Ácaros rojos: aumentar humedad</li>
+                            <li>• Pérdida de color: falta de luz</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun for vibrant colors</li>
+                            <li>• Minimum 6 hours of direct light</li>
+                            <li>• Shade reduces coloration</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Keep soil moist but not waterlogged</li>
+                            <li>• Water when surface is dry</li>
+                            <li>• Reduce in winter</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Requires high humidity (60% or more)</li>
+                            <li>• Mist leaves regularly</li>
+                            <li>• Use pebble tray with water</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Leaf drop: environmental changes</li>
+                            <li>• Spider mites: increase humidity</li>
+                            <li>• Color loss: insufficient light</li>
+                        </ul>
+                    `
+                },
+                'Croton Mamey': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno para mantener forma retorcida</li>
+                            <li>• Tolera sombra parcial</li>
+                            <li>• Luz intensa mejora los colores</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Riego regular durante crecimiento activo</li>
+                            <li>• Permitir ligero secado entre riegos</li>
+                            <li>• Drenaje excelente esencial</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Alta humedad ambiental preferida</li>
+                            <li>• Rociar alrededor de la planta</li>
+                            <li>• Evitar rociar directamente las hojas</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Hojas planas: falta de luz</li>
+                            <li>• Cochinillas: revisar pliegues de hojas</li>
+                            <li>• Fertilizar mensualmente en verano</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun to maintain twisted shape</li>
+                            <li>• Tolerates partial shade</li>
+                            <li>• Bright light enhances colors</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Regular watering during active growth</li>
+                            <li>• Allow slight drying between waterings</li>
+                            <li>• Excellent drainage essential</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• High ambient humidity preferred</li>
+                            <li>• Mist around the plant</li>
+                            <li>• Avoid misting leaves directly</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Flat leaves: insufficient light</li>
+                            <li>• Scale insects: check leaf folds</li>
+                            <li>• Fertilize monthly in summer</li>
+                        </ul>
+                    `
+                },
+                'Banana Croton': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno para colores amarillos brillantes</li>
+                            <li>• Mínimo 4-6 horas de luz directa</li>
+                            <li>• Sombra parcial en climas muy calurosos</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Suelo consistentemente húmedo</li>
+                            <li>• No permitir que se seque completamente</li>
+                            <li>• Regar más frecuentemente en verano</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Humedad alta esencial (70% o más)</li>
+                            <li>• Rociar diariamente en climas secos</li>
+                            <li>• Colocar cerca de otras plantas</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Hojas que se rizan: baja humedad</li>
+                            <li>• Puntas marrones: aire muy seco</li>
+                            <li>• Proteger de corrientes de aire frío</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun for bright yellow colors</li>
+                            <li>• Minimum 4-6 hours of direct light</li>
+                            <li>• Partial shade in very hot climates</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Consistently moist soil</li>
+                            <li>• Don't allow to dry out completely</li>
+                            <li>• Water more frequently in summer</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• High humidity essential (70% or more)</li>
+                            <li>• Mist daily in dry climates</li>
+                            <li>• Place near other plants</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Curling leaves: low humidity</li>
+                            <li>• Brown tips: very dry air</li>
+                            <li>• Protect from cold air drafts</li>
+                        </ul>
+                    `
+                },
+                'Green Island Ficus': {
+                    es: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Sol pleno a sombra parcial</li>
+                            <li>• Muy adaptable a diferentes condiciones de luz</li>
+                            <li>• Crece bien en interiores con luz brillante</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Riego regular pero sin encharcar</li>
+                            <li>• Permite que el suelo seque ligeramente</li>
+                            <li>• Tolerante a períodos secos cortos</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Prefiere humedad moderada a alta</li>
+                            <li>• Rociar hojas ocasionalmente</li>
+                            <li>• Buena ventilación importante</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                        <ul class="text-gray-300">
+                            <li>• Caída de hojas: cambio brusco de ambiente</li>
+                            <li>• Cochinillas: revisar regularmente</li>
+                            <li>• Poda ligera para mantener forma compacta</li>
+                        </ul>
+                    `,
+                    en: `
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Full sun to partial shade</li>
+                            <li>• Very adaptable to different light conditions</li>
+                            <li>• Grows well indoors with bright light</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Regular watering but avoid waterlogging</li>
+                            <li>• Allow soil to dry slightly between waterings</li>
+                            <li>• Tolerant of short dry periods</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                        <ul class="mb-4 text-gray-300">
+                            <li>• Prefers moderate to high humidity</li>
+                            <li>• Mist leaves occasionally</li>
+                            <li>• Good ventilation important</li>
+                        </ul>
+                        
+                        <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                        <ul class="text-gray-300">
+                            <li>• Leaf drop: sudden environmental changes</li>
+                            <li>• Scale insects: check regularly</li>
+                            <li>• Light pruning to maintain compact shape</li>
+                        </ul>
+                    `
+                }
             };
 
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
+            // Add more plants as needed
+            const defaultCare = {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• La mayoría de plantas tropicales prefieren luz brillante indirecta</li>
+                        <li>• Evitar sol directo intenso del mediodía</li>
+                        <li>• Observar la planta para ajustar ubicación</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Regar cuando la superficie del suelo esté seca</li>
+                        <li>• Drenar bien el exceso de agua</li>
+                        <li>• Reducir frecuencia en invierno</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Mantener humedad ambiental moderada</li>
+                        <li>• Agrupar plantas para aumentar humedad</li>
+                        <li>• Usar humidificador si es necesario</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Hojas amarillas: exceso o falta de agua</li>
+                        <li>• Revisar plagas regularmente</li>
+                        <li>• Fertilizar durante temporada de crecimiento</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Most tropical plants prefer bright indirect light</li>
+                        <li>• Avoid intense midday direct sun</li>
+                        <li>• Observe plant to adjust location</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Water when soil surface is dry</li>
+                        <li>• Drain excess water well</li>
+                        <li>• Reduce frequency in winter</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Maintain moderate ambient humidity</li>
+                        <li>• Group plants to increase humidity</li>
+                        <li>• Use humidifier if necessary</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Yellow leaves: over or under watering</li>
+                        <li>• Check for pests regularly</li>
+                        <li>• Fertilize during growing season</li>
+                    </ul>
+                `
+            };
 
-                if (!response.ok) throw new Error(`API request failed with status ${response.status}`);
-
-                const result = await response.json();
-                
-                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts[0]) {
-                    modalBody.innerHTML = result.candidates[0].content.parts[0].text;
-                } else {
-                    throw new Error("Unexpected API response structure.");
-                }
-
-            } catch (error) {
-                console.error("Error fetching plant care info:", error);
-                modalBody.innerHTML = `<p class="text-red-400">${translations[currentLang].apiError}</p>`;
-            }
+            return careDatabase[plantName]?.[lang] || defaultCare[lang];
         }
 
         // --- Initialize Page ---
