@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://machinnurseryfarms.com/sitemap.xml
