@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO: Meta Description -->
     <meta name="description" content="Vivero de plantas en Homestead, FL. Venta de árboles, palmas, arbustos y plantas tropicales al por mayor. Nursery Machin Farms: calidad y experiencia.">
+    <meta name="keywords" content="vivero, plantas, nursery, Homestead, FL, árboles, palmas, arbustos, tropicales, Machin Farms, venta de plantas, vivero en Homestead, nursery en Homestead, plantas tropicales, wholesale plants, nursery Florida">
+    <link rel="canonical" href="https://machinfarms.com/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Machin Farms - Vivero de Plantas y Nursery en Homestead, FL">
+    <meta property="og:description" content="Vivero de plantas en Homestead, FL. Venta de árboles, palmas, arbustos y plantas tropicales al por mayor. Nursery Machin Farms: calidad y experiencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://machinfarms.com/">
+    <meta property="og:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Machin Farms - Vivero de Plantas y Nursery en Homestead, FL">
+    <meta name="twitter:description" content="Vivero de plantas en Homestead, FL. Venta de árboles, palmas, arbustos y plantas tropicales al por mayor. Nursery Machin Farms: calidad y experiencia.">
+    <meta name="twitter:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" type="image/png">
     <title>Machin Farms - Vivero de Plantas y Nursery en Homestead, FL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -114,7 +129,8 @@
     <!-- Navigation Menu -->
     <nav id="navbar" class="nav-glass p-4 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-green-400">Machin Farms</a>
+            <!-- Cambia el logo de <a> a <span> para evitar dos <h1> -->
+            <span class="text-2xl font-bold text-green-400" aria-label="Machin Farms logo">Machin Farms</span>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navHome">Home</a>
                 <a href="#about" class="text-gray-300 hover:text-green-400 transition" data-translate-key="navAbout">About Us</a>
@@ -143,10 +159,10 @@
     <!-- Hero Section -->
     <header id="home" class="hero-bg pt-24">
         <div class="container mx-auto px-6 py-20 text-center">
-            <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" alt="Logo Vivero Machin Farms Nursery Homestead" class="mx-auto mb-6 h-36 md:h-48">
+            <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" alt="Logo Machin Farms, vivero y nursery en Homestead Florida" class="mx-auto mb-6 h-36 md:h-48" loading="lazy">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" data-translate-key="heroTitle"></h1>
             <p class="text-lg md:text-2xl text-green-300 mb-8" data-translate-key="heroSubtitle"></p>
-            <a href="#contact-section" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105" data-translate-key="heroButton"></a>
+            <a href="#contact-section" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105" data-translate-key="heroButton" aria-label="Contáctanos"></a>
             <p class="mt-6 text-green-200 font-semibold" data-translate-key="heroSeoPhrase"></p>
         </div>
     </header>
@@ -156,12 +172,12 @@
         <section id="about" class="py-24">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://i.postimg.cc/tJps90wb/Nuestro-Equipo.png" alt="Equipo del Vivero Machin Farms Nursery" class="rounded-lg shadow-2xl w-full">
+                    <img src="https://i.postimg.cc/tJps90wb/Nuestro-Equipo.png" alt="Equipo Machin Farms: expertos en plantas y vivero en Homestead" class="rounded-lg shadow-2xl w-full" loading="lazy">
                 </div>
                 <div class="md:w-1/2 text-center md:text-left">
                     <h2 class="text-3xl font-bold text-green-400 mb-4" data-translate-key="aboutTitle"></h2>
                     <p class="text-gray-300 leading-relaxed" data-translate-key="aboutText"></p>
-                    <a href="#products" class="text-green-400 underline mt-4 inline-block" data-translate-key="aboutSeePlants"></a>
+                    <a href="#products" class="text-green-400 underline mt-4 inline-block" data-translate-key="aboutSeePlants" aria-label="Ver nuestras plantas"></a>
                 </div>
             </div>
         </section>
@@ -174,57 +190,60 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Plant Item: Clusias -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/L4WjqxT1/IMG-20250711-WA0004.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="Planta Clusia para setos en vivero Machin Farms" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/L4WjqxT1/IMG-20250711-WA0004.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="Clusia para setos y privacidad en Machin Farms Homestead, planta tropical resistente" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Clusias</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="clusiaDesc">Ideal para setos y privacidad, con hojas gruesas y resistentes. Disponible en nuestro vivero.</p>
-                        <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="clusiaDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton" aria-label="Guía de cuidado Clusia"></button>
                     </div>
                     <!-- Plant Item: Cocoplum Red Tip -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/cJJQg2Vf/IMG-20250711-WA0008.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip planta tropical nursery Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/cJJQg2Vf/IMG-20250711-WA0008.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip, planta tropical de brotes rojizos en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Cocoplum Red Tip</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="cocoplumDesc">Perfecto para un toque de color y gran resistencia. Encuéntralo en nuestro nursery.</p>
-                        <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="cocoplumDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton" aria-label="Guía de cuidado Cocoplum Red Tip"></button>
                     </div>
                     <!-- Plant Item: Green Island -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/xjLbC9cW/IMG-20250711-WA0011.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus planta ornamental vivero" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/xjLbC9cW/IMG-20250711-WA0011.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus ornamental, bajo mantenimiento en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Green Island</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="greenIslandDesc">Follaje denso y brillante, bajo mantenimiento. Planta ideal de vivero.</p>
-                        <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="greenIslandDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Green Island"></button>
                     </div>
                     <!-- Plant Item: Podocarpus -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/9fvrmkVm/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus planta para setos nursery Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/9fvrmkVm/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus para setos y privacidad, elegante y versátil en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Podocarpus</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="podocarpusDesc">Elegante y versátil, crea privacidad. Disponible en nuestro vivero.</p>
-                        <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="podocarpusDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Podocarpus"></button>
                     </div>
                     <!-- Plant Item: Croton Petra -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/8zZvSwjc/IMG-20250711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra planta colorida nursery Machin Farms" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/8zZvSwjc/IMG-20250711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra, hojas coloridas para jardines tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Croton Petra</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="crotonPetraDesc">Hojas vibrantes, ideal para jardines tropicales. Nursery en Homestead.</p>
-                        <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonPetraDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Petra"></button>
                     </div>
                     <!-- Plant Item: Croton Mamey -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/SQ9cMWt1/IMG-20250711-WA0000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey planta tropical vivero Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/SQ9cMWt1/IMG-20250711-WA0000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey, planta tropical exuberante y retorcida en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Croton Mamey</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="crotonMameyDesc">Exuberante y tropical, disponible en nuestro vivero de plantas.</p>
-                        <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonMameyDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Mamey"></button>
                     </div>
                     <!-- Plant Item: Banana Croton -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col sm:col-span-2 lg:col-span-1 lg:col-start-2">
-                        <img src="https://i.postimg.cc/NfLbSyN1/IMG-20250711-WA0013.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton planta amarilla nursery Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover">
+                        <img src="https://i.postimg.cc/NfLbSyN1/IMG-20250711-WA0013.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton, hojas amarillas tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
                         <h3 class="text-xl font-semibold mb-2">Banana Croton</h3>
-                        <p class="text-gray-400 flex-grow" data-translate-key="bananaCrotonDesc">Hojas alargadas y coloridas. Planta tropical de vivero.</p>
-                        <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <p class="text-gray-400 flex-grow" data-translate-key="bananaCrotonDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton" aria-label="Guía de cuidado Banana Croton"></button>
                     </div>
                 </div>
                 <!-- SEO: Enlace interno -->
                 <div class="text-center mt-8">
-                    <a href="#contact-section" class="text-green-400 underline" data-translate-key="productsContactLink"></a>
+                    <a href="#contact-section" class="text-green-400 underline" data-translate-key="productsContactLink" aria-label="Solicita información sobre plantas y precios"></a>
+                    <!-- Enlace interno adicional a la sección About -->
+                    <span class="mx-2 text-gray-400">|</span>
+                    <a href="#about" class="text-green-400 underline" aria-label="Conoce nuestro vivero">Conoce nuestro vivero</a>
                 </div>
             </div>
         </section>
@@ -246,14 +265,14 @@
                         <!-- Future upload area for images/videos -->
                         <div id="gallery-upload-area" class="mt-4">
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                <img src="https://i.postimg.cc/1gqWZjp7/IMG-20250711-WA0001.jpg" alt="Vivero Machin Farms plantas tropicales Homestead" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/5YWs9Sg4/IMG-20250711-WA0003.jpg" alt="Plantas en nursery Homestead Machin Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/MM0dnf3y/IMG-20250711-WA0009.jpg" alt="Árboles y arbustos vivero Machin Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/Jtmp9KtK/IMG-20250711-WA0010.jpg" alt="Palmas tropicales nursery Homestead" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/jCXMKN7T/IMG-20250711-WA0012.jpg" alt="Venta de plantas en vivero Machin Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/562nt0BC/IMG-20250711-WA0014.jpg" alt="Plantas ornamentales nursery Homestead" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/9rg1whbN/IMG-20250711-WA0015.jpg" alt="Vivero Machin Farms Homestead Florida" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/bZGgQBFY/IMG-20250711-WA0020.jpg" alt="Nursery Machin Farms plantas y árboles" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/1gqWZjp7/IMG-20250711-WA0001.jpg" alt="Plantas tropicales en vivero Machin Farms Homestead Florida, variedad de especies" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/5YWs9Sg4/IMG-20250711-WA0003.jpg" alt="Plantas en nursery Homestead Machin Farms, vista general del vivero" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/MM0dnf3y/IMG-20250711-WA0009.jpg" alt="Árboles y arbustos en Machin Farms Homestead, vivero especializado" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/Jtmp9KtK/IMG-20250711-WA0010.jpg" alt="Palmas tropicales en nursery Homestead Machin Farms, plantas ornamentales" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/jCXMKN7T/IMG-20250711-WA0012.jpg" alt="Venta de plantas en vivero Machin Farms Homestead, atención personalizada" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/562nt0BC/IMG-20250711-WA0014.jpg" alt="Plantas ornamentales nursery Homestead Machin Farms, variedad y calidad" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/9rg1whbN/IMG-20250711-WA0015.jpg" alt="Vivero Machin Farms Homestead Florida, plantas y árboles tropicales" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/bZGgQBFY/IMG-20250711-WA0020.jpg" alt="Nursery Machin Farms plantas y árboles en Homestead, vivero local" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -268,39 +287,39 @@
                 <div class="flex flex-wrap justify-around gap-8 text-center">
                     <!-- Email -->
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-envelope fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <i class="fas fa-envelope fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
                         <h3 class="text-xl font-semibold" data-translate-key="contactEmail">Email</h3>
-                        <a href="mailto:machindavid2@gmail.com" class="text-gray-300 hover:text-green-300">machindavid2@gmail.com</a>
-                        <a href="mailto:Machinfarms@gmail.com" class="text-gray-300 hover:text-green-300">Machinfarms@gmail.com</a>
+                        <a href="mailto:machindavid2@gmail.com" class="text-gray-300 hover:text-green-300" aria-label="Enviar correo a machindavid2@gmail.com">machindavid2@gmail.com</a>
+                        <a href="mailto:Machinfarms@gmail.com" class="text-gray-300 hover:text-green-300" aria-label="Enviar correo a Machinfarms@gmail.com">Machinfarms@gmail.com</a>
                     </div>
                     <!-- Phones -->
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-phone fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <i class="fas fa-phone fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
                         <h3 class="text-xl font-semibold" data-translate-key="contactPhones">Teléfonos</h3>
                         <!-- Phone Number 1 -->
                         <div class="flex items-center justify-center space-x-4 mt-2">
                             <span class="text-gray-300">786-992-6153</span>
-                            <a href="tel:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Call 786-992-6153">
-                                <i class="fas fa-phone-alt"></i>
+                            <a href="tel:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Llamar al 786-992-6153">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
                             </a>
-                            <a href="sms:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Message 786-992-6153">
-                                <i class="fas fa-comment-sms"></i>
+                            <a href="sms:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Enviar SMS al 786-992-6153">
+                                <i class="fas fa-comment-sms" aria-hidden="true"></i>
                             </a>
                         </div>
                         <!-- Phone Number 2 -->
                         <div class="flex items-center justify-center space-x-4 mt-2">
                             <span class="text-gray-300">786-775-0816</span>
-                            <a href="tel:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Call 786-775-0816">
-                                <i class="fas fa-phone-alt"></i>
+                            <a href="tel:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Llamar al 786-775-0816">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
                             </a>
-                            <a href="sms:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Message 786-775-0816">
-                                <i class="fas fa-comment-sms"></i>
+                            <a href="sms:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Enviar SMS al 786-775-0816">
+                                <i class="fas fa-comment-sms" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                     <!-- Address -->
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-map-marker-alt fa-2x mb-3 text-green-400 icon-glow transition-transform"></i>
+                        <i class="fas fa-map-marker-alt fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
                         <h3 class="text-xl font-semibold" data-translate-key="contactAddress"></h3>
                         <p class="text-gray-300">30760 SW 212 Ave<br>Homestead, FL 33030</p>
                         <p class="text-green-300 mt-2" data-translate-key="contactSeoPhrase"></p>
@@ -315,7 +334,9 @@
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de Machin Farms en Google Maps"
+                        aria-label="Mapa de ubicación de Machin Farms Homestead">
                     </iframe>
                 </div>
             </div>
@@ -323,36 +344,47 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800">
+    <footer class="bg-gray-800" role="contentinfo">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
             <p data-translate-key="footerRights"></p>
             <p class="text-sm mt-2" data-translate-key="footerCredit"></p>
-            <a href="#about" class="text-green-400 underline" data-translate-key="footerAboutLink"></a>
+            <a href="#about" class="text-green-400 underline" data-translate-key="footerAboutLink" aria-label="Sobre nuestro vivero"></a>
+            <!-- Enlace interno a la sección de contacto -->
+            <span class="mx-2 text-gray-400">|</span>
+            <a href="#contact-section" class="text-green-400 underline" aria-label="Contáctanos">Contáctanos</a>
         </div>
     </footer>
 
-    <!-- Gallery Image Modal -->
-    <div id="gallery-image-modal" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:2000;">
-        <div style="position:relative;max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;">
-            <img id="gallery-modal-img" src="" alt="Expanded" style="max-width:90vw;max-height:90vh;border-radius:1rem;box-shadow:0 0 40px #22c55e;">
-            <button id="gallery-modal-close" style="position:absolute;top:10px;right:10px;font-size:2rem;color:white;background:rgba(0,0,0,0.5);border:none;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;">&times;</button>
-        </div>
-    </div>
-
-    <!-- AI Care Modal -->
-    <div id="ai-care-modal" class="modal-overlay">
-        <div class="modal-content text-gray-300">
-            <div class="flex justify-between items-center mb-4">
-                <h3 id="modal-title" class="text-2xl font-bold text-green-400"></h3>
-                <button id="modal-close-btn" class="text-3xl">&times;</button>
-            </div>
-            <div id="modal-body">
-                <!-- AI content will be injected here -->
-            </div>
-            <p id="modal-disclaimer" class="text-xs text-gray-500 mt-4"></p>
-        </div>
-    </div>
-
+    <!-- Datos estructurados LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "name": "Machin Farms",
+      "image": "https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-786-992-6153",
+      "email": "machindavid2@gmail.com",
+      "url": "https://machinfarms.com/",
+      "description": "Vivero de plantas, nursery, venta de árboles, palmas, arbustos y plantas tropicales en Homestead, FL.",
+      "openingHours": "Mo-Sa 08:00-17:00",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.54045,
+        "longitude": -80.52857
+      },
+      "sameAs": [
+        "https://www.facebook.com/machinfarms"
+      ]
+    }
+    </script>
 
     <script>
         // --- Translation Data ---
