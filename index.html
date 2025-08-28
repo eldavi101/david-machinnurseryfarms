@@ -29,9 +29,18 @@
     <!-- Favicon -->
     <link rel="icon" href="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" type="image/png">
     <title>Machin Farms - Wholesale & Retail Nursery in Homestead, Florida | Tropical Plants Trees</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload Critical Resources for Speed -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Tailwind CSS with defer for better loading -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <!-- Critical CSS Inlined for Speed -->
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    </noscript>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -40,10 +49,19 @@
         .hero-bg {
             background-image: 
                 linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /* Dark overlay for contrast */
-                url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=2574&auto=format&fit=crop');
+                url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+        }
+        /* Optimized image loading */
+        img {
+            image-rendering: optimizeQuality;
+            image-rendering: -webkit-optimize-contrast;
+        }
+        .webp-img {
+            content-visibility: auto;
+            contain-intrinsic-size: 300px 200px;
         }
         .glass-effect {
             background: rgba(17, 24, 39, 0.6); /* bg-gray-900 with opacity */
@@ -125,10 +143,63 @@
             font-weight: 500;
             margin-top: 1rem;
             transition: background-color 0.3s, transform 0.2s;
+            min-height: 44px; /* Touch-friendly minimum */
+            min-width: 44px;
         }
         .ai-care-btn:hover {
             background-color: #2563eb; /* blue-600 */
             transform: scale(1.05);
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .nav-glass {
+                padding: 1rem 0.5rem;
+            }
+            .hero-bg {
+                background-attachment: scroll; /* Better mobile performance */
+            }
+            .glass-effect {
+                backdrop-filter: blur(8px); /* Reduced for mobile performance */
+                -webkit-backdrop-filter: blur(8px);
+            }
+            /* Touch-friendly buttons */
+            button, .btn, a[href] {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 12px 16px;
+                touch-action: manipulation;
+            }
+            /* Larger text for mobile */
+            .text-sm {
+                font-size: 1rem;
+            }
+            /* Better spacing on mobile */
+            .gap-8 {
+                gap: 1.5rem;
+            }
+            .py-24 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        
+        /* Core Web Vitals Optimization */
+        .optimize-cls {
+            contain: layout style paint;
+        }
+        
+        /* Lazy loading optimization */
+        .lazy-container {
+            min-height: 200px;
+            background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+            background-size: 400% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
         }
     </style>
 </head>
@@ -182,7 +253,7 @@
         <section id="about" class="py-24">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://i.postimg.cc/523yq1GM/About-us-picture.png" 
+                    <img src="https://i.postimg.cc/tJps90wb/Nuestro-Equipo.png?v=2025" 
                          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop';" 
                          alt="Equipo experto Machin Farms Nursery Homestead Florida - Especialistas en plantas, árboles y flores tropicales" 
                          class="rounded-lg shadow-2xl w-full" loading="lazy">
@@ -369,6 +440,62 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center text-green-400 mb-4" data-translate-key="galleryTitle"></h2>
                 <p class="text-center text-gray-300 mb-16" data-translate-key="galleryDesc"></p>
+                
+                <!-- Gallery Grid with Lazy Loading -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 optimize-cls">
+                    <!-- Gallery Item 1 -->
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=400&h=300" 
+                                 alt="Plantas tropicales nursery Homestead Florida Machin Farms" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x300/4ade80/ffffff?text=Plantas'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Tropical Plants" data-es="Plantas Tropicales">Plantas Tropicales</h3>
+                            <p class="text-gray-300 text-sm" data-en="Wide variety of tropical plants perfect for Florida climate" data-es="Gran variedad de plantas tropicales perfectas para el clima de Florida">Gran variedad de plantas tropicales perfectas para el clima de Florida</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 2 -->
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&q=80&w=400&h=300" 
+                                 alt="Árboles ornamentales nursery Homestead Florida" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x300/22c55e/ffffff?text=Arboles'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Ornamental Trees" data-es="Árboles Ornamentales">Árboles Ornamentales</h3>
+                            <p class="text-gray-300 text-sm" data-en="Beautiful ornamental trees for landscaping projects" data-es="Hermosos árboles ornamentales para proyectos de paisajismo">Hermosos árboles ornamentales para proyectos de paisajismo</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 3 -->
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=400&h=300" 
+                                 alt="Flores coloridas nursery Machin Farms Florida" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x300/f59e0b/ffffff?text=Flores'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Colorful Flowers" data-es="Flores Coloridas">Flores Coloridas</h3>
+                            <p class="text-gray-300 text-sm" data-en="Vibrant flowers to brighten up your garden" data-es="Flores vibrantes para alegrar tu jardín">Flores vibrantes para alegrar tu jardín</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Original Gallery Placeholder -->
                 <div class="flex justify-center">
                     <div class="glass-effect rounded-xl p-8 text-center glow-effect flex flex-col w-full max-w-xl">
                         <div class="bg-gray-700 rounded-lg mb-4 h-56 w-full flex items-center justify-center">
@@ -1419,4 +1546,3 @@
     </script>
 </body>
 </html>
-
