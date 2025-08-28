@@ -253,7 +253,7 @@
         <section id="about" class="py-24">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://i.postimg.cc/tJps90wb/Nuestro-Equipo.png?v=2025" 
+                    <img src="https://i.postimg.cc/VkG6V6vm/About-us-picture.png" 
                          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop';" 
                          alt="Equipo experto Machin Farms Nursery Homestead Florida - Especialistas en plantas, árboles y flores tropicales" 
                          class="rounded-lg shadow-2xl w-full" loading="lazy">
@@ -455,8 +455,8 @@
                                  onerror="this.src='https://via.placeholder.com/400x300/4ade80/ffffff?text=Plantas'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Tropical Plants" data-es="Plantas Tropicales">Plantas Tropicales</h3>
-                            <p class="text-gray-300 text-sm" data-en="Wide variety of tropical plants perfect for Florida climate" data-es="Gran variedad de plantas tropicales perfectas para el clima de Florida">Gran variedad de plantas tropicales perfectas para el clima de Florida</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant1Title">Plantas Tropicales</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant1Desc">Gran variedad de plantas tropicales perfectas para el clima de Florida</p>
                         </div>
                     </div>
                     
@@ -472,8 +472,8 @@
                                  onerror="this.src='https://via.placeholder.com/400x300/22c55e/ffffff?text=Arboles'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Ornamental Trees" data-es="Árboles Ornamentales">Árboles Ornamentales</h3>
-                            <p class="text-gray-300 text-sm" data-en="Beautiful ornamental trees for landscaping projects" data-es="Hermosos árboles ornamentales para proyectos de paisajismo">Hermosos árboles ornamentales para proyectos de paisajismo</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant2Title">Árboles Ornamentales</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant2Desc">Hermosos árboles ornamentales para proyectos de paisajismo</p>
                         </div>
                     </div>
                     
@@ -489,8 +489,8 @@
                                  onerror="this.src='https://via.placeholder.com/400x300/f59e0b/ffffff?text=Flores'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-en="Colorful Flowers" data-es="Flores Coloridas">Flores Coloridas</h3>
-                            <p class="text-gray-300 text-sm" data-en="Vibrant flowers to brighten up your garden" data-es="Flores vibrantes para alegrar tu jardín">Flores vibrantes para alegrar tu jardín</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant3Title">Flores Coloridas</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant3Desc">Flores vibrantes para alegrar tu jardín</p>
                         </div>
                     </div>
                 </div>
@@ -660,7 +660,7 @@
             <a href="#about" class="text-green-400 underline" data-translate-key="footerAboutLink" aria-label="Sobre nuestro vivero"></a>
             <!-- Enlace interno a la sección de contacto -->
             <span class="mx-2 text-gray-400">|</span>
-            <a href="#contact-section" class="text-green-400 underline" aria-label="Contáctanos">Contáctanos</a>
+            <a href="#contact-section" class="text-green-400 underline" data-translate-key="footerContactLink" aria-label="Contáctanos">Contáctanos</a>
         </div>
     </footer>
 
@@ -836,6 +836,8 @@
                 galleryMain: "Fotos del Nursery Machin Farms - Plantas y Árboles",
                 galleryUploadHint: "Pronto podrás subir tus fotos de plantas y árboles.",
                 contactTitle: "Visita Nuestro Nursery en Homestead, Florida",
+                contactEmail: "Email",
+                contactPhones: "Teléfonos",
                 contactAddress: "Dirección del Nursery",
                 contactSeoPhrase: "Nursery Machin Farms - Plantas, Árboles y Flores en Homestead, Florida",
                 seoTitle1: "Nursery Homestead Florida",
@@ -856,6 +858,7 @@
                 footerRights: "© 2025 Machin Farms Nursery. Todos los derechos reservados. Nursery especializado en plantas, árboles y flores en Homestead, Florida.",
                 footerCredit: "Diseño web y funciones IA por Gemini.",
                 footerAboutLink: "Sobre nuestro nursery en Florida",
+                footerContactLink: "Contáctanos",
                 /* Plant Care Translations */
                 clusiaDesc: "Ideales para cercas vivas y privacidad en nuestro nursery de Homestead Florida, con hojas gruesas resistentes al clima tropical.",
                 cocoplumDesc: "Perfectas plantas tropicales para color con brotes rojizos, disponibles en nuestro vivero de Homestead. Gran resistencia para jardines Florida.",
@@ -867,7 +870,14 @@
                 aiCareButton: "✨ Cuidado con IA",
                 modalCareTitle: "Consejos de Cuidado",
                 modalDisclaimer: "Descargo de responsabilidad: La información es generada por IA y debe ser usada como una guía.",
-                apiError: "Lo sentimos, no se pudieron obtener los consejos de cuidado en este momento. Por favor, inténtalo de nuevo más tarde."
+                apiError: "Lo sentimos, no se pudieron obtener los consejos de cuidado en este momento. Por favor, inténtalo de nuevo más tarde.",
+                /* Gallery Translations */
+                galleryPlant1Title: "Plantas Tropicales",
+                galleryPlant1Desc: "Gran variedad de plantas tropicales perfectas para el clima de Florida",
+                galleryPlant2Title: "Árboles Ornamentales", 
+                galleryPlant2Desc: "Hermosos árboles ornamentales para proyectos de paisajismo",
+                galleryPlant3Title: "Flores Coloridas",
+                galleryPlant3Desc: "Flores vibrantes para alegrar tu jardín"
             },
             en: {
                 navHome: "Home",
@@ -917,6 +927,8 @@
                 galleryMain: "Photos of Machin Farms Nursery - Plants and Trees",
                 galleryUploadHint: "Soon you'll be able to upload your plant and tree photos.",
                 contactTitle: "Visit Our Nursery in Homestead, Florida",
+                contactEmail: "Email",
+                contactPhones: "Phones",
                 contactAddress: "Nursery Address",
                 contactSeoPhrase: "Machin Farms Nursery - Plants, Trees, and Flowers in Homestead, Florida",
                 seoTitle1: "Nursery Homestead Florida",
@@ -937,6 +949,7 @@
                 footerRights: "© 2025 Machin Farms Nursery. All rights reserved. Nursery specializing in plants, trees, and flowers in Homestead, Florida.",
                 footerCredit: "Web design and AI features by Gemini.",
                 footerAboutLink: "About our Florida nursery",
+                footerContactLink: "Contact Us",
                 /* Plant Care Translations */
                 clusiaDesc: "Ideal for hedges and privacy screens at our Homestead Florida nursery, with thick sturdy leaves perfect for Florida climate.",
                 cocoplumDesc: "Perfect tropical plants for color with reddish new growth, available at our Homestead nursery. Great resilience for Florida gardens.",
@@ -948,7 +961,14 @@
                 aiCareButton: "✨ AI Care Guide",
                 modalCareTitle: "Care Tips",
                 modalDisclaimer: "Disclaimer: Information is generated by AI and should be used as a guide.",
-                apiError: "Sorry, we could not get the care tips at this moment. Please try again later."
+                apiError: "Sorry, we could not get the care tips at this moment. Please try again later.",
+                /* Gallery Translations */
+                galleryPlant1Title: "Tropical Plants",
+                galleryPlant1Desc: "Wide variety of tropical plants perfect for Florida climate",
+                galleryPlant2Title: "Ornamental Trees", 
+                galleryPlant2Desc: "Beautiful ornamental trees for landscaping projects",
+                galleryPlant3Title: "Colorful Flowers",
+                galleryPlant3Desc: "Vibrant flowers to brighten up your garden"
             }
         };
 
@@ -1541,7 +1561,7 @@
 
         // --- Initialize Page ---
         document.addEventListener('DOMContentLoaded', () => {
-            translatePage('en'); // Set initial language to English
+            translatePage('es'); // Set initial language to Spanish (default content)
         });
     </script>
 </body>
