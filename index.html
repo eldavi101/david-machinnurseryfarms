@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO: Enhanced Meta Description -->
-    <meta name="description" content="Machin Farms - Wholesale & Retail Nursery in Homestead, Florida. 20+ years serving South Florida with tropical plants, trees, and flowers. Located in Homestead, FL.">
-    <meta name="keywords" content="wholesale nursery homestead florida, retail nursery homestead florida, nursery homestead, plantas homestead florida, tropical plants nursery florida, wholesale plants homestead, nursery south florida, homestead nursery, tropical trees florida, plants nursery homestead fl">
+    <meta name="description" content="Specialized nursery for tropical plants & trees in Homestead, Florida. 20+ years experience. Wholesale & retail.">
+    <meta name="keywords" content="nursery homestead florida, tropical plants for sale, ornamental trees homestead, buy flowers florida, vivero homestead florida, plantas tropicales en venta, árboles ornamentales homestead, flores en homestead">
     <meta name="geo.region" content="FL">
     <meta name="geo.placename" content="Homestead">
     <meta name="geo.position" content="25.54045;-80.52857">
@@ -13,8 +13,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://machinnurseryfarms.com/" />
     <!-- Open Graph -->
-    <meta property="og:title" content="🌿 Machin Nursery Farms - Tropical Plants, Trees & Flowers in Homestead, Florida">
-    <meta property="og:description" content="Specialized nursery in Homestead, Florida. Sale of tropical plants, ornamental trees and flowers. Nursery with over 20 years of experience in Florida.">
+    <meta property="og:title" content="Nursery in Homestead | Machin Nursery Farms">
+    <meta property="og:description" content="Specialized nursery for tropical plants & trees in Florida. 20+ years experience serving Homestead area.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://machinnurseryfarms.com/">
     <meta property="og:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
@@ -23,24 +23,90 @@
     <meta property="og:site_name" content="Machin Nursery Farms Homestead Florida">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="🌿 Machin Nursery Farms - Tropical Plants, Trees & Flowers in Homestead, Florida">
-    <meta name="twitter:description" content="Specialized nursery in Homestead, Florida. Sale of tropical plants, ornamental trees and flowers. Nursery with over 20 years of experience in Florida.">
+    <meta name="twitter:title" content="Nursery in Homestead | Machin Nursery Farms">
+    <meta name="twitter:description" content="Specialized nursery for tropical plants & trees in Florida. 20+ years experience serving Homestead area.">
     <meta name="twitter:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
     <!-- Favicon -->
     <link rel="icon" href="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" type="image/png">
-    <title>Machin Farms - Wholesale & Retail Nursery in Homestead, Florida | Tropical Plants Trees</title>
-    <!-- Preload Critical Resources for Speed -->
+    <title>Nursery in Homestead | Machin Nursery Farms</title>
+    <!-- Preload Critical Resources for Performance -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" as="image">
+    <link rel="preload" href="https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp" as="image">
     
-    <!-- Tailwind CSS with defer for better loading -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical above-the-fold CSS */
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #111827; color: #f9fafb; }
+        .hero-bg { 
+            background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), 
+                        url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .nav-glass { 
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            padding: 1rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .text-green-400 { color: #4ade80; }
+        .text-white { color: #ffffff; }
+        .font-bold { font-weight: 700; }
+        .text-center { text-align: center; }
+        .pt-24 { padding-top: 6rem; }
+        .py-20 { padding: 5rem 0; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .leading-tight { line-height: 1.25; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+        .hidden { display: none; }
+        @media (min-width: 768px) { 
+            .md\\:flex { display: flex; }
+            .md\\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .md\\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .md\\:h-48 { height: 12rem; }
+        }
+        @media (max-width: 768px) { 
+            .hero-bg { background-attachment: scroll; }
+            .md\\:hidden { display: block; }
+        }
+        /* Image optimization */
+        img { 
+            image-rendering: optimizeQuality;
+            image-rendering: -webkit-optimize-contrast;
+        }
+    </style>
     
-    <!-- Critical CSS Inlined for Speed -->
+    <!-- Non-critical CSS (deferred) -->
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
     </noscript>
+    
+    <!-- Tailwind CSS deferred -->
+    <script>
+        // Load Tailwind CSS after page load
+        window.addEventListener('load', function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.tailwindcss.com';
+            script.defer = true;
+            document.head.appendChild(script);
+        });
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -240,7 +306,13 @@
     <!-- Hero Section -->
     <header id="home" class="hero-bg pt-24">
         <div class="container mx-auto px-6 py-20 text-center">
-            <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" alt="Machin Nursery Farms Homestead Florida - Logo del mejor vivero de plantas, árboles y flores tropicales" class="mx-auto mb-6 h-36 md:h-48" loading="lazy">
+            <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" 
+                 alt="Machin Nursery Farms Homestead Florida - Logo del mejor vivero de plantas, árboles y flores tropicales" 
+                 class="mx-auto mb-6 h-36 md:h-48" 
+                 width="192" 
+                 height="144"
+                 loading="eager"
+                 decoding="sync">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" data-translate-key="heroTitle"></h1>
             <p class="text-lg md:text-2xl text-green-300 mb-8" data-translate-key="heroSubtitle"></p>
             <a href="#contact-section" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105" data-translate-key="heroButton" aria-label="Contáctanos"></a>
@@ -256,7 +328,11 @@
                     <img src="https://i.postimg.cc/VkG6V6vm/About-us-picture.png" 
                          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop';" 
                          alt="Equipo experto Machin Nursery Farms Homestead Florida - Especialistas en plantas, árboles y flores tropicales" 
-                         class="rounded-lg shadow-2xl w-full" loading="lazy">
+                         class="rounded-lg shadow-2xl w-full" 
+                         width="600" 
+                         height="400"
+                         loading="lazy"
+                         decoding="async">
                 </div>
                 <div class="md:w-1/2 text-center md:text-left">
                     <h2 class="text-3xl font-bold text-green-400 mb-4" data-translate-key="aboutTitle"></h2>
@@ -371,49 +447,49 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Plant Item: Clusias -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/L4WjqxT1/IMG-20250711-WA0004.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="Clusia para setos y privacidad en Machin Farms Homestead, planta tropical resistente" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/L4WjqxT1/IMG-20250711-WA0004.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="Clusia para setos y privacidad en Machin Farms Homestead, planta tropical resistente" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Clusias</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="clusiaDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton" aria-label="Guía de cuidado Clusia"></button>
                     </div>
                     <!-- Plant Item: Cocoplum Red Tip -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/cJJQg2Vf/IMG-20250711-WA0008.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip, planta tropical de brotes rojizos en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/cJJQg2Vf/IMG-20250711-WA0008.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip, planta tropical de brotes rojizos en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Cocoplum Red Tip</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="cocoplumDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton" aria-label="Guía de cuidado Cocoplum Red Tip"></button>
                     </div>
                     <!-- Plant Item: Green Island -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/xjLbC9cW/IMG-20250711-WA0011.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus ornamental, bajo mantenimiento en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/xjLbC9cW/IMG-20250711-WA0011.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus ornamental, bajo mantenimiento en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Green Island</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="greenIslandDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Green Island"></button>
                     </div>
                     <!-- Plant Item: Podocarpus -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/9fvrmkVm/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus para setos y privacidad, elegante y versátil en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/9fvrmkVm/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus para setos y privacidad, elegante y versátil en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Podocarpus</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="podocarpusDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Podocarpus"></button>
                     </div>
                     <!-- Plant Item: Croton Petra -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/8zZvSwjc/IMG-20250711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra, hojas coloridas para jardines tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/8zZvSwjc/IMG-20250711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra, hojas coloridas para jardines tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Croton Petra</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="crotonPetraDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Petra"></button>
                     </div>
                     <!-- Plant Item: Croton Mamey -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/SQ9cMWt1/IMG-20250711-WA0000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey, planta tropical exuberante y retorcida en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/SQ9cMWt1/IMG-20250711-WA0000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey, planta tropical exuberante y retorcida en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Croton Mamey</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="crotonMameyDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Mamey"></button>
                     </div>
                     <!-- Plant Item: Banana Croton -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col sm:col-span-2 lg:col-span-1 lg:col-start-2">
-                        <img src="https://i.postimg.cc/NfLbSyN1/IMG-20250711-WA0013.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton, hojas amarillas tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" loading="lazy">
+                        <img src="https://i.postimg.cc/NfLbSyN1/IMG-20250711-WA0013.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton, hojas amarillas tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
                         <h3 class="text-xl font-semibold mb-2">Banana Croton</h3>
                         <p class="text-gray-400 flex-grow" data-translate-key="bananaCrotonDesc"></p>
                         <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton" aria-label="Guía de cuidado Banana Croton"></button>
@@ -446,51 +522,57 @@
                     <!-- Gallery Item 1 -->
                     <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                         <div class="lazy-container">
-                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=400&h=300" 
-                                 alt="Plantas tropicales nursery Homestead Florida Machin Farms" 
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Tropical plants nursery Homestead Florida - ornamental trees for sale" 
                                  class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
                                  loading="lazy"
                                  decoding="async"
                                  onload="this.parentElement.classList.remove('lazy-container')"
-                                 onerror="this.src='https://via.placeholder.com/400x300/4ade80/ffffff?text=Plantas'; this.parentElement.classList.remove('lazy-container');">
+                                 onerror="this.src='https://via.placeholder.com/400x192/4ade80/ffffff?text=Tropical+Plants'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant1Title">Plantas Tropicales</h3>
-                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant1Desc">Gran variedad de plantas tropicales perfectas para el clima de Florida</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant1Title">Tropical Plants</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant1Desc">Wide variety of tropical plants perfect for Florida climate</p>
                         </div>
                     </div>
                     
                     <!-- Gallery Item 2 -->
                     <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                         <div class="lazy-container">
-                            <img src="https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&q=80&w=400&h=300" 
-                                 alt="Árboles ornamentales nursery Homestead Florida" 
+                            <img src="https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Ornamental trees nursery Homestead Florida - buy flowers florida" 
                                  class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
                                  loading="lazy"
                                  decoding="async"
                                  onload="this.parentElement.classList.remove('lazy-container')"
-                                 onerror="this.src='https://via.placeholder.com/400x300/22c55e/ffffff?text=Arboles'; this.parentElement.classList.remove('lazy-container');">
+                                 onerror="this.src='https://via.placeholder.com/400x192/22c55e/ffffff?text=Trees'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant2Title">Árboles Ornamentales</h3>
-                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant2Desc">Hermosos árboles ornamentales para proyectos de paisajismo</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant2Title">Ornamental Trees</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant2Desc">Beautiful ornamental trees for landscaping projects</p>
                         </div>
                     </div>
                     
                     <!-- Gallery Item 3 -->
                     <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                         <div class="lazy-container">
-                            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=400&h=300" 
-                                 alt="Flores coloridas nursery Machin Farms Florida" 
+                            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Colorful flowers nursery Machin Nursery Farms Florida - tropical plants for sale" 
                                  class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
                                  loading="lazy"
                                  decoding="async"
                                  onload="this.parentElement.classList.remove('lazy-container')"
-                                 onerror="this.src='https://via.placeholder.com/400x300/f59e0b/ffffff?text=Flores'; this.parentElement.classList.remove('lazy-container');">
+                                 onerror="this.src='https://via.placeholder.com/400x192/f59e0b/ffffff?text=Flowers'; this.parentElement.classList.remove('lazy-container');">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant3Title">Flores Coloridas</h3>
-                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant3Desc">Flores vibrantes para alegrar tu jardín</p>
+                            <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant3Title">Colorful Flowers</h3>
+                            <p class="text-gray-300 text-sm" data-translate-key="galleryPlant3Desc">Vibrant flowers to brighten up your garden</p>
                         </div>
                     </div>
                 </div>
@@ -508,14 +590,14 @@
                         <!-- Future upload area for images/videos -->
                         <div id="gallery-upload-area" class="mt-4">
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                <img src="https://i.postimg.cc/1gqWZjp7/IMG-20250711-WA0001.jpg" alt="Plantas tropicales en nursery Machin Farms Homestead Florida - Tropical plants at nursery with trees and flowers" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/5YWs9Sg4/IMG-20250711-WA0003.jpg" alt="Plantas en nursery Homestead Machin Farms, vista general del vivero" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/MM0dnf3y/IMG-20250711-WA0009.jpg" alt="Árboles y flores en nursery Machin Farms Homestead Florida - Trees and flowers at specialized nursery" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/Jtmp9KtK/IMG-20250711-WA0010.jpg" alt="Palmas tropicales en nursery Homestead Machin Farms, plantas ornamentales" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/jCXMKN7T/IMG-20250711-WA0012.jpg" alt="Venta de plantas en vivero Machin Farms Homestead, atención personalizada" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/562nt0BC/IMG-20250711-WA0014.jpg" alt="Plantas ornamentales nursery Homestead Machin Farms, variedad y calidad" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/9rg1whbN/IMG-20250711-WA0015.jpg" alt="Nursery Machin Farms Homestead Florida plantas árboles flores tropicales - Tropical plants trees flowers nursery" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
-                                <img src="https://i.postimg.cc/bZGgQBFY/IMG-20250711-WA0020.jpg" alt="Nursery Machin Farms plantas y árboles en Homestead, vivero local" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" loading="lazy">
+                                <img src="https://i.postimg.cc/1gqWZjp7/IMG-20250711-WA0001.jpg" alt="Nursery Homestead Florida - tropical plants for sale at Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/5YWs9Sg4/IMG-20250711-WA0003.jpg" alt="Ornamental trees homestead - buy flowers florida at local nursery" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/MM0dnf3y/IMG-20250711-WA0009.jpg" alt="Trees and flowers nursery homestead florida - tropical plants wholesale retail" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/Jtmp9KtK/IMG-20250711-WA0010.jpg" alt="Tropical palms nursery Homestead - ornamental plants Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/jCXMKN7T/IMG-20250711-WA0012.jpg" alt="Plant sales nursery homestead florida - personalized service tropical plants" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/562nt0BC/IMG-20250711-WA0014.jpg" alt="Ornamental plants nursery homestead - variety and quality tropical trees" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/9rg1whbN/IMG-20250711-WA0015.jpg" alt="Machin Nursery Farms Homestead Florida - tropical plants trees flowers for sale" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/bZGgQBFY/IMG-20250711-WA0020.jpg" alt="Local nursery homestead florida - plants and trees Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -888,11 +970,11 @@
                 navContact: "Contact",
                 langToggle: "Español",
                 heroTitle: "🌿 Machin Nursery Farms in Homestead, Florida",
-                heroSubtitle: "Your specialized nursery for tropical plants, ornamental trees, and flowers. Nursery with 20+ years in Homestead, Florida.",
+                heroSubtitle: "Buy flowers Florida - tropical plants for sale - ornamental trees homestead - nursery wholesale & retail",
                 heroButton: "Contact Us",
                 heroSeoPhrase: "The best nursery for plants, trees, and flowers in Homestead, Florida. Visit our nursery!",
-                aboutTitle: "20+ Years Experience - Wholesale & Retail Nursery in Homestead Florida",
-                aboutText: "Machin Farms is an established nursery in Homestead, Florida, specializing in tropical plants, ornamental trees, and flowers. With over 20 years serving the nursery industry in South Florida, we are your trusted nursery in Homestead. Our expert team grows and selects the finest tropical plants, trees, and flowers adapted to Florida's climate.",
+                aboutTitle: "Best Nursery Homestead Florida - Buy Flowers & Tropical Plants for Sale",
+                aboutText: "Machin Nursery Farms is your premier destination to buy flowers Florida and tropical plants for sale. Located in Homestead, our nursery specializes in ornamental trees homestead, offering wholesale and retail services. With over 20 years serving the nursery industry in South Florida, we provide the highest quality tropical plants, trees, and flowers perfect for Florida's climate. From landscape design to plant delivery, our nursery homestead florida serves Miami-Dade, Broward, and Monroe counties.",
                 experienceTitle: "Our Homestead Florida Nursery",
                 experienceList: "",
                 exp1: "📍 Located in the heart of Homestead, Florida",
@@ -1559,9 +1641,40 @@
             `
         };
 
+        // --- Performance & SEO Optimizations ---
+        
+        // WebP Support Detection for optimal image loading
+        function supportsWebP() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1;
+            canvas.height = 1;
+            return canvas.toDataURL('image/webp').indexOf('image/webp') === 5;
+        }
+
+        // Add WebP support class to body for CSS optimization
+        if (!supportsWebP()) {
+            document.documentElement.classList.add('no-webp');
+        }
+
+        // Critical Performance Metrics for Core Web Vitals
+        function initPerformanceOptimizations() {
+            // Optimize CLS by ensuring all images have dimensions
+            document.querySelectorAll('img:not([width]):not([height])').forEach(img => {
+                // Set default dimensions based on common nursery image sizes
+                if (img.classList.contains('gallery-img')) {
+                    img.setAttribute('width', '400');
+                    img.setAttribute('height', '224');
+                } else if (img.classList.contains('h-48')) {
+                    img.setAttribute('width', '300');
+                    img.setAttribute('height', '192');
+                }
+            });
+        }
+
         // --- Initialize Page ---
         document.addEventListener('DOMContentLoaded', () => {
             translatePage('en'); // Set initial language to English (default)
+            initPerformanceOptimizations(); // Initialize SEO optimizations
         });
     </script>
 </body>
