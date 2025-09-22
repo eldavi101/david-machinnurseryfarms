@@ -459,6 +459,371 @@
         .skip-link:focus {
             top: 6px;
         }
+
+        /* ===== CHAT WIDGET STYLES ===== */
+        .chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 350px;
+            max-width: calc(100vw - 40px);
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            transform: translateY(100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10000;
+            overflow: hidden;
+        }
+
+        .chat-widget.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-widget.minimized {
+            transform: translateY(calc(100% - 60px));
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 16px;
+            position: relative;
+        }
+
+        .chat-header-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .chat-info {
+            flex: 1;
+        }
+
+        .chat-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .chat-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .chat-time {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .chat-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            padding: 20px;
+            height: 200px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .chat-message {
+            margin-bottom: 16px;
+        }
+
+        .bot-message .message-content {
+            background: #22c55e;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 18px 18px 18px 4px;
+            display: inline-block;
+            max-width: 85%;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .user-message {
+            text-align: right;
+        }
+
+        .user-message .message-content {
+            background: #e2e8f0;
+            color: #374151;
+            padding: 12px 16px;
+            border-radius: 18px 18px 4px 18px;
+            display: inline-block;
+            max-width: 85%;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Chat Input */
+        .chat-input-area {
+            padding: 16px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            outline: none;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .chat-input:focus {
+            border-color: #22c55e;
+        }
+
+        .chat-send-btn {
+            background: #22c55e;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-send-btn:hover {
+            background: #16a34a;
+        }
+
+        .chat-send-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .form-header h5 {
+            color: #22c55e;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .form-header p {
+            color: #6b7280;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            border-color: #22c55e;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-submit-btn:hover {
+            background: #16a34a;
+        }
+
+        .form-submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* Chat Toggle Button */
+        .chat-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #22c55e;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .chat-toggle-btn:hover {
+            background: #16a34a;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+
+        .chat-toggle-btn.hidden {
+            display: none;
+        }
+
+        .chat-notification-dot {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            background: #ef4444;
+            border: 2px solid white;
+            border-radius: 50%;
+            animation: pulse-notification 2s infinite;
+        }
+
+        .chat-notification-dot.hidden {
+            display: none;
+        }
+
+        @keyframes pulse-notification {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .chat-widget {
+                width: calc(100vw - 20px);
+                right: 10px;
+                bottom: 90px;
+            }
+
+            .chat-toggle-btn {
+                right: 15px;
+                bottom: 15px;
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            .chat-messages {
+                height: 180px;
+            }
+        }
+
+        /* Chat Loading Animation */
+        .chat-loading {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .chat-loading-dot {
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: chat-loading 1.4s infinite both;
+        }
+
+        .chat-loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .chat-loading-dot:nth-child(2) { animation-delay: -0.16s; }
+        .chat-loading-dot:nth-child(3) { animation-delay: 0; }
+
+        @keyframes chat-loading {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -984,6 +1349,71 @@
             <a href="#contact-section" class="text-green-400 underline" data-translate-key="footerContactLink" aria-label="Contáctanos">Contáctanos</a>
         </div>
     </footer>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <!-- Chat Header -->
+        <div id="chat-header" class="chat-header">
+            <div class="chat-header-content">
+                <div class="chat-avatar">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="chat-info">
+                    <h4 class="chat-title">MACHIN NURSERY FARMS</h4>
+                    <p class="chat-subtitle" data-translate-key="chatSubtitle">We'll reply as soon as we can</p>
+                </div>
+                <div class="chat-time" id="chat-time">11:16 AM</div>
+            </div>
+            <button id="chat-close" class="chat-close-btn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages">
+            <div class="chat-message bot-message">
+                <div class="message-content">
+                    <span data-translate-key="welcomeMessage">Hi there 👋 Welcome to Machin Nursery Farms. Let me know if you have any questions, we would be happy to help.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-area">
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Write your message..." data-translate-key="chatPlaceholder" required>
+                <button type="submit" id="chat-send" class="chat-send-btn" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Contact Form (appears after user message) -->
+        <div id="contact-form-section" class="contact-form-section" style="display: none;">
+            <div class="form-header">
+                <h5 data-translate-key="contactFormTitle">Let us help you!</h5>
+                <p data-translate-key="contactFormSubtitle">Please provide your contact information</p>
+            </div>
+            <form id="chat-contact-form" class="chat-contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" data-translate-key="namePlaceholder" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" name="email" class="form-input" placeholder="Your email" data-translate-key="emailPlaceholder" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="Phone (optional)" data-translate-key="phonePlaceholder">
+                </div>
+                <button type="submit" class="form-submit-btn" data-translate-key="sendButton">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button id="chat-toggle" class="chat-toggle-btn" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification-dot" id="chat-notification"></span>
+    </button>
 
     <!-- Datos estructurados LocalBusiness -->
     <script type="application/ld+json">
@@ -2003,6 +2433,7 @@
             try {
                 translatePage('en'); // Set initial language to English (default)
                 initPerformanceOptimizations(); // Initialize SEO optimizations
+                initChatWidget(); // Initialize chat widget
                 
                 // Global error handling to prevent console errors
                 window.addEventListener('error', function(e) {
@@ -2019,6 +2450,285 @@
                 console.warn('Page initialization error handled:', error.message);
             }
         });
+
+        // --- CHAT WIDGET FUNCTIONALITY ---
+        let chatStep = 'initial'; // 'initial', 'contact', 'sending'
+        let userMessage = '';
+        let chatAutoOpened = false;
+
+        function initChatWidget() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            const chatClose = document.getElementById('chat-close');
+            const chatForm = document.getElementById('chat-form');
+            const chatInput = document.getElementById('chat-input');
+            const contactForm = document.getElementById('chat-contact-form');
+            const chatNotification = document.getElementById('chat-notification');
+
+            // Update time in chat header
+            updateChatTime();
+            setInterval(updateChatTime, 60000); // Update every minute
+
+            // Auto-open chat after 4 seconds
+            setTimeout(() => {
+                if (!chatAutoOpened) {
+                    openChat();
+                    chatAutoOpened = true;
+                    // Show notification dot
+                    chatNotification.classList.remove('hidden');
+                }
+            }, 4000);
+
+            // Chat toggle functionality
+            chatToggle.addEventListener('click', () => {
+                if (chatWidget.classList.contains('active')) {
+                    closeChat();
+                } else {
+                    openChat();
+                }
+                chatNotification.classList.add('hidden');
+            });
+
+            // Close chat
+            chatClose.addEventListener('click', () => {
+                closeChat();
+            });
+
+            // Chat form submission
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                handleChatMessage();
+            });
+
+            // Contact form submission
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                handleContactFormSubmission();
+            });
+
+            // Add translations for chat
+            addChatTranslations();
+        }
+
+        function updateChatTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('chat-time').textContent = timeString;
+        }
+
+        function openChat() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            
+            chatWidget.classList.add('active');
+            chatWidget.classList.remove('minimized');
+            chatToggle.innerHTML = '<i class="fas fa-times"></i>';
+            
+            // Focus input when chat opens
+            setTimeout(() => {
+                document.getElementById('chat-input').focus();
+            }, 300);
+        }
+
+        function closeChat() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            
+            chatWidget.classList.remove('active');
+            chatToggle.innerHTML = '<i class="fas fa-comments"></i>';
+        }
+
+        function addMessage(content, isUser = false, isTyping = false) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+            
+            if (isTyping) {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div class="chat-loading">
+                            <div class="chat-loading-dot"></div>
+                            <div class="chat-loading-dot"></div>
+                            <div class="chat-loading-dot"></div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            
+            return messageDiv;
+        }
+
+        function handleChatMessage() {
+            const chatInput = document.getElementById('chat-input');
+            const message = chatInput.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            userMessage = message;
+            addMessage(message, true);
+            chatInput.value = '';
+            
+            // Show typing indicator
+            const typingMessage = addMessage('', false, true);
+            
+            // After 1.5 seconds, show response and contact form
+            setTimeout(() => {
+                typingMessage.remove();
+                
+                const responseMessage = currentLang === 'es' ? 
+                    'Gracias por tu mensaje! Para responderte mejor, por favor comparte tu información de contacto:' :
+                    'Thanks for your message! To help you better, please share your contact information:';
+                
+                addMessage(responseMessage);
+                
+                // Show contact form
+                document.getElementById('contact-form-section').style.display = 'block';
+                
+                // Focus first input
+                setTimeout(() => {
+                    document.getElementById('contact-name').focus();
+                }, 300);
+                
+                chatStep = 'contact';
+            }, 1500);
+        }
+
+        function handleContactFormSubmission() {
+            const form = document.getElementById('chat-contact-form');
+            const formData = new FormData(form);
+            
+            const contactData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || 'Not provided',
+                message: userMessage
+            };
+
+            // Validate email
+            if (!isValidEmail(contactData.email)) {
+                alert(currentLang === 'es' ? 'Por favor ingresa un email válido' : 'Please enter a valid email');
+                return;
+            }
+
+            // Disable form
+            const submitBtn = form.querySelector('.form-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+
+            // Send to WhatsApp and Email
+            sendToWhatsApp(contactData);
+            sendToEmail(contactData);
+
+            // Show success message
+            setTimeout(() => {
+                const successMessage = currentLang === 'es' ? 
+                    '¡Perfecto! Te hemos enviado la información por WhatsApp y email. Te contactaremos pronto. 🌱' :
+                    'Perfect! We\'ve sent your information via WhatsApp and email. We\'ll contact you soon! 🌱';
+                
+                addMessage(successMessage);
+                
+                // Hide contact form
+                document.getElementById('contact-form-section').style.display = 'none';
+                
+                // Auto-close chat after 3 seconds
+                setTimeout(() => {
+                    closeChat();
+                }, 3000);
+            }, 1000);
+        }
+
+        function sendToWhatsApp(data) {
+            const whatsappMessage = encodeURIComponent(
+                `🌿 New customer from Machin Nursery Farms website:\n\n` +
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Phone: ${data.phone}\n` +
+                `Message: ${data.message}\n\n` +
+                `Sent at: ${new Date().toLocaleString()}`
+            );
+            
+            const whatsappURL = `https://wa.me/17869926153?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        function sendToEmail(data) {
+            const subject = encodeURIComponent('New Contact from Machin Nursery Farms Website');
+            const body = encodeURIComponent(
+                `New customer contact from your website:\n\n` +
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Phone: ${data.phone}\n` +
+                `Original Message: ${data.message}\n\n` +
+                `Sent at: ${new Date().toLocaleString()}\n` +
+                `From: Machin Nursery Farms Website Chat`
+            );
+            
+            const mailtoURL = `mailto:machindavid2@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoURL;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function addChatTranslations() {
+            // Add chat translations to existing translations object
+            translations.es = {
+                ...translations.es,
+                chatSubtitle: "Te responderemos tan pronto como podamos",
+                welcomeMessage: "¡Hola! 👋 Bienvenido a Machin Nursery Farms. Déjame saber si tienes alguna pregunta, estaremos felices de ayudarte.",
+                chatPlaceholder: "Escribe tu mensaje...",
+                contactFormTitle: "¡Déjanos ayudarte!",
+                contactFormSubtitle: "Por favor proporciona tu información de contacto",
+                namePlaceholder: "Tu nombre",
+                emailPlaceholder: "Tu email", 
+                phonePlaceholder: "Teléfono (opcional)",
+                sendButton: "Enviar Mensaje"
+            };
+
+            translations.en = {
+                ...translations.en,
+                chatSubtitle: "We'll reply as soon as we can",
+                welcomeMessage: "Hi there 👋 Welcome to Machin Nursery Farms. Let me know if you have any questions, we would be happy to help.",
+                chatPlaceholder: "Write your message...",
+                contactFormTitle: "Let us help you!",
+                contactFormSubtitle: "Please provide your contact information", 
+                namePlaceholder: "Your name",
+                emailPlaceholder: "Your email",
+                phonePlaceholder: "Phone (optional)",
+                sendButton: "Send Message"
+            };
+        }
+
+        // Update chat translations when language changes
+        const originalTranslatePage = translatePage;
+        translatePage = function(lang) {
+            originalTranslatePage(lang);
+            
+            // Update chat-specific elements
+            const chatElements = document.querySelectorAll('[data-translate-key]');
+            chatElements.forEach(el => {
+                const key = el.dataset.translateKey;
+                if (translations[lang][key]) {
+                    if (el.tagName === 'INPUT') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                }
+            });
+        };
     </script>
 </body>
 </html>
