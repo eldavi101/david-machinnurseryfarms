@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#1 Homestead Nurseries & Plant Nursery in Homestead FL. Best nurseries in Homestead for tropical plants, trees & flowers. South Florida nursery experts.">
-    <meta name="keywords" content="homestead nurseries, plant nursery in homestead fl, best nursery in homestead, homestead nursery florida, nursery in homestead fl, homestead plant nursery, nurseries near me, plant nursery near me">
-    <meta name="author" content="Machin Nursery Farms">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
+    <!-- SEO: Enhanced Meta Description -->
+    <meta name="description" content="#1 Homestead Nurseries & Plant Nursery in Homestead FL. Best nurseries in Homestead for tropical plants, trees & flowers. South Florida nursery experts since 2004.">
+    <meta name="keywords" content="nursery for plants near me, plant nursery near me, nursery plants, tropical plants near me, local nursery, Homestead Florida nursery, plant center near me, garden center, wholesale nursery, retail plants, South Florida nursery">
+    <meta name="geo.region" content="FL">
+    <meta name="geo.placename" content="Homestead">
+    <meta name="geo.position" content="25.54045;-80.52857">
+    <meta name="ICBM" content="25.54045, -80.52857">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://machinnurseryfarms.com/" />
+    <!-- Open Graph -->
     <meta property="og:title" content="Homestead Nurseries | #1 Plant Nursery in Homestead FL">
     <meta property="og:description" content="#1 Homestead Nurseries & Plant Nursery in Homestead FL. Best nurseries in Homestead for tropical plants, trees & flowers. South Florida nursery experts.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://machinfarms.com">
+    <meta property="og:url" content="https://machinnurseryfarms.com/">
     <meta property="og:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="es_US">
     <meta property="og:site_name" content="Machin Nursery Farms Homestead Florida">
-    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Homestead Nurseries | #1 Plant Nursery in Homestead FL">
     <meta name="twitter:description" content="#1 Homestead Nurseries & Plant Nursery in Homestead FL. Best nurseries in Homestead for tropical plants, trees & flowers. South Florida nursery experts.">
     <meta name="twitter:image" content="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png">
-    
     <!-- Favicon -->
     <link rel="icon" href="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" type="image/png">
-    
-    <!-- Page Title -->
     <title>Homestead Nurseries | #1 Plant Nursery in Homestead FL - Machin Farms</title>
-    
-    <!-- Resource Loading for Performance -->
+    <!-- Optimized Resource Loading for Performance -->
+    <!-- Font Awesome - Deferred loading -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
+    <!-- Google Fonts - Optimized loading with font-display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"></noscript>
     
@@ -50,11 +50,799 @@
     <link rel="dns-prefetch" href="https://i.postimg.cc">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     
-    <!-- External CSS Files -->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- Critical CSS Inline with Font Display Optimization -->
+    <style>
+        /* Font display optimization for performance */
+        @font-face {
+            font-family: 'Inter';
+            font-display: swap; /* Ensures text is visible during font load */
+            src: local('Inter');
+        }
+        
+        /* Critical above-the-fold CSS with enhanced contrast */
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            margin: 0; 
+            background: #0f172a; 
+            color: #f1f5f9; 
+        }
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .nav-glass { 
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.4);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Enhanced contrast ratios for WCAG AAA compliance */
+        .text-gray-300 { color: #f8fafc; } /* Enhanced from #f1f5f9 for better contrast */
+        .text-green-300 { color: #bbf7d0; } /* Better contrast on dark backgrounds */
+        .text-green-400 { color: #4ade80; }
+        .text-green-200 { color: #ecfdf5; } /* Enhanced from #dcfce7 for better contrast */
+        .text-white { color: #ffffff; }
+        .text-gray-400{color:#e5e7eb}.text-gray-500{color:#d1d5db}
+        .bg-green-500{background-color:#16a34a}.bg-green-500:hover{background-color:#15803d}
+        .bg-green-600{background-color:#15803d}.bg-green-600:hover{background-color:#166534}
+        .flex{display:flex}.block{display:block}.hidden{display:none}
+        .w-full{width:100%}.h-full{height:100%}.text-center{text-align:center}
+        .text-left { text-align: left; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .py-3{padding:0.75rem 0}.py-4{padding:1rem 0}.px-8{padding:0 2rem}
+        .rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}
+        .transition-colors{transition:color,background-color,border-color,text-decoration-color,fill,stroke 0.15s cubic-bezier(0.4,0,0.2,1)}
+        .duration-300{transition-duration:300ms}.hover\:bg-green-600:hover{background-color:#15803d}
+        .inline-block{display:inline-block}
+        a:not(.btn-green){color:#60a5fa}a:not(.btn-green):hover{color:#93c5fd}
+        a:not(.btn-green):focus{color:#dbeafe;outline:2px solid #60a5fa}
+        .fixed{position:fixed}.top-0{top:0}.z-50{z-index:50}
+        .items-center{align-items:center}.justify-between{justify-content:space-between}
+        .space-x-6>:not([hidden])~:not([hidden]){margin-left:1.5rem}
+        .md\:flex{display:flex}.md\:hidden{display:none}.ml-4{margin-left:1rem}
+        
+        /* Mobile menu classes */
+        .absolute { position: absolute; }
+        .left-0 { left: 0px; }
+        .right-0 { right: 0px; }
+        .mt-2 { margin-top: 0.5rem; }
+        .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+        .w-full { width: 100%; }
+        
+        /* Hero section essentials */
+        .min-h-screen { min-height: 100vh; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        
+        /* Responsive utilities */
+        @media (min-width: 768px) {
+            .md\:flex { display: flex !important; }
+            .md\:hidden { display: none !important; }
+            .md\:text-5xl { font-size: 3rem; line-height: 1; }
+            .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        }
+        
+        /* Navigation specific styles */
+        .nav-links { text-decoration: none; display: block; }
+        
+        /* Enhanced glass effects with better contrast and performance */
+        .glass-effect { 
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            border-radius: 12px;
+            color: #f9fafb;
+            padding: 1.5rem;
+            will-change: transform;
+            transform: translateZ(0); /* Force GPU acceleration */
+        }
+        
+        .glass-effect:hover {
+            transform: scale(1.02) translateZ(0); /* Optimized for performance */
+        }
+        
+        .glass-effect-hero {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        /* Navigation improvements */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #f9fafb;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #4ade80;
+            background: rgba(34, 197, 94, 0.1);
+        }
+        
+        /* Button styling */
+        .btn-green {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-green:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+            color: white;
+        }
+        .text-white { color: #ffffff; }
+        .font-bold { font-weight: 700; }
+        .text-center { text-align: center; }
+        .pt-24 { padding-top: 6rem; }
+        .py-20 { padding: 5rem 0; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .leading-tight { line-height: 1.25; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+        .hidden { display: none; }
+        @media (min-width: 768px) { 
+            .md\\:flex { display: flex; }
+            .md\\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .md\\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .md\\:h-48 { height: 12rem; }
+        }
+        @media (max-width: 768px) { 
+            .hero-bg { background-attachment: scroll; }
+            .md\\:hidden { display: block; }
+        }
+        /* Image optimization */
+        img { 
+            image-rendering: optimizeQuality;
+            image-rendering: -webkit-optimize-contrast;
+        }
+    </style>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS deferred for better performance -->
     <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <!-- Configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'green-custom': '#22c55e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .hero-bg {
+            background-image: 
+                linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /* Dark overlay for contrast */
+                url('https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Optimized image loading with performance hints */
+        img {
+            image-rendering: optimizeQuality;
+            image-rendering: -webkit-optimize-contrast;
+            content-visibility: auto;
+            contain-intrinsic-size: 300px 200px;
+        }
+        .webp-img {
+            content-visibility: auto;
+            contain-intrinsic-size: 300px 200px;
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.6); /* bg-gray-900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-glass {
+             background: rgba(17, 24, 39, 0.7); /* More opaque for readability */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect {
+            transition: all 0.3s ease-in-out;
+            will-change: transform, box-shadow;
+            transform: translateZ(0); /* Force composite layer */
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px 7px rgba(74, 222, 128, 0.4);
+            transform: translateY(-8px) translateZ(0);
+        }
+        .icon-glow:hover {
+            color: #4ade80; /* green-400 */
+            transform: scale(1.1) translateZ(0);
+            will-change: transform;
+        }
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background: #1f2937; /* gray-800 */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s;
+        }
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+        /* Spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #4ade80; /* green-400 */
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* AI Care Button */
+        .ai-care-btn {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            min-height: 44px; /* Touch-friendly minimum */
+            min-width: 44px;
+        }
+        .ai-care-btn:hover {
+            background-color: #2563eb; /* blue-600 */
+            transform: scale(1.05);
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .nav-glass {
+                padding: 1rem 0.5rem;
+            }
+            .hero-bg {
+                background-attachment: scroll; /* Better mobile performance */
+            }
+            .glass-effect {
+                backdrop-filter: blur(8px); /* Reduced for mobile performance */
+                -webkit-backdrop-filter: blur(8px);
+            }
+            /* Touch-friendly buttons */
+            button, .btn, a[href] {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 12px 16px;
+                touch-action: manipulation;
+            }
+            /* Larger text for mobile */
+            .text-sm {
+                font-size: 1rem;
+            }
+            /* Better spacing on mobile */
+            .gap-8 {
+                gap: 1.5rem;
+            }
+            .py-24 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        
+        /* Core Web Vitals Optimization */
+        .optimize-cls {
+            contain: layout style paint;
+        }
+        
+        /* Lazy loading optimization */
+        .lazy-container {
+            min-height: 200px;
+            background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+            background-size: 400% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 4px;
+        }
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* ===== CHAT WIDGET STYLES ===== */
+        .chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 350px;
+            max-width: calc(100vw - 40px);
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            transform: translateY(100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            contain: layout style paint;
+            content-visibility: auto;
+            z-index: 10000;
+            overflow: hidden;
+        }
+
+        .chat-widget.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-widget.minimized {
+            transform: translateY(calc(100% - 60px));
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 16px;
+            position: relative;
+        }
+
+        .chat-header-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .chat-info {
+            flex: 1;
+        }
+
+        .chat-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .chat-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .chat-time {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .chat-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            padding: 20px;
+            height: 200px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .chat-message {
+            margin-bottom: 16px;
+        }
+
+        .bot-message .message-content {
+            background: #22c55e;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 18px 18px 18px 4px;
+            display: inline-block;
+            max-width: 85%;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .user-message {
+            text-align: right;
+        }
+
+        .user-message .message-content {
+            background: #e2e8f0;
+            color: #374151;
+            padding: 12px 16px;
+            border-radius: 18px 18px 4px 18px;
+            display: inline-block;
+            max-width: 85%;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Chat Input */
+        .chat-input-area {
+            padding: 16px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            outline: none;
+            font-size: 14px;
+            color: #374151;
+            background: #ffffff;
+            transition: border-color 0.2s;
+        }
+
+        .chat-input:focus {
+            border-color: #22c55e;
+        }
+
+        .chat-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .chat-send-btn {
+            background: #22c55e;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-send-btn:hover {
+            background: #16a34a;
+        }
+
+        .chat-send-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .form-header h5 {
+            color: #22c55e;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .form-header p {
+            color: #6b7280;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            color: #374151;
+            background: #ffffff;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            border-color: #22c55e;
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-submit-btn:hover {
+            background: #16a34a;
+        }
+
+        .form-submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* Screen Reader Only - Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Chat Toggle Button */
+        .chat-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #22c55e;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            contain: layout style paint;
+        }
+
+        .chat-toggle-btn:hover {
+            background: #16a34a;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+
+        .chat-toggle-btn.hidden {
+            display: none;
+        }
+
+        .chat-notification-dot {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            background: #ef4444;
+            border: 2px solid white;
+            border-radius: 50%;
+            animation: pulse-notification 2s infinite;
+        }
+
+        .chat-notification-dot.hidden {
+            display: none;
+        }
+
+        @keyframes pulse-notification {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .chat-widget {
+                width: calc(100vw - 20px);
+                right: 10px;
+                bottom: 90px;
+            }
+
+            .chat-toggle-btn {
+                right: 15px;
+                bottom: 15px;
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            .chat-messages {
+                height: 180px;
+            }
+        }
+
+        /* Chat Loading Animation */
+        .chat-loading {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .chat-loading-dot {
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: chat-loading 1.4s infinite both;
+        }
+
+        .chat-loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .chat-loading-dot:nth-child(2) { animation-delay: -0.16s; }
+        .chat-loading-dot:nth-child(3) { animation-delay: 0; }
+
+        @keyframes chat-loading {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+    </style>
     
     <!-- Local Business Structured Data -->
     <script type="application/ld+json">
@@ -95,86 +883,20 @@
         "keywords": "homestead nurseries, plant nursery in homestead fl, best nursery in homestead, homestead nursery florida, nursery in homestead fl, homestead plant nursery, nurseries near me, plant nursery near me, tropical plants homestead, palm trees homestead fl"
     }
     </script>
-    
-    <!-- Additional Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "GardenStore",
-      "name": "Machin Nursery Farms",
-      "alternateName": ["Nursery for Plants Near Me Homestead", "Local Plant Nursery Homestead Florida", "Plant Nursery Near Me"],
-      "description": "Local nursery for plants near me in Homestead, Florida. Your neighborhood plant nursery specializing in tropical plants, trees, and flowers. Best nursery for plants near me in South Florida.",
-      "image": "https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "30760 SW 212 Ave",
-        "addressLocality": "Homestead",
-        "addressRegion": "FL",
-        "postalCode": "33030",
-        "addressCountry": "US"
-      },
-      "telephone": "+1-786-992-6153",
-      "email": "machindavid2@gmail.com",
-      "url": "https://machinnurseryfarms.com/",
-      "openingHours": "Mo-Sa 08:00-17:00",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 25.54045,
-        "longitude": -80.52857
-      },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 25.54045,
-          "longitude": -80.52857
-        },
-        "geoRadius": "50000"
-      },
-      "priceRange": "$$",
-      "paymentAccepted": "Cash, Credit Card",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Plantas, Árboles y Flores",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Plantas Tropicales",
-              "description": "Variedad de plantas tropicales para jardín y paisajismo"
-            }
-          }
-        ]
-      }
-    }
-    </script>
 </head>
-
 <body class="bg-gray-900 text-white">
     <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="nav-glass" role="navigation" aria-label="Main navigation">
-        <div class="container flex justify-between items-center">
-            <!-- Logo -->
+    <!-- Navigation Menu -->
+    <nav id="navbar" class="nav-glass fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo mejorado -->
             <div class="flex items-center space-x-3">
-                <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" 
-                     onerror="this.onerror=null;this.src='https://placehold.co/80x80/22C55E/FFFFFF?text=MF';" 
-                     alt="Machin Nursery Farms - Best Plant Nursery in Homestead FL Logo" 
-                     class="h-16 w-auto" 
-                     width="80" 
-                     height="80"
-                     loading="eager"
-                     decoding="sync"
-                     fetchpriority="high">
-                <div>
-                    <h1 class="text-xl font-bold text-green-400">Machin Farms</h1>
-                    <p class="text-sm text-gray-300" data-translate-key="navSubtitle">Homestead Plant Nursery</p>
-                </div>
+                <i class="fas fa-leaf text-green-400 text-2xl"></i>
+                <span class="text-2xl font-bold text-green-400" aria-label="Machin Nursery Farms Homestead Florida">Machin Nursery Farms</span>
             </div>
-
+            
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-1">
                 <a href="#home" class="nav-links text-gray-300 hover:text-green-400 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-green-500/10" data-translate-key="navHome">Home</a>
@@ -191,28 +913,35 @@
                 <i class="fas fa-bars fa-2x"></i>
             </button>
         </div>
-        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden mt-4 glass-effect rounded-lg">
             <a href="#home" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navHome">🏠 Home</a>
             <a href="#about" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navAbout">👥 About Us</a>
             <a href="#services" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navServices">🛠️ Services</a>
             <a href="#products" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navPlants">🌿 Plants</a>
-            <a href="#gallery" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navGallery">📸 Gallery</a>
+            <a href="#gallery" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navGallery">📷 Gallery</a>
             <a href="#contact-section" class="block py-3 px-4 text-gray-300 hover:bg-green-500/20 hover:text-green-400 rounded-lg transition-all duration-300" data-translate-key="navContact">📞 Contact</a>
-            <div class="px-4 py-2">
-                <button id="lang-toggle-mobile" class="btn-green w-full" aria-label="Switch Language" title="Switch Language">EN/ES</button>
+            <div class="p-4 border-t border-gray-700">
+                 <button id="lang-toggle-mobile" class="btn-green w-full" aria-label="Switch Language" title="Switch Language">🌐 EN/ES</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-bg min-h-screen flex items-center justify-center" role="banner">
-        <div class="container px-6 text-center">
+    <header id="home" class="hero-bg pt-24">
+        <div class="container mx-auto px-6 py-20 text-center">
             <div class="glass-effect-hero max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight" data-translate-key="heroTitle">🌿 Nursery for Plants Near Me - Homestead, Florida</h1>
-                <p class="text-lg md:text-2xl mb-8 text-gray-300" data-translate-key="heroSubtitle">Looking for nursery for plants near me? You found it! Local plant nursery with tropical plants, trees & flowers. Visit our Homestead nursery today.</p>
-                <a href="#contact-section" class="btn-green text-xl px-8 py-4 inline-block hover:scale-105 transition-transform duration-300" data-translate-key="heroButton">Visit Our Nursery</a>
+                <img src="https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png" 
+                     alt="Machin Nursery Farms Homestead Florida - Logo del mejor vivero de plantas, árboles y flores tropicales" 
+                     class="mx-auto mb-6 h-36 md:h-48 rounded-xl shadow-lg" 
+                     width="192" 
+                     height="144"
+                     loading="eager"
+                     decoding="sync"
+                     fetchpriority="high">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-green-400" data-translate-key="heroTitle">Best Homestead Nurseries | #1 Plant Nursery in Homestead FL</h1>
+                <p class="text-lg md:text-2xl text-green-300 mb-8 leading-relaxed" data-translate-key="heroSubtitle"></p>
+                <a href="#contact-section" class="btn-green text-lg px-10 py-4 inline-block" data-translate-key="heroButton" aria-label="Contáctanos">Contact Us</a>
                 <p class="mt-8 text-green-200 font-semibold text-sm" data-translate-key="heroSeoPhrase"></p>
             </div>
         </div>
@@ -224,15 +953,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="glass-effect p-6">
                     <h2 class="text-2xl font-bold text-green-400 mb-3">Homestead Nurseries Leader</h2>
-                    <p class="text-gray-300">The premier plant nursery in Homestead FL, serving South Florida with quality tropical plants, trees, and expert gardening advice since 2004.</p>
+                    <p class="text-gray-300">As one of the top <strong>homestead nurseries</strong> in South Florida, we've been serving the community with premium plants and expert guidance since 2004.</p>
                 </div>
                 <div class="glass-effect p-6">
                     <h2 class="text-2xl font-bold text-green-400 mb-3">Best Nursery in Homestead</h2>
-                    <p class="text-gray-300">Recognized as the best nursery in Homestead for our extensive variety, competitive prices, and exceptional customer service for all your landscaping needs.</p>
+                    <p class="text-gray-300">Recognized as the <strong>best nursery in Homestead</strong>, our <strong>plant nursery in Homestead FL</strong> offers the largest selection of tropical plants in the region.</p>
                 </div>
                 <div class="glass-effect p-6">
-                    <h2 class="text-2xl font-bold text-green-400 mb-3">Local Plant Nursery Experts</h2>
-                    <p class="text-gray-300">Your trusted nursery in Homestead FL offering wholesale and retail plants, trees, and flowers perfectly adapted to South Florida's tropical climate.</p>
+                    <h2 class="text-2xl font-bold text-green-400 mb-3">Tree Nursery Homestead FL</h2>
+                    <p class="text-gray-300">Your premier <strong>tree nursery Homestead FL</strong> destination for ornamental trees, tropical palms, and native Florida species.</p>
                 </div>
             </div>
         </div>
@@ -294,7 +1023,7 @@
                     <!-- Service 2: Landscape Design -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect">
                         <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-paint-brush text-white text-2xl"></i>
+                            <i class="fas fa-pencil-ruler text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3 text-green-400" data-translate-key="service2Title"></h3>
                         <p class="text-gray-300 text-sm" data-translate-key="service2Desc"></p>
@@ -312,7 +1041,7 @@
                     <!-- Service 4: Plant Consultation -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect">
                         <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-leaf text-white text-2xl"></i>
+                            <i class="fas fa-user-check text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3 text-green-400" data-translate-key="service4Title"></h3>
                         <p class="text-gray-300 text-sm" data-translate-key="service4Desc"></p>
@@ -327,13 +1056,26 @@
                         <p class="text-gray-300 text-sm" data-translate-key="service5Desc"></p>
                     </div>
 
-                    <!-- Service 6: Garden Maintenance -->
+                    <!-- Service 6: Maintenance -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect">
                         <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-tools text-white text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3 text-green-400" data-translate-key="service6Title"></h3>
                         <p class="text-gray-300 text-sm" data-translate-key="service6Desc"></p>
+                    </div>
+                </div>
+
+                <!-- Service Areas -->
+                <div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold text-green-400 mb-6" data-translate-key="serviceAreasTitle"></h3>
+                    <p class="text-gray-300 mb-4" data-translate-key="serviceAreasDesc"></p>
+                    <div class="flex flex-wrap justify-center gap-4 text-sm">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full">Homestead, FL</span>
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full">Miami-Dade County</span>
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full">Broward County</span>
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full">Monroe County</span>
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full">South Florida</span>
                     </div>
                 </div>
             </div>
@@ -356,114 +1098,193 @@
                     <!-- Plant Item: Clusias -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
                         <img src="https://i.postimg.cc/L4WjqxT1/IMG-20250711-WA0004.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Clusia';" alt="Clusia para setos y privacidad en Machin Farms Homestead, planta tropical resistente" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Clusia</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="clusiaDesc">Ideales para cercas vivas y privacidad en nuestro centro de plantas de Homestead Florida, con hojas gruesas resistentes al clima tropical.</p>
-                        <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <h3 class="text-xl font-semibold mb-2">Clusias</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="clusiaDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Clusia" data-translate-key="aiCareButton" aria-label="Guía de cuidado Clusia"></button>
                     </div>
-
                     <!-- Plant Item: Cocoplum Red Tip -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/7ZsZfJdM/IMG-20240711-WA0001.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip con brotes rojizos en Machin Nursery Farms Homestead Florida, plantas tropicales coloridas" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Cocoplum Red Tip</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="cocoplumDesc">Perfectas plantas tropicales para color con brotes rojizos, disponibles en nuestro vivero de Homestead. Gran resistencia para jardines Florida.</p>
-                        <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <img src="https://i.postimg.cc/cJJQg2Vf/IMG-20250711-WA0008.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Cocoplum';" alt="Cocoplum Red Tip, planta tropical de brotes rojizos en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Cocoplum Red Tip</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="cocoplumDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Cocoplum Red Tip" data-translate-key="aiCareButton" aria-label="Guía de cuidado Cocoplum Red Tip"></button>
                     </div>
-
-                    <!-- Plant Item: Green Island Ficus -->
+                    <!-- Plant Item: Green Island -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/JzNm8xR7/IMG-20240711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus con follaje denso en Machin Farms Homestead, plantas de bajo mantenimiento" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Green Island Ficus</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="greenIslandDesc">Follaje denso y brillante, árboles de muy bajo mantenimiento ideales para bordes. Elección popular en nuestro centro de plantas Homestead Florida.</p>
-                        <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <img src="https://i.postimg.cc/xjLbC9cW/IMG-20250711-WA0011.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Green+Island';" alt="Green Island Ficus ornamental, bajo mantenimiento en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Green Island</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="greenIslandDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Green Island Ficus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Green Island"></button>
                     </div>
-
                     <!-- Plant Item: Podocarpus -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/jjvnhvdg/IMG-20240711-WA0003.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus elegante para privacidad en Machin Nursery Farms Homestead Florida, árboles versátiles" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Podocarpus</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="podocarpusDesc">Árboles elegantes y versátiles que crean pantallas de privacidad sofisticadas. Calidad premium de nuestro vivero en Homestead Florida.</p>
-                        <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <img src="https://i.postimg.cc/9fvrmkVm/podocarpus.png" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Podocarpus';" alt="Podocarpus para setos y privacidad, elegante y versátil en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Podocarpus</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="podocarpusDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Podocarpus" data-translate-key="aiCareButton" aria-label="Guía de cuidado Podocarpus"></button>
                     </div>
-
                     <!-- Plant Item: Croton Petra -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/rpp9JS0v/IMG-20240711-WA0005.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra vibrante con colores rojos y amarillos en Machin Farms Homestead, plantas tropicales coloridas" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Croton Petra</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="crotonPetraDesc">Plantas tropicales vibrantes con tonos explosivos de rojo, amarillo y flores naranjas. Especialidad de nuestro centro de plantas Homestead.</p>
-                        <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <img src="https://i.postimg.cc/8zZvSwjc/IMG-20250711-WA0002.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Petra';" alt="Croton Petra, hojas coloridas para jardines tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Croton Petra</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonPetraDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Croton Petra" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Petra"></button>
                     </div>
-
                     <!-- Plant Item: Croton Mamey -->
                     <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/8CrPNL6R/IMG-20240711-WA0007.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey con hojas retorcidas en Machin Nursery Farms Homestead Florida, plantas tropicales únicas" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Croton Mamey</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="crotonMameyDesc">Plantas tropicales exuberantes con hojas retorcidas, verdaderos árboles focales para paisajes Florida de nuestro centro de plantas Homestead.</p>
-                        <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                        <img src="https://i.postimg.cc/SQ9cMWt1/IMG-20250711-WA0000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Croton+Mamey';" alt="Croton Mamey, planta tropical exuberante y retorcida en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Croton Mamey</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="crotonMameyDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Croton Mamey" data-translate-key="aiCareButton" aria-label="Guía de cuidado Croton Mamey"></button>
                     </div>
-
                     <!-- Plant Item: Banana Croton -->
-                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col">
-                        <img src="https://i.postimg.cc/VvtnhPq8/IMG-20240711-WA0006.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton con hojas amarillas brillantes en Machin Farms Homestead Florida, plantas con flores" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
-                        <h3 class="text-xl font-semibold mb-2 text-green-400">Banana Croton</h3>
-                        <p class="text-gray-300 text-sm mb-4 flex-grow" data-translate-key="bananaCrotonDesc">Hojas alargadas con brillantes manchas amarillas. Hermosas plantas con flores disponibles en nuestro centro de plantas Homestead Florida.</p>
-                        <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton">✨ AI Care Guide</button>
+                    <div class="glass-effect rounded-xl p-6 text-center glow-effect flex flex-col sm:col-span-2 lg:col-span-1 lg:col-start-2">
+                        <img src="https://i.postimg.cc/NfLbSyN1/IMG-20250711-WA0013.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x200/22C55E/FFFFFF?text=Banana+Croton';" alt="Banana Croton, hojas amarillas tropicales en Machin Farms Homestead" class="mx-auto rounded-lg mb-4 h-48 w-full object-cover" width="300" height="192" loading="lazy" decoding="async">
+                        <h3 class="text-xl font-semibold mb-2">Banana Croton</h3>
+                        <p class="text-gray-400 flex-grow" data-translate-key="bananaCrotonDesc"></p>
+                        <button class="ai-care-btn" data-plant-name="Banana Croton" data-translate-key="aiCareButton" aria-label="Guía de cuidado Banana Croton"></button>
                     </div>
+                </div>
+                <!-- SEO: Enlace interno -->
+                <div class="text-center mt-8">
+                    <a href="#contact-section" class="text-green-400 underline" data-translate-key="productsContactLink" aria-label="Solicita información sobre plantas y precios"></a>
+                    <!-- Enlaces internos adicionales con palabras clave SEO -->
+                    <span class="mx-2 text-gray-400">|</span>
+                    <a href="#about" class="text-green-400 underline" aria-label="Conoce nuestro nursery en Homestead Florida">
+                        <span data-translate-key="seoLink1"></span>
+                    </a>
+                    <span class="mx-2 text-gray-400">|</span>
+                    <a href="#gallery" class="text-green-400 underline" aria-label="Ver galería de plantas, árboles y flores">
+                        <span data-translate-key="seoLink2"></span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="py-24 bg-gray-800">
+        <section id="gallery" class="py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-green-400 mb-4" data-translate-key="galleryTitle">Gallery</h2>
-                <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-translate-key="galleryDesc">Explore our beautiful tropical plants, trees and flowers collection.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 class="text-4xl font-bold text-center text-green-400 mb-4" data-translate-key="galleryTitle"></h2>
+                <p class="text-center text-gray-300 mb-16" data-translate-key="galleryDesc"></p>
+                
+                <!-- Gallery Grid with Lazy Loading -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 optimize-cls">
                     <!-- Gallery Item 1 -->
-                    <div class="glass-effect rounded-xl overflow-hidden glow-effect">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop&fm=webp" 
-                             onerror="this.onerror=null;this.src='https://placehold.co/400x224/22C55E/FFFFFF?text=Gallery+Image+1';" 
-                             alt="Tropical plants variety at Machin Nursery Farms Homestead Florida" 
-                             class="w-full h-56 object-cover gallery-img" 
-                             width="400" 
-                             height="224"
-                             loading="lazy" 
-                             decoding="async">
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Tropical plants nursery Homestead Florida - ornamental trees for sale" 
+                                 class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x192/4ade80/ffffff?text=Tropical+Plants'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
                         <div class="p-4">
                             <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant1Title">Tropical Plants</h3>
                             <p class="text-gray-300 text-sm" data-translate-key="galleryPlant1Desc">Wide variety of tropical plants perfect for Florida climate</p>
                         </div>
                     </div>
-
+                    
                     <!-- Gallery Item 2 -->
-                    <div class="glass-effect rounded-xl overflow-hidden glow-effect">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600&auto=format&fit=crop&fm=webp" 
-                             onerror="this.onerror=null;this.src='https://placehold.co/400x224/22C55E/FFFFFF?text=Gallery+Image+2';" 
-                             alt="Ornamental trees at Machin Nursery Farms landscaping projects Homestead Florida" 
-                             class="w-full h-56 object-cover gallery-img" 
-                             width="400" 
-                             height="224"
-                             loading="lazy" 
-                             decoding="async">
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Ornamental trees nursery Homestead Florida - buy flowers florida" 
+                                 class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x192/22c55e/ffffff?text=Trees'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
                         <div class="p-4">
                             <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant2Title">Ornamental Trees</h3>
                             <p class="text-gray-300 text-sm" data-translate-key="galleryPlant2Desc">Beautiful ornamental trees for landscaping projects</p>
                         </div>
                     </div>
-
+                    
                     <!-- Gallery Item 3 -->
-                    <div class="glass-effect rounded-xl overflow-hidden glow-effect">
-                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=600&auto=format&fit=crop&fm=webp" 
-                             onerror="this.onerror=null;this.src='https://placehold.co/400x224/22C55E/FFFFFF?text=Gallery+Image+3';" 
-                             alt="Colorful flowers collection at Machin Nursery Farms Homestead Florida garden center" 
-                             class="w-full h-56 object-cover gallery-img" 
-                             width="400" 
-                             height="224"
-                             loading="lazy" 
-                             decoding="async">
+                    <div class="glass-effect rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="lazy-container">
+                            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=400&h=300&fm=webp" 
+                                 alt="Colorful flowers nursery Machin Nursery Farms Florida - tropical plants for sale" 
+                                 class="w-full h-48 object-cover"
+                                 width="400"
+                                 height="192"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onload="this.parentElement.classList.remove('lazy-container')"
+                                 onerror="this.src='https://via.placeholder.com/400x192/f59e0b/ffffff?text=Flowers'; this.parentElement.classList.remove('lazy-container');">
+                        </div>
                         <div class="p-4">
                             <h3 class="text-lg font-semibold text-green-400 mb-2" data-translate-key="galleryPlant3Title">Colorful Flowers</h3>
                             <p class="text-gray-300 text-sm" data-translate-key="galleryPlant3Desc">Vibrant flowers to brighten up your garden</p>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Original Gallery Placeholder -->
+                <div class="flex justify-center">
+                    <div class="glass-effect rounded-xl p-8 text-center glow-effect flex flex-col w-full max-w-xl">
+                        <div class="bg-gray-700 rounded-lg mb-4 h-56 w-full flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-images fa-3x text-green-400 mb-2"></i>
+                                <p class="text-gray-400 text-lg font-semibold" data-translate-key="galleryMain"></p>
+                                <p class="text-gray-400 text-sm mt-2" data-translate-key="galleryUploadHint"></p>
+                            </div>
+                        </div>
+                        <!-- Future upload area for images/videos -->
+                        <div id="gallery-upload-area" class="mt-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                <img src="https://i.postimg.cc/1gqWZjp7/IMG-20250711-WA0001.jpg" alt="Nursery Homestead Florida - tropical plants for sale at Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/5YWs9Sg4/IMG-20250711-WA0003.jpg" alt="Ornamental trees homestead - buy flowers florida at local nursery" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/MM0dnf3y/IMG-20250711-WA0009.jpg" alt="Trees and flowers nursery homestead florida - tropical plants wholesale retail" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/Jtmp9KtK/IMG-20250711-WA0010.jpg" alt="Tropical palms nursery Homestead - ornamental plants Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/jCXMKN7T/IMG-20250711-WA0012.jpg" alt="Plant sales nursery homestead florida - personalized service tropical plants" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/562nt0BC/IMG-20250711-WA0014.jpg" alt="Ornamental plants nursery homestead - variety and quality tropical trees" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/9rg1whbN/IMG-20250711-WA0015.jpg" alt="Machin Nursery Farms Homestead Florida - tropical plants trees flowers for sale" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                                <img src="https://i.postimg.cc/bZGgQBFY/IMG-20250711-WA0020.jpg" alt="Local nursery homestead florida - plants and trees Machin Nursery Farms" class="gallery-img rounded-lg shadow-lg w-full object-cover h-56 cursor-pointer" width="400" height="224" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Section for Nursery for Plants Near Me -->
+        <section class="py-16 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="glass-effect rounded-xl p-8 md:p-12 text-center">
+                    <h2 class="text-3xl font-bold text-green-400 mb-6" data-translate-key="seoSectionTitle">Best Nursery for Plants Near Me in Homestead, Florida</h2>
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
+                        <div>
+                            <h3 class="text-xl font-semibold text-green-300 mb-4" data-translate-key="seoWhyChooseTitle">Why Choose Our Local Plant Nursery?</h3>
+                            <p class="text-gray-300 mb-4" data-translate-key="seoWhyChooseText1">
+                                When you search "nursery for plants near me," Machin Nursery Farms stands out as the premier local plant nursery in Homestead, Florida. Our neighborhood nursery has been serving South Florida families and landscapers for over 20 years with the highest quality tropical plants, trees, and flowers.
+                            </p>
+                            <p class="text-gray-300" data-translate-key="seoWhyChooseText2">
+                                As your trusted nursery for plants near me, we understand the unique growing conditions in South Florida. Our expert team carefully selects and cultivates plants that thrive in our tropical climate, ensuring your garden's success.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-green-300 mb-4" data-translate-key="seoServicesTitle">Local Nursery Services</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li data-translate-key="seoService1">✅ <strong>Plant Expert Advice:</strong> Get personalized recommendations from your local plant nursery professionals</li>
+                                <li data-translate-key="seoService2">✅ <strong>Same-Day Availability:</strong> Find the plants you need today at our nursery for plants near me</li>
+                                <li data-translate-key="seoService3">✅ <strong>Local Delivery:</strong> We bring our nursery for plants near me directly to your home</li>
+                                <li data-translate-key="seoService4">✅ <strong>Climate-Adapted Plants:</strong> All plants are perfectly suited for South Florida conditions</li>
+                                <li data-translate-key="seoService5">✅ <strong>Competitive Local Prices:</strong> Best value nursery for plants near me in Homestead</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="#contact" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300 inline-block" data-translate-key="seoVisitButton" aria-label="Visit your local nursery today">
+                            Visit Your Local Nursery Today
+                        </a>
                     </div>
                 </div>
             </div>
@@ -471,54 +1292,132 @@
 
         <!-- Contact Section -->
         <section id="contact-section" class="py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-green-400 mb-8" data-translate-key="contactTitle">Contact Us</h2>
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- Contact Info -->
-                        <div class="glass-effect p-8 rounded-xl">
-                            <h3 class="text-2xl font-semibold text-green-400 mb-6">Get in Touch</h3>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-envelope text-green-400 text-xl mr-4"></i>
-                                    <div>
-                                        <h4 class="font-semibold" data-translate-key="contactEmail">Email</h4>
-                                        <a href="mailto:machindavid2@gmail.com" class="text-gray-300 hover:text-green-400 transition-colors">machindavid2@gmail.com</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <i class="fas fa-phone text-green-400 text-xl mr-4"></i>
-                                    <div>
-                                        <h4 class="font-semibold" data-translate-key="contactPhones">Phone</h4>
-                                        <a href="tel:+17869926153" class="text-gray-300 hover:text-green-400 transition-colors">(786) 992-6153</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <i class="fas fa-map-marker-alt text-green-400 text-xl mr-4"></i>
-                                    <div>
-                                        <h4 class="font-semibold" data-translate-key="contactAddress">Address</h4>
-                                        <p class="text-gray-300">30760 SW 212 Ave<br>Homestead, FL 33030</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div id="contact" class="container mx-auto px-6 glass-effect rounded-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center text-green-400 mb-8" data-translate-key="contactTitle"></h2>
+                <div class="flex flex-wrap justify-around gap-8 text-center">
+                    <!-- Email -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-envelope fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactEmail">Email</h3>
+                        <a href="mailto:machindavid2@gmail.com" class="text-gray-300 hover:text-green-300" aria-label="Enviar correo a machindavid2@gmail.com">machindavid2@gmail.com</a>
+                        <a href="mailto:Machinfarms@gmail.com" class="text-gray-300 hover:text-green-300" aria-label="Enviar correo a Machinfarms@gmail.com">Machinfarms@gmail.com</a>
+                    </div>
+                    <!-- Phones -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-phone fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactPhones">Teléfonos</h3>
+                        <!-- Phone Number 1 -->
+                        <div class="flex items-center justify-center space-x-4 mt-2">
+                            <span class="text-gray-300">786-992-6153</span>
+                            <a href="tel:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Llamar al 786-992-6153">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="sms:7869926153" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Enviar SMS al 786-992-6153">
+                                <i class="fas fa-comment-sms" aria-hidden="true"></i>
+                            </a>
                         </div>
+                        <!-- Phone Number 2 -->
+                        <div class="flex items-center justify-center space-x-4 mt-2">
+                            <span class="text-gray-300">786-775-0816</span>
+                            <a href="tel:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Llamar al 786-775-0816">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="sms:7867750816" class="text-green-400 hover:text-green-300 icon-glow" aria-label="Enviar SMS al 786-775-0816">
+                                <i class="fas fa-comment-sms" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3 text-green-400 icon-glow transition-transform" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold" data-translate-key="contactAddress"></h3>
+                        <div class="text-gray-300 text-center">
+                            <p class="font-semibold">Machin Nursery Farms</p>
+                            <p>30760 SW 212 Ave</p>
+                            <p>Homestead, Florida 33030</p>
+                            <p class="text-sm text-gray-400 mt-1">Wholesale & Retail Nursery</p>
+                        </div>
+                        <p class="text-green-300 mt-2" data-translate-key="contactSeoPhrase"></p>
+                    </div>
+                </div>
+                <!-- Map -->
+                <div class="mt-12 rounded-lg overflow-hidden border-2 border-green-500/30">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.932847620202!2d-80.52857768498308!3d25.5404499837379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9e3a3e6f8e7f1%3A0x4f7b6d5b7d6f6e5e!2s30760%20SW%20212th%20Ave%2C%20Homestead%2C%20FL%2033030%2C%20USA!5e0!3m2!1sen!2s!4v1678886412345!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de Machin Farms en Google Maps"
+                        aria-label="Mapa de ubicación de Machin Farms Homestead">
+                    </iframe>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Map Placeholder -->
-                        <div class="glass-effect p-8 rounded-xl">
-                            <h3 class="text-2xl font-semibold text-green-400 mb-6">Visit Our Nursery</h3>
-                            <div class="bg-gray-700 rounded-lg h-64 flex items-center justify-center mb-4">
-                                <i class="fas fa-map text-green-400 text-4xl"></i>
-                            </div>
-                            <p class="text-gray-300 text-sm">Located in the heart of Homestead, Florida. Easy access for South Florida residents.</p>
-                        </div>
+        <!-- SEO Information Section -->
+        <section class="py-16 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Column 1: Nursery Homestead Florida -->
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-green-400 mb-4" data-translate-key="seoTitle1"></h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-translate-key="seoText1"></p>
+                    </div>
+                    <!-- Column 2: Plantas y Árboles -->
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-green-400 mb-4" data-translate-key="seoTitle2"></h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-translate-key="seoText2"></p>
+                    </div>
+                    <!-- Column 3: Flores Tropicales -->
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-green-400 mb-4" data-translate-key="seoTitle3"></h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-translate-key="seoText3"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="py-16 bg-gray-900">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h3 class="text-3xl font-bold text-center text-green-400 mb-12" data-translate-key="faqTitle"></h3>
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3" data-translate-key="faq1Q"></h4>
+                        <p class="text-gray-300" data-translate-key="faq1A"></p>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3" data-translate-key="faq2Q"></h4>
+                        <p class="text-gray-300" data-translate-key="faq2A"></p>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3" data-translate-key="faq3Q"></h4>
+                        <p class="text-gray-300" data-translate-key="faq3A"></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal para AI Care -->
+    <div id="ai-care-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-xl font-bold text-green-400"></h3>
+                <button id="modal-close-btn" class="text-gray-400 hover:text-white text-2xl" aria-label="Close modal" title="Close">&times;</button>
+            </div>
+            <div id="modal-body" class="text-gray-300">
+                <!-- Contenido del modal se carga aquí -->
+            </div>
+            <p id="modal-disclaimer" class="text-xs text-gray-500 mt-4 border-t border-gray-600 pt-2"></p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800" role="contentinfo">
@@ -582,13 +1481,13 @@
     <!-- Chat Widget -->
     <div id="chat-widget" class="chat-widget">
         <!-- Chat Header -->
-        <div class="chat-header">
+        <div id="chat-header" class="chat-header">
             <div class="chat-header-content">
                 <div class="chat-avatar">
-                    <i class="fas fa-seedling"></i>
+                    <i class="fas fa-leaf"></i>
                 </div>
                 <div class="chat-info">
-                    <h4 class="chat-title">Machin Nursery Farms</h4>
+                    <h4 class="chat-title">MACHIN NURSERY FARMS</h4>
                     <p class="chat-subtitle" data-translate-key="chatSubtitle">We'll reply as soon as we can</p>
                 </div>
                 <div class="chat-time" id="chat-time">11:16 AM</div>
@@ -611,55 +1510,31 @@
         <div class="chat-input-area">
             <form id="chat-form" class="chat-form">
                 <label for="chat-input" class="sr-only">Chat message input</label>
-                <input type="text" 
-                       id="chat-input" 
-                       class="chat-input" 
-                       placeholder="Write your message..." 
-                       data-translate-key="chatPlaceholder"
-                       required 
-                       maxlength="500"
-                       autocomplete="off">
-                <button type="submit" class="chat-send-btn" aria-label="Send message">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Write your message..." data-translate-key="chatPlaceholder" required>
+                <button type="submit" id="chat-send" class="chat-send-btn" aria-label="Send message">
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
         </div>
 
-        <!-- Contact Form Section (Initially Hidden) -->
+        <!-- Contact Form (appears after user message) -->
         <div id="contact-form-section" class="contact-form-section" style="display: none;">
             <div class="form-header">
                 <h5 data-translate-key="contactFormTitle">Let us help you!</h5>
                 <p data-translate-key="contactFormSubtitle">Please provide your contact information</p>
             </div>
-            <form id="chat-contact-form">
+            <form id="chat-contact-form" class="chat-contact-form">
                 <div class="form-group">
-                    <input type="text" 
-                           id="contact-name" 
-                           name="name" 
-                           class="form-input" 
-                           placeholder="Your name" 
-                           data-translate-key="namePlaceholder"
-                           required 
-                           maxlength="100">
+                    <label for="contact-name" class="sr-only">Your name</label>
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" data-translate-key="namePlaceholder" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" 
-                           id="contact-email" 
-                           name="email" 
-                           class="form-input" 
-                           placeholder="Your email" 
-                           data-translate-key="emailPlaceholder"
-                           required 
-                           maxlength="100">
+                    <label for="contact-email" class="sr-only">Your email address</label>
+                    <input type="email" id="contact-email" name="email" class="form-input" placeholder="Your email" data-translate-key="emailPlaceholder" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" 
-                           id="contact-phone" 
-                           name="phone" 
-                           class="form-input" 
-                           placeholder="Phone (optional)" 
-                           data-translate-key="phonePlaceholder"
-                           maxlength="20">
+                    <label for="contact-phone" class="sr-only">Your phone number</label>
+                    <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="Phone (optional)" data-translate-key="phonePlaceholder">
                 </div>
                 <button type="submit" class="form-submit-btn" data-translate-key="sendButton">Send Message</button>
             </form>
@@ -669,29 +1544,1316 @@
     <!-- Chat Toggle Button -->
     <button id="chat-toggle" class="chat-toggle-btn" aria-label="Open chat">
         <i class="fas fa-comments"></i>
-        <div id="chat-notification" class="chat-notification-dot hidden"></div>
+        <span class="chat-notification-dot" id="chat-notification"></span>
     </button>
 
-    <!-- AI Care Modal -->
-    <div id="ai-care-modal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="flex justify-between items-center mb-4">
-                <h3 id="modal-title" class="text-xl font-semibold text-green-400">Plant Care Tips</h3>
-                <button id="modal-close-btn" class="text-gray-400 hover:text-white transition-colors" aria-label="Close modal">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-            </div>
-            <div id="modal-body" class="text-gray-300">
-                <!-- Care content will be inserted here -->
-            </div>
-            <p id="modal-disclaimer" class="text-xs text-gray-500 mt-4 italic">
-                Disclaimer: Information is generated by AI and should be used as a guide.
-            </p>
-        </div>
-    </div>
+    <!-- Datos estructurados LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "name": "Machin Nursery Farms",
+      "alternateName": ["Nursery for Plants Near Me Homestead", "Local Plant Nursery Homestead Florida", "Plant Nursery Near Me"],
+      "description": "Local nursery for plants near me in Homestead, Florida. Your neighborhood plant nursery specializing in tropical plants, trees, and flowers. Best nursery for plants near me in South Florida.",
+      "image": "https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-786-992-6153",
+      "email": "machindavid2@gmail.com",
+      "url": "https://machinnurseryfarms.com/",
+      "openingHours": "Mo-Sa 08:00-17:00",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.54045,
+        "longitude": -80.52857
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.54045,
+          "longitude": -80.52857
+        },
+        "geoRadius": "50000"
+      },
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Plantas, Árboles y Flores",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Plantas Tropicales",
+              "description": "Variedad de plantas tropicales para jardín y paisajismo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Árboles Ornamentales",
+              "description": "Árboles nativos y tropicales para Florida"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Flores y Arbustos",
+              "description": "Flores coloridas y arbustos para decoración"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/machinfarms"
+      ]
+    }
+    </script>
 
-    <!-- External JavaScript Files -->
-    <script src="scripts/main.js"></script>
+    <!-- Additional Schema for Products in Both Languages -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Plantas, Árboles y Flores - Plants, Trees and Flowers",
+      "description": "Nursery Machin Farms Homestead Florida specializing in tropical plants, trees and flowers",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "Plantas Tropicales - Tropical Plants",
+          "description": "Plantas tropicales adaptadas al clima de Florida - Tropical plants adapted to Florida climate",
+          "category": "Plants",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Product", 
+          "position": 2,
+          "name": "Árboles Ornamentales - Ornamental Trees",
+          "description": "Árboles nativos y tropicales para paisajismo en Florida - Native and tropical trees for Florida landscaping",
+          "category": "Trees",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 3, 
+          "name": "Flores Tropicales - Tropical Flowers",
+          "description": "Flores coloridas resistentes al clima tropical de Homestead - Colorful flowers resistant to Homestead tropical climate",
+          "category": "Flowers",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock", 
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema for Nursery for Plants Near Me -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Machin Nursery Farms the best nursery for plants near me in Homestead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Machin Nursery Farms is the top-rated nursery for plants near me in Homestead, Florida. As your local plant nursery, we offer the largest selection of tropical plants, trees, and flowers in South Florida with over 20 years of experience."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "What makes this nursery for plants near me different from others?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our nursery for plants near me specializes in tropical plants perfectly adapted to Florida's climate. We're a local family-owned plant nursery in Homestead with expert knowledge, competitive prices, and personalized service you won't find at big box stores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this nursery for plants near me offer delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Yes! Our local plant nursery offers delivery throughout South Florida including Miami-Dade, Broward, and Monroe counties. When you search nursery for plants near me, we bring the nursery to you with our delivery service."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            es: {
+                navHome: "Inicio",
+                navAbout: "Nosotros", 
+                navServices: "Servicios",
+                navPlants: "Plantas",
+                navGallery: "Galería",
+                navContact: "Contacto",
+                langToggle: "English",
+                heroTitle: "🌿 Vivero de Plantas Cerca de Mí - Homestead, Florida",
+                heroSubtitle: "¿Buscas vivero de plantas cerca de mí? ¡Lo encontraste! Vivero local con plantas tropicales, árboles y flores. Visita nuestro vivero en Homestead hoy.",
+                heroButton: "Visitar Nuestro Vivero",
+                heroSeoPhrase: "El mejor vivero de plantas cerca de mí en Homestead, Florida. Vivero local con plantas tropicales, árboles y flores. ¡Tu vivero del barrio!",
+                aboutTitle: "Mejor Vivero de Plantas Cerca de Mí - Homestead Florida Vivero Local",
+                aboutText: "¿Buscando 'vivero de plantas cerca de mí'? Machin Nursery Farms es tu vivero local en Homestead, Florida. Como el mejor vivero de plantas cerca de mí, nos especializamos en plantas tropicales, árboles ornamentales y flores perfectas para jardines de South Florida. Nuestro vivero local sirve Miami-Dade, Broward y Monroe con más de 20 años como tu vivero de confianza del barrio. Cuando busques vivero de plantas cerca de mí, elige los expertos locales en Machin Nursery Farms.",
+                experienceTitle: "Tu Vivero de Plantas Cerca de Mí en Homestead Florida",
+                experienceList: "",
+                exp1: "📍 Vivero de plantas cerca de mí en Homestead, Florida",
+                exp2: "🌿 Vivero local del barrio con plantas tropicales y árboles nativos de Florida",
+                exp3: "🏪 Vivero local sirviendo clientes wholesale y retail",
+                exp4: "🚚 Entrega de plantas desde tu vivero de plantas cerca de mí en South Florida",
+                servicesTitle: "Servicios de Centro de Plantas en Homestead Florida",
+                servicesIntro: "Machin Farms ofrece servicios completos de centro de plantas en Homestead, Florida. Desde ventas wholesale y retail hasta diseño paisajístico e instalación de plantas, somos tu socio completo para proyectos de jardinería y paisajismo en South Florida.",
+                service1Title: "Ventas Wholesale & Retail",
+                service1Desc: "Plantas tropicales, árboles y flores al por mayor y al detalle. Precios competitivos para contractors, landscapers y particulares en Homestead Florida.",
+                service2Title: "Diseño Paisajístico",
+                service2Desc: "Diseño profesional de jardines y paisajes con plantas adaptadas al clima de Florida. Especialistas en proyectos residenciales y comerciales.",
+                service3Title: "Entrega e Instalación",
+                service3Desc: "Servicio completo de entrega e instalación de plantas, árboles y flores en toda el área de South Florida desde nuestro centro de plantas en Homestead.",
+                service4Title: "Consultoría de Plantas",
+                service4Desc: "Asesoramiento experto en selección de plantas tropicales, árboles nativos y flores para tu clima específico en Florida.",
+                service5Title: "Cultivo Personalizado",
+                service5Desc: "Cultivo de plantas especiales bajo pedido. Trabajamos contigo para cultivar las especies exactas que necesitas para tu proyecto.",
+                service6Title: "Mantenimiento de Jardines",
+                service6Desc: "Servicios de mantenimiento y cuidado continuo de plantas, árboles y jardines instalados por nuestro centro de plantas.",
+                serviceAreasTitle: "Áreas de Servicio en Florida",
+                serviceAreasDesc: "Prestamos servicios de centro de plantas, entrega e instalación en las siguientes áreas de South Florida:",
+                aboutSeePlants: "Ver nuestras plantas y árboles",
+                plantsTitle: "Plantas, Árboles y Flores en Nuestro Centro de Plantas",
+                productsSeoPhrase: "Descubre la mayor variedad de plantas tropicales, árboles y flores en nuestro centro de plantas de Homestead, Florida.",
+                seoContent1: "En nuestro centro de plantas de Homestead, Florida, encontrarás la mejor selección de plantas tropicales, árboles ornamentales y flores adaptadas al clima de Florida. Somos especialistas en especies nativas y tropicales.",
+                seoContent2: "Como centro de plantas líder en Homestead, ofrecemos plantas de alta calidad, árboles resistentes y flores coloridas. Nuestro vivero en Florida cuenta con décadas de experiencia cultivando las mejores especies.",
+                seoContent3: "Visita nuestro centro de plantas en Homestead, Florida y descubre por qué somos el vivero preferido para plantas, árboles y flores tropicales en toda la región de South Florida.",
+                productsContactLink: "Solicita información sobre plantas, árboles y precios",
+                galleryTitle: "Galería de Nuestro Centro de Plantas en Homestead Florida",
+                galleryDesc: "Explora imágenes de nuestro centro de plantas especializado en plantas, árboles y flores en Homestead, Florida.",
+                galleryMain: "Fotos del Centro de Plantas Machin Nursery Farms - Plantas y Árboles",
+                galleryUploadHint: "Pronto podrás subir tus fotos de plantas y árboles.",
+                contactTitle: "Visita Nuestro Centro de Plantas en Homestead, Florida",
+                contactEmail: "Email",
+                contactPhones: "Teléfonos",
+                contactAddress: "Dirección del Centro de Plantas",
+                contactSeoPhrase: "Centro de Plantas Machin Nursery Farms - Plantas, Árboles y Flores en Homestead, Florida",
+                seoTitle1: "Centro de Plantas Homestead Florida",
+                seoText1: "Somos el centro de plantas más reconocido de Homestead, Florida, especializado en plantas tropicales y árboles nativos. Nuestro vivero ofrece la mejor calidad y variedad en toda Florida.",
+                seoTitle2: "Plantas y Árboles Tropicales",
+                seoText2: "Cultivamos las mejores plantas tropicales y árboles ornamentales adaptados al clima de Florida. Desde plantas de interior hasta árboles grandes para paisajismo.",
+                seoTitle3: "Flores y Arbustos Florida",
+                seoText3: "Nuestra selección de flores coloridas y arbustos tropicales embellece cualquier jardín en Florida. Flores resistentes al clima tropical de Homestead.",
+                faqTitle: "Preguntas Frecuentes - Centro de Plantas Homestead Florida",
+                faq1Q: "¿Qué tipos de plantas, árboles y flores tienen en su centro de plantas de Homestead?",
+                faq1A: "En nuestro centro de plantas de Homestead, Florida, ofrecemos una amplia variedad de plantas tropicales, árboles ornamentales nativos, flores coloridas y arbustos resistentes al clima de Florida. Especializados en especies adaptadas al clima tropical de South Florida.",
+                faq2Q: "¿Por qué elegir Machin Farms como su centro de plantas en Homestead, Florida?",
+                faq2A: "Somos el centro de plantas más confiable de Homestead con más de 20 años de experiencia. Ofrecemos plantas de alta calidad, árboles saludables y flores vibrantes. Nuestro equipo experto te asesora para elegir las mejores especies para tu jardín en Florida.",
+                faq3Q: "¿Ofrecen servicios de entrega de plantas y árboles en Homestead, Florida?",
+                faq3A: "Sí, nuestro centro de plantas ofrece servicios de entrega de plantas, árboles y flores en Homestead y áreas cercanas de Florida. Contactanos para coordinar la entrega de tus plantas favoritas directamente a tu hogar o proyecto.",
+                seoLink1: "Nuestro Centro de Plantas Homestead",
+                seoLink2: "Plantas, Árboles y Flores",
+                footerRights: "© 2025 Machin Nursery Farms. Todos los derechos reservados. Centro de plantas especializado en plantas, árboles y flores en Homestead, Florida.",
+                footerCredit: "Diseño web y funciones IA por Gemini.",
+                footerAboutLink: "Sobre nuestro centro de plantas en Florida",
+                footerContactLink: "Contáctanos",
+                /* Plant Care Translations */
+                clusiaDesc: "Ideales para cercas vivas y privacidad en nuestro centro de plantas de Homestead Florida, con hojas gruesas resistentes al clima tropical.",
+                cocoplumDesc: "Perfectas plantas tropicales para color con brotes rojizos, disponibles en nuestro vivero de Homestead. Gran resistencia para jardines Florida.",
+                greenIslandDesc: "Follaje denso y brillante, árboles de muy bajo mantenimiento ideales para bordes. Elección popular en nuestro centro de plantas Homestead Florida.",
+                podocarpusDesc: "Árboles elegantes y versátiles que crean pantallas de privacidad sofisticadas. Calidad premium de nuestro vivero en Homestead Florida.",
+                crotonPetraDesc: "Plantas tropicales vibrantes con tonos explosivos de rojo, amarillo y flores naranjas. Especialidad de nuestro centro de plantas Homestead.",
+                crotonMameyDesc: "Plantas tropicales exuberantes con hojas retorcidas, verdaderos árboles focales para paisajes Florida de nuestro centro de plantas Homestead.",
+                bananaCrotonDesc: "Hojas alargadas con brillantes manchas amarillas. Hermosas plantas con flores disponibles en nuestro centro de plantas Homestead Florida.",
+                aiCareButton: "✨ Cuidado con IA",
+                modalCareTitle: "Consejos de Cuidado",
+                modalDisclaimer: "Descargo de responsabilidad: La información es generada por IA y debe ser usada como una guía.",
+                apiError: "Lo sentimos, no se pudieron obtener los consejos de cuidado en este momento. Por favor, inténtalo de nuevo más tarde.",
+                /* Gallery Translations */
+                galleryPlant1Title: "Plantas Tropicales",
+                galleryPlant1Desc: "Gran variedad de plantas tropicales perfectas para el clima de Florida",
+                galleryPlant2Title: "Árboles Ornamentales", 
+                galleryPlant2Desc: "Hermosos árboles ornamentales para proyectos de paisajismo",
+                galleryPlant3Title: "Flores Coloridas",
+                galleryPlant3Desc: "Flores vibrantes para alegrar tu jardín",
+                /* SEO Section Translations */
+                seoSectionTitle: "Mejor Vivero de Plantas Cerca de Mí en Homestead, Florida",
+                seoWhyChooseTitle: "¿Por Qué Elegir Nuestro Vivero Local?",
+                seoWhyChooseText1: "Cuando buscas 'vivero de plantas cerca de mí,' Machin Nursery Farms se destaca como el vivero local premier en Homestead, Florida. Nuestro vivero del barrio ha estado sirviendo a familias de South Florida y paisajistas por más de 20 años con plantas tropicales, árboles y flores de la más alta calidad.",
+                seoWhyChooseText2: "Como tu vivero de plantas cerca de mí de confianza, entendemos las condiciones únicas de crecimiento en South Florida. Nuestro equipo experto selecciona y cultiva cuidadosamente plantas que prosperan en nuestro clima tropical, asegurando el éxito de tu jardín.",
+                seoServicesTitle: "Servicios de Vivero Local",
+                seoService1: "✅ **Consejos de Expertos en Plantas:** Obtén recomendaciones personalizadas de los profesionales de tu vivero local",
+                seoService2: "✅ **Disponibilidad el Mismo Día:** Encuentra las plantas que necesitas hoy en nuestro vivero de plantas cerca de mí",
+                seoService3: "✅ **Entrega Local:** Llevamos nuestro vivero de plantas cerca de mí directamente a tu hogar",
+                seoService4: "✅ **Plantas Adaptadas al Clima:** Todas las plantas son perfectas para las condiciones de South Florida",
+                seoService5: "✅ **Precios Locales Competitivos:** El mejor valor vivero de plantas cerca de mí en Homestead",
+                seoVisitButton: "Visita Tu Vivero Local Hoy"
+            },
+            en: {
+                navHome: "Home",
+                navAbout: "About Us",
+                navServices: "Services", 
+                navPlants: "Plants",
+                navGallery: "Gallery",
+                navContact: "Contact",
+                langToggle: "Español",
+                heroTitle: "🌿 Nursery for Plants Near Me - Homestead, Florida",
+                heroSubtitle: "Looking for nursery for plants near me? You found it! Local plant nursery with tropical plants, trees & flowers. Visit our Homestead nursery today.",
+                heroButton: "Visit Our Nursery",
+                heroSeoPhrase: "The best nursery for plants near me in Homestead, Florida. Local plant nursery with tropical plants, trees, and flowers. Your neighborhood nursery!",
+                aboutTitle: "Best Nursery for Plants Near Me - Homestead Florida Local Plant Nursery",
+                aboutText: "Searching for 'nursery for plants near me'? Machin Nursery Farms is your local plant nursery in Homestead, Florida. As the top nursery for plants near me, we specialize in tropical plants, ornamental trees, and beautiful flowers perfect for South Florida gardens. Our local nursery serves Miami-Dade, Broward, and Monroe counties with over 20 years of experience as your trusted neighborhood plant nursery. When you search nursery for plants near me, choose the local experts at Machin Nursery Farms.",
+                experienceTitle: "Your Local Nursery for Plants Near Me in Homestead Florida",
+                experienceList: "",
+                exp1: "📍 Local nursery for plants near me in Homestead, Florida",
+                exp2: "🌿 Neighborhood plant nursery with tropical plants and native Florida trees",
+                exp3: "🏪 Local nursery serving wholesale and retail customers",
+                exp4: "🚚 Plant delivery from your nursery for plants near me in South Florida",
+                servicesTitle: "Local Nursery for Plants Near Me - Homestead Florida Services",
+                servicesIntro: "When you search 'nursery for plants near me,' Machin Farms is your local answer in Homestead, Florida. Our neighborhood plant nursery offers complete services from plant sales to landscape design. As your trusted nursery for plants near me, we provide everything you need for your gardening projects in South Florida.",
+                service1Title: "Local Plant Nursery Sales",
+                service1Desc: "As your nursery for plants near me, we offer tropical plants, trees and flowers at wholesale and retail prices. Local nursery serving contractors, landscapers and homeowners in Homestead Florida.",
+                service2Title: "Landscape Design",
+                service2Desc: "Professional garden and landscape design with plants adapted to Florida climate. Specialists in residential and commercial projects.",
+                service3Title: "Delivery & Installation", 
+                service3Desc: "Complete delivery and installation service for plants, trees and flowers throughout South Florida area from our Homestead nursery.",
+                service4Title: "Plant Consultation",
+                service4Desc: "Expert advice on selection of tropical plants, native trees and flowers for your specific climate in Florida.",
+                service5Title: "Custom Growing",
+                service5Desc: "Special order plant growing. We work with you to grow the exact species you need for your project.",
+                service6Title: "Garden Maintenance",
+                service6Desc: "Maintenance and ongoing care services for plants, trees and gardens installed by our nursery.",
+                serviceAreasTitle: "Service Areas in Florida",
+                serviceAreasDesc: "We provide nursery, delivery and installation services in the following South Florida areas:",
+                aboutSeePlants: "See our plants and trees",
+                plantsTitle: "Plants, Trees, and Flowers at Our Nursery",
+                productsSeoPhrase: "Discover the largest variety of tropical plants, trees, and flowers at our Homestead, Florida nursery.",
+                seoContent1: "At our Homestead, Florida nursery, you'll find the best selection of tropical plants, ornamental trees, and flowers adapted to Florida's climate. We specialize in native and tropical species.",
+                seoContent2: "As the leading nursery in Homestead, we offer high-quality plants, hardy trees, and colorful flowers. Our Florida nursery has decades of experience growing the finest species.",
+                seoContent3: "Visit our nursery in Homestead, Florida and discover why we're the preferred nursery for tropical plants, trees, and flowers throughout South Florida.",
+                productsContactLink: "Request information about plants, trees, and prices",
+                galleryTitle: "Tropical Plants Gallery - Homestead Florida Garden Center",
+                galleryDesc: "Explore images of our specialized plant center for tropical plants, trees and flowers in Homestead, Florida.",
+                galleryMain: "Photos of Machin Nursery Farms - Plants and Trees",
+                galleryUploadHint: "Soon you'll be able to upload your plant and tree photos.",
+                contactTitle: "Visit Our Plant Center in Homestead, Florida",
+                contactEmail: "Email",
+                contactPhones: "Phones",
+                contactAddress: "Nursery Address",
+                contactSeoPhrase: "Machin Nursery Farms - Tropical Plants, Trees & Flowers in Homestead, Florida",
+                seoTitle1: "Plant Center Homestead Florida",
+                seoText1: "We are the most recognized plant center in Homestead, Florida, specializing in tropical plants and native trees. Our garden center offers the best quality and variety in all of Florida.",
+                seoTitle2: "Tropical Plants and Trees",
+                seoText2: "We grow the finest tropical plants and ornamental trees adapted to Florida's climate. From indoor plants to large trees for landscaping.",
+                seoTitle3: "Florida Flowers and Shrubs",
+                seoText3: "Our selection of colorful flowers and tropical shrubs beautifies any garden in Florida. Flowers resistant to Homestead's tropical climate.",
+                faqTitle: "Frequently Asked Questions - Plant Center Homestead Florida",
+                faq1Q: "What types of plants, trees, and flowers do you have at your Homestead plant center?",
+                faq1A: "At our Homestead, Florida plant center, we offer a wide variety of tropical plants, native ornamental trees, colorful flowers, and shrubs resistant to Florida's climate. We specialize in species adapted to South Florida's tropical climate.",
+                faq2Q: "Why choose Machin Farms as your plant center in Homestead, Florida?",
+                faq2A: "We are the most trusted garden center in Homestead with over 20 years of experience. We offer high-quality tropical plants, healthy trees, and vibrant flowers. Our expert team advises you in choosing the best species for your Florida garden.",
+                faq3Q: "Do you offer plant and tree delivery services in Homestead, Florida?",
+                faq3A: "Yes, our plant center offers delivery services for tropical plants, trees, and flowers in Homestead and nearby Florida areas. Contact us to coordinate delivery of your favorite plants directly to your home or project.",
+                seoLink1: "Our Homestead Nursery",
+                seoLink2: "Plants, Trees & Flowers",
+                footerRights: "© 2025 Machin Nursery Farms. All rights reserved. Plant center specializing in tropical plants, trees & flowers in Homestead, Florida.",
+                footerCredit: "Web design and AI features by Gemini.",
+                footerAboutLink: "About our plant center in Florida",
+                footerContactLink: "Contact Us",
+                /* Plant Care Translations */
+                clusiaDesc: "Ideal for hedges and privacy screens at our Homestead Florida nursery, with thick sturdy leaves perfect for Florida climate.",
+                cocoplumDesc: "Perfect tropical plants for color with reddish new growth, available at our Homestead nursery. Great resilience for Florida gardens.",
+                greenIslandDesc: "Dense shiny foliage, very low maintenance trees ideal for borders. Popular choice at our Homestead Florida nursery.",
+                podocarpusDesc: "Elegant versatile trees creating slim sophisticated privacy screens. Premium quality from our Florida nursery in Homestead.",
+                crotonPetraDesc: "Vibrant tropical plants with explosive shades of red, yellow, and orange flowers. Specialty at our Homestead nursery.",
+                crotonMameyDesc: "Lush tropical plants with twisted leaves, true focal point trees for Florida landscapes from our Homestead nursery.",
+                bananaCrotonDesc: "Elongated thin leaves with bright yellow spots. Beautiful flowering plants available at our Homestead Florida nursery.",
+                aiCareButton: "✨ AI Care Guide",
+                modalCareTitle: "Care Tips",
+                modalDisclaimer: "Disclaimer: Information is generated by AI and should be used as a guide.",
+                apiError: "Sorry, we could not get the care tips at this moment. Please try again later.",
+                /* Gallery Translations */
+                galleryPlant1Title: "Tropical Plants",
+                galleryPlant1Desc: "Wide variety of tropical plants perfect for Florida climate",
+                galleryPlant2Title: "Ornamental Trees", 
+                galleryPlant2Desc: "Beautiful ornamental trees for landscaping projects",
+                galleryPlant3Title: "Colorful Flowers",
+                galleryPlant3Desc: "Vibrant flowers to brighten up your garden",
+                /* SEO Section Translations */
+                seoSectionTitle: "Best Nursery for Plants Near Me in Homestead, Florida",
+                seoWhyChooseTitle: "Why Choose Our Local Plant Nursery?",
+                seoWhyChooseText1: "When you search 'nursery for plants near me,' Machin Nursery Farms stands out as the premier local plant nursery in Homestead, Florida. Our neighborhood nursery has been serving South Florida families and landscapers for over 20 years with the highest quality tropical plants, trees, and flowers.",
+                seoWhyChooseText2: "As your trusted nursery for plants near me, we understand the unique growing conditions in South Florida. Our expert team carefully selects and cultivates plants that thrive in our tropical climate, ensuring your garden's success.",
+                seoServicesTitle: "Local Nursery Services",
+                seoService1: "✅ **Plant Expert Advice:** Get personalized recommendations from your local plant nursery professionals",
+                seoService2: "✅ **Same-Day Availability:** Find the plants you need today at our nursery for plants near me",
+                seoService3: "✅ **Local Delivery:** We bring our nursery for plants near me directly to your home",
+                seoService4: "✅ **Climate-Adapted Plants:** All plants are perfectly suited for South Florida conditions",
+                seoService5: "✅ **Competitive Local Prices:** Best value nursery for plants near me in Homestead",
+                seoVisitButton: "Visit Your Local Nursery Today"
+            }
+        };
+
+        let currentLang = 'en'; // Start with English as default language
+
+        // --- Translation Function ---
+        function translatePage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.title = lang === 'es' ? 
+                'Vivero Machin Farms - Homestead FL | Plantas Tropicales' : 
+                'Nursery Plants Near Me | Machin Farms Homestead FL';
+
+            // Update meta description dynamically
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.content = lang === 'es' ? 
+                    'Vivero Machin Farms en Homestead FL. Plantas, árboles y flores tropicales. Más de 20 años de experiencia. ¡Visítanos hoy!' :
+                    'Best nursery plants near me in Homestead FL. Local plant nursery with tropical plants, trees & flowers. Visit Machin Nursery today!';
+            }
+
+
+            document.querySelectorAll('[data-translate-key]').forEach(el => {
+                const key = el.dataset.translateKey;
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+            
+            // Update language toggle buttons
+            document.getElementById('lang-toggle').innerText = translations[lang].langToggle;
+            document.getElementById('lang-toggle-mobile').innerText = translations[lang].langToggle;
+        }
+
+        // --- Language Toggle Logic ---
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langToggleMobileBtn = document.getElementById('lang-toggle-mobile');
+
+        langToggleBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            translatePage(newLang);
+        });
+        langToggleMobileBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            translatePage(newLang);
+        });
+        
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.getElementsByTagName('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        for (let link of navLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // --- AI Care Modal Logic ---
+        const modal = document.getElementById('ai-care-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalDisclaimer = document.getElementById('modal-disclaimer');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const careButtons = document.querySelectorAll('.ai-care-btn');
+
+        const openModal = () => modal.classList.add('visible');
+        const closeModal = () => modal.classList.remove('visible');
+
+        careButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const plantName = button.dataset.plantName;
+                getPlantCareInfo(plantName);
+            });
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        /**
+         * Fetches plant care info using a free API alternative.
+         * @param {string} plantName The name of the plant.
+         */
+        async function getPlantCareInfo(plantName) {
+            modalTitle.innerText = `${translations[currentLang].modalCareTitle} for ${plantName}`;
+            modalDisclaimer.innerText = translations[currentLang].modalDisclaimer;
+            modalBody.innerHTML = '<div class="spinner"></div>';
+            openModal();
+
+            // Use a free plant care database or generate static content
+            const careInfo = careDatabase[plantName]?.[currentLang] || defaultCare[currentLang];
+            
+            // Simulate loading delay for better UX
+            setTimeout(() => {
+                modalBody.innerHTML = careInfo;
+            }, 1000);
+        }
+
+        // --- Plant Care Database ---
+        const careDatabase = {
+            'Clusia': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno a sombra parcial</li>
+                        <li>• Tolera muy bien el sol directo</li>
+                        <li>• Mínimo 4-6 horas de luz solar</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Riego moderado, permite que seque entre riegos</li>
+                        <li>• Más frecuente en verano, reducir en invierno</li>
+                        <li>• Evitar encharcamiento</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Tolera alta humedad ambiental</li>
+                        <li>• Perfecta para clima de Florida</li>
+                        <li>• No requiere humedad adicional</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Hojas amarillas: exceso de agua</li>
+                        <li>• Crecimiento lento: falta de luz</li>
+                        <li>• Resistente a plagas y enfermedades</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun to partial shade</li>
+                        <li>• Tolerates direct sunlight very well</li>
+                        <li>• Minimum 4-6 hours of sunlight</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Moderate watering, allow to dry between waterings</li>
+                        <li>• More frequent in summer, reduce in winter</li>
+                        <li>• Avoid waterlogging</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Tolerates high ambient humidity</li>
+                        <li>• Perfect for Florida climate</li>
+                        <li>• No additional humidity required</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Yellow leaves: overwatering</li>
+                        <li>• Slow growth: insufficient light</li>
+                        <li>• Resistant to pests and diseases</li>
+                    </ul>
+                `
+            },
+            'Cocoplum Red Tip': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno para mejor coloración roja</li>
+                        <li>• Tolera sombra parcial</li>
+                        <li>• 6+ horas de sol directo ideal</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Tolerante a sequía una vez establecida</li>
+                        <li>• Riego regular durante establecimiento</li>
+                        <li>• Evitar suelo constantemente húmedo</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Muy tolerante a humedad alta</li>
+                        <li>• Resistente a vientos salinos</li>
+                        <li>• Ideal para zonas costeras</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Pérdida de color rojo: falta de sol</li>
+                        <li>• Muy resistente a plagas</li>
+                        <li>• Poda regular para mantener forma</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun for best red coloration</li>
+                        <li>• Tolerates partial shade</li>
+                        <li>• 6+ hours of direct sun ideal</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Drought tolerant once established</li>
+                        <li>• Regular watering during establishment</li>
+                        <li>• Avoid constantly moist soil</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Very tolerant of high humidity</li>
+                        <li>• Resistant to salt winds</li>
+                        <li>• Ideal for coastal areas</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Loss of red color: insufficient sun</li>
+                        <li>• Very resistant to pests</li>
+                        <li>• Regular pruning to maintain shape</li>
+                    </ul>
+                `
+            },
+            'Podocarpus': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno a sombra parcial</li>
+                        <li>• Prefiere ubicaciones protegidas del viento</li>
+                        <li>• Tolera condiciones de poca luz</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Riego regular y consistente</li>
+                        <li>• Mantener suelo ligeramente húmedo</li>
+                        <li>• Evitar períodos secos prolongados</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Prefiere humedad moderada a alta</li>
+                        <li>• Rociar follaje en climas secos</li>
+                        <li>• Buena para climas húmedos tropicales</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Amarillamiento: riego irregular</li>
+                        <li>• Poda ligera para mantener forma</li>
+                        <li>• Susceptible a hongos en suelos mal drenados</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun to partial shade</li>
+                        <li>• Prefers wind-protected locations</li>
+                        <li>• Tolerates low light conditions</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Regular and consistent watering</li>
+                        <li>• Keep soil slightly moist</li>
+                        <li>• Avoid prolonged dry periods</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Prefers moderate to high humidity</li>
+                        <li>• Mist foliage in dry climates</li>
+                        <li>• Good for humid tropical climates</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Yellowing: irregular watering</li>
+                        <li>• Light pruning to maintain shape</li>
+                        <li>• Susceptible to fungi in poorly drained soils</li>
+                    </ul>
+                `
+            },
+            'Croton Petra': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno para colores vibrantes</li>
+                        <li>• Mínimo 6 horas de luz directa</li>
+                        <li>• La sombra reduce la coloración</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Mantener suelo húmedo pero no encharcado</li>
+                        <li>• Regar cuando superficie esté seca</li>
+                        <li>• Reducir en invierno</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Requiere alta humedad (60% o más)</li>
+                        <li>• Rociar hojas regularmente</li>
+                        <li>• Usar bandeja con guijarros y agua</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Caída de hojas: cambio de ambiente</li>
+                        <li>• Ácaros rojos: aumentar humedad</li>
+                        <li>• Pérdida de color: falta de luz</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun for vibrant colors</li>
+                        <li>• Minimum 6 hours of direct light</li>
+                        <li>• Shade reduces coloration</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Keep soil moist but not waterlogged</li>
+                        <li>• Water when surface is dry</li>
+                        <li>• Reduce in winter</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Requires high humidity (60% or more)</li>
+                        <li>• Mist leaves regularly</li>
+                        <li>• Use pebble tray with water</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Leaf drop: environmental changes</li>
+                        <li>• Spider mites: increase humidity</li>
+                        <li>• Color loss: insufficient light</li>
+                    </ul>
+                `
+            },
+            'Croton Mamey': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno para mantener forma retorcida</li>
+                        <li>• Tolera sombra parcial</li>
+                        <li>• Luz intensa mejora los colores</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Riego regular durante crecimiento activo</li>
+                        <li>• Permitir ligero secado entre riegos</li>
+                        <li>• Drenaje excelente esencial</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Alta humedad ambiental preferida</li>
+                        <li>• Rociar alrededor de la planta</li>
+                        <li>• Evitar rociar directamente las hojas</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Hojas planas: falta de luz</li>
+                        <li>• Cochinillas: revisar pliegues de hojas</li>
+                        <li>• Fertilizar mensualmente en verano</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun to maintain twisted shape</li>
+                        <li>• Tolerates partial shade</li>
+                        <li>• Bright light enhances colors</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Regular watering during active growth</li>
+                        <li>• Allow slight drying between waterings</li>
+                        <li>• Excellent drainage essential</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• High ambient humidity preferred</li>
+                        <li>• Mist around the plant</li>
+                        <li>• Avoid misting leaves directly</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Flat leaves: insufficient light</li>
+                        <li>• Scale insects: check leaf folds</li>
+                        <li>• Fertilize monthly in summer</li>
+                    </ul>
+                `
+            },
+            'Banana Croton': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno para colores amarillos brillantes</li>
+                        <li>• Mínimo 4-6 horas de luz directa</li>
+                        <li>• Sombra parcial en climas muy calurosos</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Suelo consistentemente húmedo</li>
+                        <li>• No permitir que se seque completamente</li>
+                        <li>• Regar más frecuentemente en verano</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Humedad alta esencial (70% o más)</li>
+                        <li>• Rociar diariamente en climas secos</li>
+                        <li>• Colocar cerca de otras plantas</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Hojas que se rizan: baja humedad</li>
+                        <li>• Puntas marrones: aire muy seco</li>
+                        <li>• Caída de hojas: estrés por riego</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun for bright yellow colors</li>
+                        <li>• Minimum 4-6 hours of direct light</li>
+                        <li>• Partial shade in very hot climates</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Consistently moist soil</li>
+                        <li>• Don't allow to dry completely</li>
+                        <li>• Water more frequently in summer</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• High humidity essential (70% or more)</li>
+                        <li>• Mist daily in dry climates</li>
+                        <li>• Place near other plants</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Curling leaves: low humidity</li>
+                        <li>• Brown tips: very dry air</li>
+                        <li>• Leaf drop: watering stress</li>
+                    </ul>
+                `
+            },
+            'Green Island Ficus': {
+                es: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Sol pleno a sombra parcial</li>
+                        <li>• Muy adaptable a diferentes condiciones de luz</li>
+                        <li>• Tolera luz interior brillante</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Riego moderado, tolerante a sequía</li>
+                        <li>• Permitir secado parcial entre riegos</li>
+                        <li>• Evitar encharcamiento</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Tolera humedad baja a alta</li>
+                        <li>• Muy resistente a condiciones secas</li>
+                        <li>• No requiere humedad adicional</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                    <ul class="text-gray-300">
+                        <li>• Muy resistente a plagas</li>
+                        <li>• Poda regular para mantener forma</li>
+                        <li>• Crecimiento rápido, controlar tamaño</li>
+                    </ul>
+                `,
+                en: `
+                    <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Full sun to partial shade</li>
+                        <li>• Very adaptable to different light conditions</li>
+                        <li>• Tolerates bright indoor light</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Moderate watering, drought tolerant</li>
+                        <li>• Allow partial drying between waterings</li>
+                        <li>• Avoid waterlogging</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                    <ul class="mb-4 text-gray-300">
+                        <li>• Tolerates low to high humidity</li>
+                        <li>• Very resistant to dry conditions</li>
+                        <li>• No additional humidity required</li>
+                    </ul>
+                    
+                    <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                    <ul class="text-gray-300">
+                        <li>• Very resistant to pests</li>
+                        <li>• Regular pruning to maintain shape</li>
+                        <li>• Fast growth, control size</li>
+                    </ul>
+                `
+            }
+        };
+
+        const defaultCare = {
+            es: `
+                <h4 class="text-green-400 font-semibold mb-2">💡 Luz</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• La mayoría de plantas tropicales prefieren luz brillante indirecta</li>
+                    <li>• Evitar sol directo intenso del mediodía</li>
+                    <li>• Observar la planta para ajustar ubicación</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">💧 Riego</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• Regar cuando la superficie del suelo esté seca</li>
+                    <li>• Drenar bien el exceso de agua</li>
+                    <li>• Reducir frecuencia en invierno</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">🌫️ Humedad</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• Mantener humedad ambiental moderada</li>
+                    <li>• Agrupar plantas para aumentar humedad</li>
+                    <li>• Usar humidificador si es necesario</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">⚠️ Problemas Comunes</h4>
+                <ul class="text-gray-300">
+                    <li>• Hojas amarillas: exceso o falta de agua</li>
+                    <li>• Revisar plagas regularmente</li>
+                    <li>• Fertilizar durante temporada de crecimiento</li>
+                </ul>
+            `,
+            en: `
+                <h4 class="text-green-400 font-semibold mb-2">💡 Light</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• Most tropical plants prefer bright indirect light</li>
+                    <li>• Avoid intense midday direct sun</li>
+                    <li>• Observe plant to adjust location</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">💧 Watering</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• Water when soil surface is dry</li>
+                    <li>• Drain excess water well</li>
+                    <li>• Reduce frequency in winter</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">🌫️ Humidity</h4>
+                <ul class="mb-4 text-gray-300">
+                    <li>• Maintain moderate ambient humidity</li>
+                    <li>• Group plants to increase humidity</li>
+                    <li>• Use humidifier if necessary</li>
+                </ul>
+                
+                <h4 class="text-green-400 font-semibold mb-2">⚠️ Common Issues</h4>
+                <ul class="text-gray-300">
+                    <li>• Yellow leaves: over or under watering</li>
+                    <li>• Check for pests regularly</li>
+                    <li>• Fertilize during growing season</li>
+                </ul>
+            `
+        };
+
+        // --- Performance & SEO Optimizations ---
+        
+        // WebP Support Detection for optimal image loading
+        // WebP support detection and optimization
+        function supportsWebP() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1; canvas.height = 1;
+            return canvas.toDataURL('image/webp').indexOf('image/webp') === 5;
+        }
+        if (!supportsWebP()) {
+            document.documentElement.classList.add('no-webp');
+        }
+        function initPerformanceOptimizations() {
+            requestAnimationFrame(() => {
+                const imageUpdates = [];
+                const images = document.querySelectorAll('img:not([width]):not([height])');
+                images.forEach(img => {
+                    const update = { element: img };
+                    if (img.classList.contains('gallery-img')) {
+                        update.width = '400';
+                        update.height = '224';
+                    } else if (img.classList.contains('h-48')) {
+                        update.width = '300';
+                        update.height = '192';
+                    }
+                    if (update.width) imageUpdates.push(update);
+                });
+                
+                // Batch write operations
+                imageUpdates.forEach(update => {
+                    update.element.setAttribute('width', update.width);
+                    update.element.setAttribute('height', update.height);
+                    update.element.setAttribute('loading', 'lazy');
+                    update.element.setAttribute('decoding', 'async');
+                });
+                
+                // Preload critical images above the fold
+                const criticalImages = [
+                    'https://i.postimg.cc/w70f22QC/Machin-Farms-LLC-3.png',
+                    'https://images.unsplash.com/photo-1520454224216-5cd2b9084153?q=80&w=1200&auto=format&fit=crop&fm=webp'
+                ];
+                
+                criticalImages.forEach(src => {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.as = 'image';
+                    link.href = src;
+                    document.head.appendChild(link);
+                });
+            });
+        }
+
+        // --- Initialize Page ---
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                translatePage('en'); // Set initial language to English (default)
+                initPerformanceOptimizations(); // Initialize SEO optimizations
+                initChatWidget(); // Initialize chat widget
+                
+                // Global error handling to prevent console errors
+                window.addEventListener('error', function(e) {
+                    console.warn('Non-critical error handled:', e.message);
+                    return true; // Prevent default error handling
+                });
+                
+                window.addEventListener('unhandledrejection', function(e) {
+                    console.warn('Non-critical promise rejection handled:', e.reason);
+                    e.preventDefault(); // Prevent default handling
+                });
+                
+            } catch (error) {
+                console.warn('Page initialization error handled:', error.message);
+            }
+        });
+
+        // --- CHAT WIDGET FUNCTIONALITY ---
+        let chatStep = 'initial'; // 'initial', 'contact', 'sending'
+        let userMessage = '';
+        let chatAutoOpened = false;
+
+        function initChatWidget() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            const chatClose = document.getElementById('chat-close');
+            const chatForm = document.getElementById('chat-form');
+            const chatInput = document.getElementById('chat-input');
+            const contactForm = document.getElementById('chat-contact-form');
+            const chatNotification = document.getElementById('chat-notification');
+
+            // Update time in chat header
+            updateChatTime();
+            setInterval(updateChatTime, 60000); // Update every minute
+
+            // Auto-open chat after 4 seconds
+            setTimeout(() => {
+                if (!chatAutoOpened) {
+                    openChat();
+                    chatAutoOpened = true;
+                    // Show notification dot
+                    chatNotification.classList.remove('hidden');
+                }
+            }, 4000);
+
+            // Chat toggle functionality
+            chatToggle.addEventListener('click', () => {
+                if (chatWidget.classList.contains('active')) {
+                    closeChat();
+                } else {
+                    openChat();
+                }
+                chatNotification.classList.add('hidden');
+            });
+
+            // Close chat
+            chatClose.addEventListener('click', () => {
+                closeChat();
+            });
+
+            // Chat form submission
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                handleChatMessage();
+            });
+
+            // Contact form submission
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                handleContactFormSubmission();
+            });
+
+            // Add translations for chat
+            addChatTranslations();
+        }
+
+        function updateChatTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('chat-time').textContent = timeString;
+        }
+
+        function openChat() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            
+            chatWidget.classList.add('active');
+            chatWidget.classList.remove('minimized');
+            chatToggle.innerHTML = '<i class="fas fa-times"></i>';
+            
+            // Focus input when chat opens
+            setTimeout(() => {
+                document.getElementById('chat-input').focus();
+            }, 300);
+        }
+
+        function closeChat() {
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle');
+            
+            chatWidget.classList.remove('active');
+            chatToggle.innerHTML = '<i class="fas fa-comments"></i>';
+        }
+
+        function addMessage(content, isUser = false, isTyping = false) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+            
+            if (isTyping) {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div class="chat-loading">
+                            <div class="chat-loading-dot"></div>
+                            <div class="chat-loading-dot"></div>
+                            <div class="chat-loading-dot"></div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            
+            return messageDiv;
+        }
+
+        function handleChatMessage() {
+            const chatInput = document.getElementById('chat-input');
+            const message = chatInput.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            userMessage = message;
+            addMessage(message, true);
+            chatInput.value = '';
+            
+            // Show typing indicator
+            const typingMessage = addMessage('', false, true);
+            
+            // After 1.5 seconds, show response and contact form
+            setTimeout(() => {
+                typingMessage.remove();
+                
+                const responseMessage = currentLang === 'es' ? 
+                    'Gracias por tu mensaje! Para responderte mejor, por favor comparte tu información de contacto:' :
+                    'Thanks for your message! To help you better, please share your contact information:';
+                
+                addMessage(responseMessage);
+                
+                // Show contact form
+                document.getElementById('contact-form-section').style.display = 'block';
+                
+                // Focus first input
+                setTimeout(() => {
+                    document.getElementById('contact-name').focus();
+                }, 300);
+                
+                chatStep = 'contact';
+            }, 1500);
+        }
+
+        function handleContactFormSubmission() {
+            const form = document.getElementById('chat-contact-form');
+            const formData = new FormData(form);
+            
+            const contactData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || 'Not provided',
+                message: userMessage
+            };
+
+            // Validate email
+            if (!isValidEmail(contactData.email)) {
+                alert(currentLang === 'es' ? 'Por favor ingresa un email válido' : 'Please enter a valid email');
+                return;
+            }
+
+            // Disable form
+            const submitBtn = form.querySelector('.form-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+
+            // Send to WhatsApp and Email
+            sendToWhatsApp(contactData);
+            sendToEmail(contactData);
+
+            // Show success message
+            setTimeout(() => {
+                const successMessage = currentLang === 'es' ? 
+                    '¡Perfecto! Te hemos enviado la información por WhatsApp y email. Te contactaremos pronto. 🌱' :
+                    'Perfect! We\'ve sent your information via WhatsApp and email. We\'ll contact you soon! 🌱';
+                
+                addMessage(successMessage);
+                
+                // Hide contact form
+                document.getElementById('contact-form-section').style.display = 'none';
+                
+                // Auto-close chat after 3 seconds
+                setTimeout(() => {
+                    closeChat();
+                }, 3000);
+            }, 1000);
+        }
+
+        function sendToWhatsApp(data) {
+            const whatsappMessage = encodeURIComponent(
+                `🌿 New customer from Machin Nursery Farms website:\n\n` +
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Phone: ${data.phone}\n` +
+                `Message: ${data.message}\n\n` +
+                `Sent at: ${new Date().toLocaleString()}`
+            );
+            
+            const whatsappURL = `https://wa.me/17869926153?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        function sendToEmail(data) {
+            const subject = encodeURIComponent('New Contact from Machin Nursery Farms Website');
+            const body = encodeURIComponent(
+                `New customer contact from your website:\n\n` +
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Phone: ${data.phone}\n` +
+                `Original Message: ${data.message}\n\n` +
+                `Sent at: ${new Date().toLocaleString()}\n` +
+                `From: Machin Nursery Farms Website Chat`
+            );
+            
+            const mailtoURL = `mailto:machindavid2@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoURL;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function addChatTranslations() {
+            // Add chat translations to existing translations object
+            translations.es = {
+                ...translations.es,
+                chatSubtitle: "Te responderemos tan pronto como podamos",
+                welcomeMessage: "¡Hola! 👋 Bienvenido a Machin Nursery Farms. Déjame saber si tienes alguna pregunta, estaremos felices de ayudarte.",
+                chatPlaceholder: "Escribe tu mensaje...",
+                contactFormTitle: "¡Déjanos ayudarte!",
+                contactFormSubtitle: "Por favor proporciona tu información de contacto",
+                namePlaceholder: "Tu nombre",
+                emailPlaceholder: "Tu email", 
+                phonePlaceholder: "Teléfono (opcional)",
+                sendButton: "Enviar Mensaje"
+            };
+
+            translations.en = {
+                ...translations.en,
+                chatSubtitle: "We'll reply as soon as we can",
+                welcomeMessage: "Hi there 👋 Welcome to Machin Nursery Farms. Let me know if you have any questions, we would be happy to help.",
+                chatPlaceholder: "Write your message...",
+                contactFormTitle: "Let us help you!",
+                contactFormSubtitle: "Please provide your contact information", 
+                namePlaceholder: "Your name",
+                emailPlaceholder: "Your email",
+                phonePlaceholder: "Phone (optional)",
+                sendButton: "Send Message"
+            };
+        }
+
+        // Update chat translations when language changes
+        const originalTranslatePage = translatePage;
+        translatePage = function(lang) {
+            originalTranslatePage(lang);
+            
+            // Update chat-specific elements
+            const chatElements = document.querySelectorAll('[data-translate-key]');
+            chatElements.forEach(el => {
+                const key = el.dataset.translateKey;
+                if (translations[lang][key]) {
+                    if (el.tagName === 'INPUT') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                }
+            });
+        };
+    </script>
 
     <!-- Additional Visitor Tracking (Hidden) -->
     <div style="display: none;">
