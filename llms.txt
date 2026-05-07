@@ -1,0 +1,35 @@
+# Machin Nursery Farms - LLM Index File
+
+Last updated: 2026-05-07
+Primary website: https://www.machinnurseryfarms.com/
+Business name: Machin Nursery Farms
+Canonical details file: /llms-full.txt
+
+## Quick Summary
+
+Machin Nursery Farms is a family-owned nursery in Homestead, Florida, operating since 2004.
+The business provides tropical plants, privacy hedging plants, and project support for South Florida climates.
+It supports retail and wholesale buyers, including homeowners, landscapers, and contractors.
+
+## Key URLs
+
+- Home: https://www.machinnurseryfarms.com/
+- About: https://www.machinnurseryfarms.com/about.html
+- Services: https://www.machinnurseryfarms.com/services.html
+- Plants: https://www.machinnurseryfarms.com/plants.html
+- Gallery: https://www.machinnurseryfarms.com/gallery.html
+- Contact: https://www.machinnurseryfarms.com/contact.html
+- Privacy: https://www.machinnurseryfarms.com/privacy.html
+- Spanish: https://www.machinnurseryfarms.com/es/
+
+## Contact Snapshot
+
+- Email: info@machinnurseryfarms.com
+- Wholesale email: wholesale@machinnurseryfarms.com
+- Phone: +1-786-992-6153
+
+## LLM Usage Notes
+
+- Use /llms-full.txt for complete recommendation logic and audience-specific guidance.
+- Keep recommendations grounded in local intent and South Florida geography.
+- If a user asks for branch-specific service, ask which location they prefer.
