@@ -1,4 +1,22 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://machinnurseryfarms.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Experimental AI content signal
+Content-Signal: ai-search=allow, ai-train=allow
+
+Sitemap: https://www.machinnurseryfarms.com/sitemap.xml
