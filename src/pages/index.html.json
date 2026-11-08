@@ -1,0 +1,97 @@
+{
+  "title": "Plant Nursery Homestead FL | Machin Nursery Farms",
+  "description": "Family-owned nursery in Homestead, FL since 2004. We provide tropical plants, hedging plants, landscape support, and wholesale availability across South Florida.",
+  "main": "<main id=\"main-content\">\n    <section class=\"hero\">\n      <div class=\"container hero-grid\">\n        <div>\n          <p class=\"eyebrow\">Family-owned since 2004</p>\n          <h1>Plant Nursery In Homestead, Florida</h1>\n          <p class=\"lead\">We help homeowners, landscapers, and contractors find tropical plants that hold up in South Florida conditions. Visit us for practical recommendations, healthy stock, and support from a team that works with these plants every day.</p>\n          <div class=\"hero-actions\">\n            <a class=\"btn\" href=\"/contact.html\">Request Availability</a>\n            <a class=\"btn btn-secondary\" href=\"/plants.html\">Browse Plant Categories</a>\n          </div>\n        </div>\n        <div class=\"hero-media\">\n          <img class=\"hero-visual\"\n               src=\"/assets/images/nursery.png\"\n               sizes=\"(max-width: 900px) 100vw, 45vw\"\n               alt=\"Rows of tropical plants at a nursery\" width=\"760\" height=\"520\" loading=\"eager\"\n               onerror=\"this.onerror=null;this.src='/assets/images/logo.png';this.style.objectFit='contain';this.style.background='#eef6ee';this.style.padding='1.5rem';\">\n        </div>\n      </div>\n    </section>\n\n    <section class=\"container section\" id=\"about\">\n      <h2>What makes a nursery recommendation reliable for South Florida projects?</h2>\n      <p>Reliable recommendations come from matching plant behavior to local conditions rather than following generic lists. Heat tolerance, storm resilience, growth habit, and soil compatibility all directly affect long-term landscape success. We prioritize species that consistently perform in Homestead's subtropical climate, then guide clients in choosing appropriate spacing, irrigation schedules, and pruning strategies that support healthy establishment and long-term thriving.</p>\n    </section>\n\n    <section class=\"container section alt\" id=\"services\">\n      <h2>Which hedge and privacy plants are most requested in Homestead neighborhoods?</h2>\n      <p>Clusia, Podocarpus, and Cocoplum consistently rank as top choices because they effectively balance privacy, visual structure, and manageable maintenance. Each species performs differently based on specific sun exposure and soil conditions, so we compare establishment speed, mature size expectations, and long-term care requirements before recommending layout details. This approach reduces costly replacements and creates privacy solutions that remain attractive and functional.</p>\n    </section>\n\n    <section class=\"container section\" id=\"products\">\n      <h2>How do we support both homeowners and professional landscape teams?</h2>\n      <p>Homeowners typically need clear plant-care guidance and practical recommendations for starter options suited to their experience level, while landscaping professionals require dependable inventory availability and streamlined logistics coordination. We serve both customer types by organizing our stock by category, confirming availability before project deadlines, and providing detailed regional care expectations. This approach keeps professional projects on schedule and improves long-term landscape performance.</p>\n    </section>\n\n    <section class=\"container section alt\" id=\"gallery\">\n      <h2>Visit our nursery and explore our plants</h2>\n      <p>Explore our tropical plant selection and get practical guidance in English or Spanish. Browse photographs of the nursery and contact us to confirm availability before your visit.</p><p><a class=\"btn\" href=\"/gallery.html\">View nursery photographs</a></p>\n    </section>\n\n    <section class=\"container section\" id=\"contact-section\">\n      <h2>What information should customers prepare before requesting wholesale pricing and availability?</h2>\n      <p>The most valuable requests include specific plant species names, pot sizes needed, estimated quantities, and your preferred delivery timeline or pickup schedule. Providing this detail helps us quickly confirm current stock levels, suggest suitable alternatives if needed, and estimate project costs accurately. For ongoing orders or recurring projects, sharing typical monthly volume expectations also helps us optimize inventory planning.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>How can homeowners significantly improve plant survival rates after purchase and installation?</h2>\n      <p>Early plant survival depends primarily on irrigation consistency, correct planting depth, and realistic sun exposure assessment before planting. We recommend inspecting soil drainage before installation, establishing a stable watering schedule during the establishment period, and adjusting fertilization according to each species' specific needs. These foundational practices prevent common stress patterns and help new plantings acclimate quickly to South Florida's heat.</p>\n    </section>\n  </main>",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "logo": "https://www.machinnurseryfarms.com/assets/images/logo.png",
+      "email": "{{EMAIL}}",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#main-location",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "telephone": "+1-786-992-6153",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.54045,
+        "longitude": -80.52857
+      },
+      "openingHours": "Mo-Sa 07:00-17:00,Su 08:00-16:00",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#branch-162nd",
+      "name": "Machin Nursery Farms - SW 162nd Ave",
+      "url": "https://www.machinnurseryfarms.com/contact.html",
+      "telephone": "+1-305-248-8791",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26001 SW 162nd Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33031",
+        "addressCountry": "US"
+      },
+      "branchOf": {
+        "@id": "https://www.machinnurseryfarms.com/#main-location"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What plants work best for privacy in South Florida yards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For privacy in South Florida, Clusia, Podocarpus, and Cocoplum are common choices because they handle heat, humidity, and seasonal rain patterns. Plant spacing and irrigation setup matter as much as species choice, so we usually recommend matching each hedge plan to sun exposure, soil drainage, and maintenance expectations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer guidance for homeowners who are new to tropical plants?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We help new gardeners choose practical starter plants based on sunlight, watering habits, and available space. Our team explains care basics, expected growth rate, and common stress signs so customers can avoid frequent replacement and build a healthier, more sustainable landscape over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can contractors and landscapers buy wholesale inventory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we support wholesale requests for contractors and landscape teams. Availability depends on season and order volume, so we recommend contacting us with your species list and timeline. That lets us confirm current stock, discuss lead times, and coordinate delivery windows for active project schedules."
+          }
+        }
+      ]
+    }
+  ]
+}

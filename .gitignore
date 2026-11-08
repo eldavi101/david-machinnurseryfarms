@@ -1,0 +1,10 @@
+.venv/
+.gstack/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+dist/
+qa-*.png
+.DS_Store

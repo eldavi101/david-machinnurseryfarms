@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <link rel="alternate" hreflang="en" href="{{EN_URL}}">
+  <link rel="alternate" hreflang="es" href="{{ES_URL}}">
+  <link rel="alternate" hreflang="x-default" href="{{EN_URL}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:image" content="{{BASE}}/assets/images/logo.png">
+  <link rel="icon" href="/assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="/main.css">
+  {{TRACKING}}
+  {{SCHEMA}}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">{{SKIP}}</a>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="{{HOME}}"><img src="/assets/images/logo.png" alt="Machin Nursery Farms" width="56" height="56"><span>Machin Nursery Farms</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav">{{MENU}}</button>
+      <nav id="site-nav" class="site-nav" aria-label="{{MENU}}">{{NAV}}</nav>
+    </div>
+  </header>
+  {{MAIN}}
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>Machin Nursery Farms</h3><p>30760 SW 212 Ave, Homestead, FL 33030</p><p>26001 SW 162nd Ave, Homestead, FL 33031</p></div>
+      <div><h3>{{CONTACT_LABEL}}</h3><p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p><p><a href="tel:+17869926153">+1 (786) 992-6153</a></p><p><a href="tel:+13052488791">+1 (305) 248-8791</a></p><p><a href="https://wa.me/{{WHATSAPP}}" target="_blank" rel="noopener noreferrer">{{CTA}}</a></p></div>
+      <div><h3>{{PRIVACY_LABEL}}</h3><p><a href="{{PRIVACY}}">{{PRIVACY_LABEL}}</a></p><p><a href="/llms.txt">llms.txt</a></p><p><a href="/llms-full.txt">llms-full.txt</a></p></div>
+    </div>
+    <div class="container legal"><p><span id="year">{{YEAR}}</span> Machin Nursery Farms. {{RIGHTS}}</p></div>
+  </footer>
+  <a class="contact-float" href="{{CONTACT}}">{{CONTACT_LABEL}}</a>
+  <script src="/main.js" defer></script>
+</body>
+</html>

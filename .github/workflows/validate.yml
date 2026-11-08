@@ -1,0 +1,24 @@
+name: Validate website
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/build.py
+      - run: python scripts/check_site.py
+      - run: node --check main.js
+      - run: node --test tests/contact.test.cjs
+      - run: python scripts/package_site.py
+      - name: Verify generated files are committed
+        run: git diff --exit-code -- '*.html' sitemap.xml

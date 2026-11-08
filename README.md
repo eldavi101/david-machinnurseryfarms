@@ -1,214 +1,60 @@
-# Machin Nursery Farms - Website Separado y Modular
+# Machin Nursery Farms
 
-## 📁 Estructura de Archivos Actualizada
+Web estática bilingüe: HTML, CSS y JavaScript, con generación mediante Python estándar. Sin paquetes de producción ni backend.
 
-```
-machin/
-├── index.html              # Archivo HTML principal (limpio y organizado)
-├── styles/
-│   └── main.css            # Todos los estilos CSS del website
-├── scripts/
-│   └── main.js             # Toda la funcionalidad JavaScript
-├── README.md               # Este archivo con instrucciones
-└── SEO_Optimization_Summary.md  # Resumen de optimización SEO
-```
+## Desarrollo
 
-## 🚀 ¿Qué se Logró?
-
-### ✅ **Separación Completa de Archivos**
-- **HTML**: Solo estructura semántica y contenido
-- **CSS**: Todos los estilos en `styles/main.css`
-- **JavaScript**: Toda la funcionalidad en `scripts/main.js`
-
-### ✅ **Beneficios de la Separación**
-
-#### **1. Mantenimiento Mejorado**
-- Cada archivo tiene una responsabilidad específica
-- Fácil localización y edición de código
-- Reducción significativa de errores
-
-#### **2. Performance Optimizado**
-- Los archivos CSS/JS pueden ser cacheados por el navegador
-- Carga más rápida en visitas posteriores
-- Mejor compresión por tipo de archivo
-
-#### **3. Desarrollo Colaborativo**
-- Diferentes desarrolladores pueden trabajar en paralelo
-- Menos conflictos en control de versiones
-- Especialización por área (CSS, JS, HTML)
-
-#### **4. Automatización Lista**
-- Perfecto para build systems (Webpack, Vite, Gulp)
-- Fácil minificación y optimización
-- Compatible con herramientas de desarrollo modernas
-
-## 📋 **Contenido de Cada Archivo**
-
-### 🎨 `styles/main.css`
-**Incluye:**
-- Estilos base y reset CSS
-- Estilos de navegación y hero section
-- Componentes glass-effect y glow-effect
-- Estilos del chat widget completo
-- Responsive design y mobile optimization
-- Estilos de modal y formularios
-- Animaciones y transiciones
-- Estilos de accesibilidad
-
-### ⚙️ `scripts/main.js`
-**Incluye:**
-- Sistema completo de traducción (ES/EN)
-- Funcionalidad del chat widget
-- Modal de cuidado de plantas con IA
-- Navegación móvil y desktop
-- Optimizaciones de performance
-- Manejo de formularios de contacto
-- Integración WhatsApp y email
-- Configuración de Tailwind CSS
-
-### 🏗️ `index.html`
-**Incluye:**
-- Estructura HTML5 semántica limpia
-- Meta tags y SEO optimization completos
-- Schema markup y structured data
-- Enlaces a archivos CSS/JS externos
-- Contador de visitas integrado
-- Accesibilidad y ARIA labels
-
-## 🔧 **Cómo Usar el Website Separado**
-
-### **Desarrollo Local**
-```bash
-# Simplemente abre el archivo index.html en tu navegador
-# O usa un servidor local:
-npx serve .
-# O con Python:
-python -m http.server 8000
+```powershell
+python scripts/build.py
+python scripts/check_site.py
+node --check main.js
+node --test tests/contact.test.cjs
+python -m http.server 8000 --bind 127.0.0.1
 ```
 
-### **Producción**
-```bash
-# Subir todos los archivos manteniendo la estructura:
-├── index.html
-├── styles/main.css  
-└── scripts/main.js
-```
+Abrir http://localhost:8000. Las rutas parten de `/`; abrir los HTML como archivos no reproduce el hosting.
 
-### **Automatización con Build Tools**
+## Estructura y edición
 
-#### **Con Vite**
-```bash
-npm init vite@latest machin-nursery
-cd machin-nursery
-# Copiar archivos en src/
-npm run build
-```
+- `src/pages/`: contenido, títulos, descripciones y JSON-LD de las 14 páginas; `main` contiene el cuerpo HTML.
+- `src/layout.html`: plantilla compartida de cabecera, navegación y pie.
+- `config/site.json`: dominio, correo, WhatsApp y medición opcional.
+- `main.css`, `main.js`: estilos y comportamiento compartidos.
+- `assets/images/`: fotografías recuperadas de la versión anterior; `sources.json` registra las URLs de origen.
+- `scripts/`: generación, validación y empaquetado.
+- `tests/`: pruebas del formulario.
+- `robots.txt`, `llms.txt`, `llms-full.txt`: información de rastreo y negocio.
 
-#### **Con Webpack**
-```javascript
-// webpack.config.js
-module.exports = {
-  entry: './scripts/main.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  }
-};
-```
+Editar las fuentes y regenerar con `python scripts/build.py`. Guardar también los HTML y sitemap generados. No editar directamente los HTML generados. El sitemap deriva de las rutas, sin fechas de modificación inventadas.
 
-## 📱 **Funcionalidades Mantenidas**
+## Consultas y privacidad
 
-### ✅ **Chat Widget Funcional**
-- Auto-apertura después de 4 segundos
-- Sistema de mensajes interactivo
-- Formulario de contacto integrado
-- Envío a WhatsApp y email automático
-- Responsive design completo
+El formulario valida datos y prepara el mensaje para WhatsApp o correo. El visitante debe completar el envío en su aplicación. No hay envío automático, confirmación de entrega, almacenamiento de leads, CRM ni IA generativa.
 
-### ✅ **Sistema de Traducción**
-- Cambio dinámico entre inglés y español
-- Traducciones completas de todo el contenido
-- Botones de idioma en desktop y móvil
+El correo configurado es `machindavid2@gmail.com`, el destino ya utilizado en la versión remota anterior. Los buzones del dominio no están verificados. Si se cambia el correo, actualizar `config/site.json`, los datos estructurados y el contenido editorial.
 
-### ✅ **Modal de Cuidado de Plantas**
-- Base de datos de plantas integrada
-- Consejos específicos por planta
-- Información bilingüe completa
+Las fotografías se sirven localmente y las fuentes son del sistema. Las aplicaciones de WhatsApp y correo tienen sus propias políticas. No guardar contraseñas, tokens privados ni datos de clientes en Git.
 
-### ✅ **SEO y Analytics**
-- Contador FreeCounterStat integrado
-- Schema markup completo
-- Meta tags optimizados
-- Keywords targeting local
+## Analytics y Bing
 
-## 🛠️ **Próximos Pasos de Automatización**
+Desactivados por defecto. Configurar `analytics_id` con un ID GA4 real y `bing_verification` con el token público real de verificación. Regenerar y revisar la política de privacidad y requisitos de consentimiento antes de publicar. No se incluyen identificadores ficticios.
 
-### **1. Task Runners**
-```bash
-# Gulp para automatización
-npm install -g gulp-cli
-gulp minify-css
-gulp minify-js
-gulp optimize-images
-```
+## GitHub y hosting
 
-### **2. CI/CD Pipeline**
-```yaml
-# GitHub Actions
-name: Deploy Website
-on: push
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Minify CSS/JS
-      - name: Deploy to hosting
-```
+- Remoto: https://github.com/eldavi101/david-machinnurseryfarms.git
+- Dominio: www.machinnurseryfarms.com, declarado en CNAME.
+- DNS observado: www apunta a eldavi101.github.io; alojamiento en GitHub Pages.
+- `.github/workflows/validate.yml` valida pushes y PRs; no despliega.
+- `python scripts/package_site.py` crea `dist/` con archivos públicos únicamente.
+- El workflow manual `deploy.yml` permite publicar ese artefacto despu?s de configurar Pages para Actions y aprobar el despliegue. El modo de Pages que sirve la raíz de una rama también puede exponer fuentes y utilidades públicas.
+- Guardar archivos en el editor no hace push automático. Trabajar en una rama, revisar y enviar cambios aprobados.
+- Si GitHub CLI pierde acceso: `gh auth login --hostname github.com --web`. Autenticarse en el navegador; no compartir contraseñas o tokens por chat.
 
-### **3. Optimización Automática**
-- **CSS**: Autoprefixer, minificación, purging
-- **JS**: Babel transpilation, minificación, tree-shaking
-- **HTML**: Minificación, inline critical CSS
-- **Images**: Compresión automática, WebP conversion
+## Pendientes del propietario
 
-## 🔍 **Verificación de Funcionalidad**
+- Crear/verificar buzones del dominio y registros MX.
+- Obtener ID GA4 y token Bing reales si se desea medición.
+- Conectar un receptor/CRM si se requiere almacenamiento de leads.
+- Aprobar publicación y confirmar configuración de Pages antes de cambiar producción.
 
-### **Checklist Post-Separación:**
-- [x] HTML válido y semántico
-- [x] CSS aplicado correctamente
-- [x] JavaScript funcionando
-- [x] Chat widget operativo
-- [x] Traducción funcionando
-- [x] Modal de plantas activo
-- [x] Responsive design intacto
-- [x] SEO mantenido
-- [x] Contador de visitas activo
-
-## 📈 **Beneficios para el Negocio**
-
-### **Desarrollo Futuro**
-- Fácil agregar nuevas funcionalidades
-- Mantenimiento más económico
-- Escalabilidad mejorada
-
-### **Performance**
-- Tiempos de carga optimizados
-- Mejor experiencia de usuario
-- SEO mejorado por velocidad
-
-### **Mantenimiento**
-- Actualizaciones más rápidas
-- Debugging simplificado
-- Menos tiempo de desarrollo
-
-## 🎯 **Resultado Final**
-
-Tu website de Machin Nursery Farms ahora está **completamente modularizado** y listo para:
-- ✅ Desarrollo profesional y escalable
-- ✅ Automatización con herramientas modernas
-- ✅ Mantenimiento eficiente y colaborativo
-- ✅ Performance optimizado
-- ✅ SEO dominando la competencia local
-
-**¡El website mantiene toda su funcionalidad mientras está preparado para el futuro del desarrollo web!** 🌟
+La rama de mejoras parte del último origin/main leído y recupera las rutas bilingües de la copia local, integrando galería y contacto de la versión anterior. No instala sincronización automática.
