@@ -16,7 +16,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Experimental AI content signal
-Content-Signal: ai-search=allow, ai-train=allow
-
 Sitemap: https://www.machinnurseryfarms.com/sitemap.xml

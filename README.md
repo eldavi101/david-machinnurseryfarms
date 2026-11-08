@@ -9,10 +9,13 @@ python scripts/build.py
 python scripts/check_site.py
 node --check main.js
 node --test tests/contact.test.cjs
-python -m http.server 8000 --bind 127.0.0.1
+python scripts/package_site.py
+node --test tests/security.test.mjs
+python -m unittest discover -s tests -p 'test_*.py'
+python scripts/serve.py --port 8001
 ```
 
-Abrir http://localhost:8000. Las rutas parten de `/`; abrir los HTML como archivos no reproduce el hosting.
+Abrir http://localhost:8001. El servidor local sirve únicamente `dist/`, con respuestas 404 y cabeceras reales. Las rutas parten de `/`; abrir los HTML como archivos no reproduce el hosting.
 
 ## Estructura y edición
 
@@ -46,7 +49,7 @@ Desactivados por defecto. Configurar `analytics_id` con un ID GA4 real y `bing_v
 - DNS observado: www apunta a eldavi101.github.io; alojamiento en GitHub Pages.
 - `.github/workflows/validate.yml` valida pushes y PRs; no despliega.
 - `python scripts/package_site.py` crea `dist/` con archivos públicos únicamente.
-- El workflow manual `deploy.yml` permite publicar ese artefacto despu?s de configurar Pages para Actions y aprobar el despliegue. El modo de Pages que sirve la raíz de una rama también puede exponer fuentes y utilidades públicas.
+- El workflow manual `deploy.yml` permite publicar ese artefacto después de configurar Pages para Actions y aprobar el despliegue. El modo de Pages que sirve la raíz de una rama también puede exponer fuentes y utilidades públicas.
 - Guardar archivos en el editor no hace push automático. Trabajar en una rama, revisar y enviar cambios aprobados.
 - Si GitHub CLI pierde acceso: `gh auth login --hostname github.com --web`. Autenticarse en el navegador; no compartir contraseñas o tokens por chat.
 
@@ -55,6 +58,14 @@ Desactivados por defecto. Configurar `analytics_id` con un ID GA4 real y `bing_v
 - Crear/verificar buzones del dominio y registros MX.
 - Obtener ID GA4 y token Bing reales si se desea medición.
 - Conectar un receptor/CRM si se requiere almacenamiento de leads.
-- Aprobar publicación y confirmar configuración de Pages antes de cambiar producción.
+- Conectar un proxy o alojamiento configurable para activar todas las cabeceras HTTP; GitHub Pages no aplica `_headers` ni configuración de servidor del repositorio.
 
 La rama de mejoras parte del último origin/main leído y recupera las rutas bilingües de la copia local, integrando galería y contacto de la versión anterior. No instala sincronización automática.
+
+## SEO técnico y seguridad
+
+La plantilla publica CSP con hashes y una política de referrer en HTML, además de integridad SRI y versiones de CSS/JS para evitar caché obsoleta. Los enlaces y el contenido principal existen sin JavaScript. `404.html` devuelve una página bilingüe de error cuando Pages responde 404, sin redirigir a inicio.
+
+Las pruebas comprueban títulos/descripciones únicos, robots/noindex, canónicas, hreflang, páginas huérfanas, enlaces, contenido estático, sitemap, JSON-LD e integridad de recursos. Ver [informe técnico](docs/seo-security.md) para el alcance y los límites de las capturas.
+
+`edge/` contiene una capa opcional de alojamiento con las nueve cabeceras HTTP solicitadas. Está probada localmente; no se activa al hacer push a GitHub Pages. Ver [activación de la capa de seguridad](edge/README.md). Pages ya está configurado para publicar mediante Actions; el despliegue sigue siendo manual.

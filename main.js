@@ -1,3 +1,15 @@
+document.documentElement.classList.add("js");
+
+document.querySelectorAll("img[data-fallback-src]").forEach((image) => {
+  image.addEventListener("error", () => {
+    if (image.dataset.fallbackUsed) return;
+    image.dataset.fallbackUsed = "true";
+    image.src = image.dataset.fallbackSrc;
+    image.classList.add("image-fallback");
+  });
+  if (image.complete && !image.naturalWidth) image.dispatchEvent(new Event("error"));
+});
+
 const yearNode = document.getElementById("year");
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();

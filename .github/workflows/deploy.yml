@@ -22,6 +22,8 @@ jobs:
       - run: node --check main.js
       - run: node --test tests/contact.test.cjs
       - run: python scripts/package_site.py
+      - run: node --test tests/security.test.mjs
+      - run: python -m unittest discover -s tests -p 'test_*.py'
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

@@ -277,13 +277,13 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .menu-toggle {
+  .js .menu-toggle {
     display: inline-block;
   }
 
   .site-nav {
-    display: none;
-    position: absolute;
+    display: flex;
+    position: static;
     top: 4.3rem;
     right: 4vw;
     flex-direction: column;
@@ -294,6 +294,20 @@ body {
     padding: 0.5rem;
     min-width: 190px;
     box-shadow: 0 14px 30px rgba(24, 41, 28, 0.16);
+  }
+
+  .js .site-nav {
+    display: none;
+    position: absolute;
+  }
+
+  html:not(.js) .topbar {
+    flex-wrap: wrap;
+  }
+
+  html:not(.js) .site-nav {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .site-nav a {
@@ -315,6 +329,7 @@ body {
 }
 
 .site-nav a[aria-current="page"] { background: #dcecd8; }
+.image-fallback { object-fit: contain; background: #eef6ee; padding: 1.5rem; }
 .contact-float { position: fixed; bottom: 1rem; right: 1rem; background: #1f5f2c; color: white; padding: .8rem 1.15rem; border-radius: 999px; font-weight: 700; text-decoration: none; z-index: 25; box-shadow: var(--shadow); }
 .inquiry-form { display: grid; gap: .65rem; max-width: 640px; }
 .inquiry-form > label { font-weight: 700; }

@@ -7,6 +7,7 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
+from security_policy import digest, policy
 
 ROOT = Path(__file__).resolve().parents[1]
 ROUTES = [
@@ -27,15 +28,20 @@ def route_url(path):
 def build(output):
     config = json.loads((ROOT / "config/site.json").read_text(encoding="utf-8"))
     base = config["url"].rstrip("/")
-    if urlsplit(base).scheme != "https" or not urlsplit(base).netloc:
+    parts = urlsplit(base)
+    if parts.scheme != "https" or not parts.hostname or parts.username or parts.password or parts.path or parts.query or parts.fragment:
         raise ValueError("site.url must be an absolute HTTPS URL")
     if config["analytics_id"] and not re.fullmatch(r"G-[A-Z0-9]+", config["analytics_id"]):
         raise ValueError("Invalid GA4 measurement ID")
     if not re.fullmatch(r"[0-9]{8,15}", config["whatsapp"]):
         raise ValueError("WhatsApp number must contain international digits only")
-    if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", config["email"]):
+    if not re.fullmatch(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", config["email"]):
         raise ValueError("Invalid contact email")
     esc = html.escape
+    script_hash = digest((ROOT / "main.js").read_bytes())
+    style_hash = digest((ROOT / "main.css").read_bytes())
+    script_version = script_hash.removeprefix("sha256-")[:12].replace("/", "_").replace("+", "-")
+    style_version = style_hash.removeprefix("sha256-")[:12].replace("/", "_").replace("+", "-")
     sitemap = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     for pair in ROUTES:
         for lang_index, lang in enumerate(("en", "es")):
@@ -58,6 +64,8 @@ def build(output):
                 tracking += f'<meta name="msvalidate.01" content="{esc(config["bing_verification"])}">'
             schema_data = json.loads(json.dumps(page["schema"]).replace("{{EMAIL}}", config["email"]))
             schemas = "\n".join('<script type="application/ld+json">' + json.dumps(s, ensure_ascii=False).replace("<", "\\u003c") + '</script>' for s in schema_data)
+            inline_scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", schemas + tracking, re.S)
+            csp = policy(script_hash, inline_scripts, bool(config["analytics_id"]))
             document = (ROOT / "src/layout.html").read_text(encoding="utf-8")
             values = {
                 "LANG": lang, "TITLE": esc(page["title"]), "DESCRIPTION": esc(page["description"]),
@@ -72,6 +80,9 @@ def build(output):
                 "CTA": "Consultar por WhatsApp" if spanish else "Ask on WhatsApp",
                 "EMAIL": esc(config["email"]), "WHATSAPP": config["whatsapp"],
                 "YEAR": str(date.today().year),
+                "CSP": esc(csp, quote=True), "SCRIPT_HASH": script_hash, "STYLE_HASH": style_hash,
+                "OG_LOCALE": "es_US" if spanish else "en_US", "OG_ALTERNATE": "en_US" if spanish else "es_US",
+                "SCRIPT_VERSION": script_version, "STYLE_VERSION": style_version,
                 "RIGHTS": "Todos los derechos reservados." if spanish else "All rights reserved.",
             }
             document = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: values[m[1]], document)
@@ -83,6 +94,10 @@ def build(output):
             ET.SubElement(url, "loc").text = base + route_url(path)
     ET.indent(sitemap)
     (output / "sitemap.xml").write_bytes(ET.tostring(sitemap, encoding="utf-8", xml_declaration=True))
+    not_found = (ROOT / "src/404.html").read_text(encoding="utf-8")
+    replacements = {"CSP": esc(policy(script_hash), quote=True), "STYLE_HASH": style_hash, "STYLE_VERSION": style_version}
+    not_found = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: replacements[m[1]], not_found)
+    (output / "404.html").write_text(not_found, encoding="utf-8", newline="\n")
     print(f"Built 14 pages in {output}")
 
 

@@ -2,6 +2,8 @@
 <html lang="{{LANG}}">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="{{CSP}}">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{TITLE}}</title>
   <meta name="description" content="{{DESCRIPTION}}">
@@ -13,10 +15,13 @@
   <meta property="og:title" content="{{TITLE}}">
   <meta property="og:description" content="{{DESCRIPTION}}">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{OG_LOCALE}}">
+  <meta property="og:locale:alternate" content="{{OG_ALTERNATE}}">
   <meta property="og:url" content="{{CANONICAL}}">
   <meta property="og:image" content="{{BASE}}/assets/images/logo.png">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
-  <link rel="stylesheet" href="/main.css">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/main.css?v={{STYLE_VERSION}}" integrity="{{STYLE_HASH}}" crossorigin="anonymous">
   {{TRACKING}}
   {{SCHEMA}}
 </head>
@@ -39,6 +44,6 @@
     <div class="container legal"><p><span id="year">{{YEAR}}</span> Machin Nursery Farms. {{RIGHTS}}</p></div>
   </footer>
   <a class="contact-float" href="{{CONTACT}}">{{CONTACT_LABEL}}</a>
-  <script src="/main.js" defer></script>
+  <script src="/main.js?v={{SCRIPT_VERSION}}" integrity="{{SCRIPT_HASH}}" crossorigin="anonymous" defer></script>
 </body>
 </html>

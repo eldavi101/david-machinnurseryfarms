@@ -1,0 +1,20 @@
+{
+  "name": "machin-nursery-security",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-08",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "www.machinnurseryfarms.com", "custom_domain": true },
+    { "pattern": "machinnurseryfarms.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "../dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "404-page"
+  },
+  "vars": {
+    "CANONICAL_ORIGIN": "https://www.machinnurseryfarms.com"
+  }
+}

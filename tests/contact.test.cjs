@@ -8,7 +8,7 @@ function runForm({ lang = 'en', channel = 'whatsapp', valid = true } = {}) {
   const form = { dataset: { email: 'owner@example.com', whatsapp: '17869926153' }, addEventListener: (_, handler) => { submit = handler; }, reportValidity: () => valid };
   const fields = { name: '<script>& María', email: 'visitor@example.com', phone: '', type: 'Wholesale', message: 'Clusia & Cocoplum\n20 plants?', channel };
   vm.runInNewContext(fs.readFileSync('main.js', 'utf8'), {
-    document: { documentElement: { lang }, getElementById: () => null, querySelector: selector => ({ '#inquiry-form': form, '#inquiry-status': status, '#inquiry-open': fallback })[selector] },
+    document: { documentElement: { lang, classList: { add() {} } }, querySelectorAll: () => [], getElementById: () => null, querySelector: selector => ({ '#inquiry-form': form, '#inquiry-status': status, '#inquiry-open': fallback })[selector] },
     FormData: class { get(key) { return fields[key]; } },
     window: { open: url => { destination = url; }, location: { set href(url) { destination = url; } } },
   });
