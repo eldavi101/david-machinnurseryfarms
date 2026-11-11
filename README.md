@@ -1,6 +1,6 @@
 # Machin Nursery Farms
 
-Web estática bilingüe: HTML, CSS y JavaScript, con generación mediante Python estándar. Sin paquetes de producción ni backend.
+Web bilingüe: HTML, CSS y JavaScript, con generación mediante Python estándar. Incluye un backend propio opcional de visitas en Python y SQLite, sin paquetes externos.
 
 ## Desarrollo
 
@@ -72,4 +72,4 @@ Las pruebas comprueban títulos/descripciones únicos, robots/noindex, canónica
 
 ## Contador de visitas
 
-Integración de CounterAPI V2 en el pie bilingüe. Pendiente de crear el contador público en la cuenta del propietario y configurar `visit_counter_url`; no hay peticiones externas mientras esté vacío. Ver [activación, privacidad y limitaciones](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs`.
+Contador propio con API en `/api/visits` y almacenamiento SQLite persistente. No usa proveedores de medición, cuentas ni tokens. Ejecutar `python scripts/package_site.py` y `python scripts/serve.py --port 8002` para probarlo. GitHub Pages no puede ejecutar este backend: el dominio necesita un servidor con Python y almacenamiento persistente. Ver [ejecución, alojamiento y privacidad](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs` y `python -m unittest discover -s tests -p 'test_*.py'`.

@@ -2,53 +2,43 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
+const { randomUUID } = require('node:crypto');
 
-const endpoint = 'https://api.counterapi.dev/v2/owner/visits';
-async function visit({ storage = new Map(), url = endpoint, hostname = 'www.machinnurseryfarms.com', lang = 'en', ok = true, data = { data: { up_count: 1234, down_count: 0 } }, storageBlocked = false } = {}) {
-  const node = { dataset: { counterUrl: url }, textContent: 'Pending activation' };
-  const calls = [];
-  const context = vm.createContext({
+async function visit({ storage = new Map(), lang = 'en', ok = true, data = { count: 1234 }, storageBlocked = false } = {}) {
+  const node = { textContent: '' }, calls = [];
+  vm.runInNewContext(fs.readFileSync('main.js', 'utf8'), {
     document: { documentElement: { lang, classList: { add() {} } }, getElementById: id => id === 'visit-count' ? node : null, querySelectorAll: () => [], querySelector: () => null },
-    window: { location: { hostname } },
     sessionStorage: { getItem: key => { if (storageBlocked) throw Error(); return storage.get(key); }, setItem: (key, value) => { if (storageBlocked) throw Error(); storage.set(key, value); } },
+    crypto: { randomUUID },
     fetch: async (url, options) => { calls.push({ url, options }); return { ok, json: async () => data }; },
     AbortController, setTimeout, clearTimeout, Intl,
   });
-  vm.runInContext(fs.readFileSync('main.js', 'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
   return { node, calls, storage };
 }
 
-test('first visit increments shared counter without credentials or referrer', async () => {
+test('counts using only our origin without credentials or referrer', async () => {
   const { node, calls } = await visit();
   assert.equal(node.textContent, '1,234');
-  assert.equal(calls[0].url, endpoint + '/up');
+  assert.equal(calls[0].url, '/api/visits');
+  assert.equal(calls[0].options.method, 'POST');
   assert.equal(calls[0].options.credentials, 'omit');
   assert.equal(calls[0].options.referrerPolicy, 'no-referrer');
 });
-test('reload and bilingual navigation read total without another increment', async () => {
+test('reload and language changes reuse session for server deduplication', async () => {
   const storage = new Map();
-  await visit({ storage });
-  const result = await visit({ storage, lang: 'es' });
-  assert.equal(result.calls[0].url, endpoint);
+  const first = await visit({ storage });
+  const second = await visit({ storage, lang: 'es' });
+  assert.equal(first.calls[0].options.body, second.calls[0].options.body);
+  assert.notEqual(first.calls[0].options.body, (await visit()).calls[0].options.body);
 });
-test('new session increments again', async () => {
-  await visit();
-  assert.equal((await visit()).calls[0].url, endpoint + '/up');
-});
-test('missing configuration and local previews never contact the provider', async () => {
-  assert.equal((await visit({ url: '' })).calls.length, 0);
-  assert.equal((await visit({ hostname: 'localhost' })).calls.length, 0);
-  assert.equal((await visit({ url: 'https://evil.example/track' })).calls.length, 0);
-});
-test('outages and malformed responses show honest status without automatic retries', async () => {
-  const failed = await visit({ ok: false, lang: 'es' });
-  assert.equal(failed.node.textContent, 'No disponible');
-  assert.equal(failed.storage.size, 0);
+test('failed responses reuse the same ID on the next page instead of double counting', async () => {
   const storage = new Map();
-  assert.equal((await visit({ storage, data: { data: { value: '<script>' } } })).node.textContent, 'Unavailable');
-  assert.equal((await visit({ storage })).calls[0].url, endpoint);
+  const first = await visit({ storage, ok: false, lang: 'es' });
+  assert.equal(first.node.textContent, 'No disponible');
+  assert.equal(first.calls[0].options.body, (await visit({ storage })).calls[0].options.body);
 });
-test('blocked session storage does not break rendering', async () => {
+test('invalid values and blocked storage are handled without breaking the page', async () => {
+  assert.equal((await visit({ data: { count: '<script>' } })).node.textContent, 'Unavailable');
   assert.equal((await visit({ storageBlocked: true })).node.textContent, '1,234');
 });
