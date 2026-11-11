@@ -38,6 +38,9 @@ def build(output):
     if not re.fullmatch(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", config["email"]):
         raise ValueError("Invalid contact email")
     esc = html.escape
+    counter_url = config.get("visit_counter_url", "")
+    if counter_url and not re.fullmatch(r"https://api\.counterapi\.dev/v2/[A-Za-z0-9_-]+/[A-Za-z0-9_-]+", counter_url):
+        raise ValueError("visit_counter_url must be a public CounterAPI V2 counter URL without a token or trailing slash")
     script_hash = digest((ROOT / "main.js").read_bytes())
     style_hash = digest((ROOT / "main.css").read_bytes())
     script_version = script_hash.removeprefix("sha256-")[:12].replace("/", "_").replace("+", "-")
@@ -65,7 +68,7 @@ def build(output):
             schema_data = json.loads(json.dumps(page["schema"]).replace("{{EMAIL}}", config["email"]))
             schemas = "\n".join('<script type="application/ld+json">' + json.dumps(s, ensure_ascii=False).replace("<", "\\u003c") + '</script>' for s in schema_data)
             inline_scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", schemas + tracking, re.S)
-            csp = policy(script_hash, inline_scripts, bool(config["analytics_id"]))
+            csp = policy(script_hash, inline_scripts, bool(config["analytics_id"]), bool(counter_url))
             document = (ROOT / "src/layout.html").read_text(encoding="utf-8")
             values = {
                 "LANG": lang, "TITLE": esc(page["title"]), "DESCRIPTION": esc(page["description"]),
@@ -80,6 +83,10 @@ def build(output):
                 "CTA": "Consultar por WhatsApp" if spanish else "Ask on WhatsApp",
                 "EMAIL": esc(config["email"]), "WHATSAPP": config["whatsapp"],
                 "YEAR": str(date.today().year),
+                "COUNTER_URL": esc(counter_url, quote=True),
+                "VISITS_LABEL": "Visitas al sitio" if spanish else "Website visits",
+                "VISITS_STATUS": ("Cargando…" if spanish else "Loading…") if counter_url else ("Pendiente de activación" if spanish else "Pending activation"),
+                "VISITS_HELP": "Una visita por sesión de navegación; no identifica personas únicas." if spanish else "One visit per browsing session; does not identify unique people.",
                 "CSP": esc(csp, quote=True), "SCRIPT_HASH": script_hash, "STYLE_HASH": style_hash,
                 "OG_LOCALE": "es_US" if spanish else "en_US", "OG_ALTERNATE": "en_US" if spanish else "es_US",
                 "SCRIPT_VERSION": script_version, "STYLE_VERSION": style_version,

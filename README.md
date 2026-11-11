@@ -69,3 +69,7 @@ La plantilla publica CSP con hashes y una política de referrer en HTML, además
 Las pruebas comprueban títulos/descripciones únicos, robots/noindex, canónicas, hreflang, páginas huérfanas, enlaces, contenido estático, sitemap, JSON-LD e integridad de recursos. Ver [informe técnico](docs/seo-security.md) para el alcance y los límites de las capturas.
 
 `edge/` contiene una capa opcional de alojamiento con las nueve cabeceras HTTP solicitadas. Está probada localmente; no se activa al hacer push a GitHub Pages. Ver [activación de la capa de seguridad](edge/README.md). Pages ya está configurado para publicar mediante Actions; el despliegue sigue siendo manual.
+
+## Contador de visitas
+
+Integraci?n de CounterAPI V2 en el pie biling?e. Pendiente de crear el contador p?blico en la cuenta del propietario y configurar `visit_counter_url`; no hay peticiones externas mientras est? vac?o. Ver [activaci?n, privacidad y limitaciones](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs`.

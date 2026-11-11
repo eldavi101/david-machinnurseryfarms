@@ -19,6 +19,7 @@ jobs:
       - run: python scripts/check_site.py
       - run: node --check main.js
       - run: node --test tests/contact.test.cjs
+      - run: node --test tests/visits.test.cjs
       - run: python scripts/package_site.py
       - run: node --test tests/security.test.mjs
       - run: python -m unittest discover -s tests -p 'test_*.py'
