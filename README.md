@@ -72,4 +72,4 @@ Las pruebas comprueban títulos/descripciones únicos, robots/noindex, canónica
 
 ## Contador de visitas
 
-Integraci?n de CounterAPI V2 en el pie biling?e. Pendiente de crear el contador p?blico en la cuenta del propietario y configurar `visit_counter_url`; no hay peticiones externas mientras est? vac?o. Ver [activaci?n, privacidad y limitaciones](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs`.
+Integración de CounterAPI V2 en el pie bilingüe. Pendiente de crear el contador público en la cuenta del propietario y configurar `visit_counter_url`; no hay peticiones externas mientras esté vacío. Ver [activación, privacidad y limitaciones](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs`.
