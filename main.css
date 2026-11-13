@@ -343,3 +343,40 @@ body {
 .legal { padding-bottom: 5rem; }
 @media (max-width: 600px) { .brand { font-size: .9rem; gap: .45rem; } .brand img { width: 42px; height: 42px; } .topbar { gap: .4rem; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* Machi: local nursery navigation guide */
+
+  .robot-launch { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: 84px; z-index: 100; display: flex; align-items: center; gap: 6px; padding: 4px; border: 0; background: transparent; color: var(--ink); cursor: pointer; transition: bottom .25s ease; }
+  .robot-launch[hidden] { display: none; }
+  .robot-label { background: var(--surface); border: 1px solid var(--line); border-radius: 16px 16px 3px 16px; padding: 8px 12px; font-size: .85rem; box-shadow: var(--shadow); }
+  .robot { overflow: visible; filter: drop-shadow(0 3px 5px #161a1820); }
+  .robot-body { animation: robot-bob 4s ease-in-out 1; transform-origin: center; }
+  .robot-eyes { animation: robot-blink 5s 1; transform-box: fill-box; transform-origin: center; }
+  .robot-launch:hover .robot-arm, .robot-launch:focus-visible .robot-arm { animation: robot-wave .6s ease-in-out 3; transform-origin: 61px 68px; }
+  .assistant-panel { position: fixed; inset: auto 18px 18px auto; margin: 0; width: min(390px, calc(100vw - 24px)); max-width: none; height: min(600px, calc(100dvh - 36px)); max-height: none; padding: 0; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); overflow: hidden; }
+  .assistant-panel[open] { display: flex; flex-direction: column; }
+  .assistant-panel::backdrop { background: rgb(22 26 24 / .25); }
+  .assistant-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px; border-bottom: 1px solid var(--line); background: var(--surface-soft); }
+  .assistant-head strong { font-family: Georgia, serif; font-size: 1.25rem; }
+  .assistant-head p { font-size: .8rem; color: var(--ink-soft); margin-top: 3px; }
+  .assistant-close { flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); font-size: 1.7rem; color: var(--ink); cursor: pointer; }
+  .assistant-log { flex: 1; min-height: 72px; overflow-y: auto; overscroll-behavior: contain; padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-size: .9rem; }
+  .assistant-log .assistant-message { max-width: 100%; border-radius: 14px 14px 14px 3px; padding: 12px 14px; background: #e2efdf; overflow-wrap: anywhere; flex-shrink: 0; }
+  .assistant-log .assistant-message a { display: block; margin-top: 8px; font-weight: 600; }
+  .assistant-log .assistant-message p + p { margin-top: 12px; }
+  .assistant-log .assistant-user { align-self: flex-end; border-radius: 14px 14px 3px 14px; color: white; background: var(--accent-strong); }
+  .assistant-suggestions { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 12px; }
+  .assistant-suggestions button { border: 1px solid var(--line); border-radius: 20px; background: white; color: var(--ink); font-size: .78rem; min-height: 36px; padding: 6px 10px; cursor: pointer; }
+  .assistant-form { padding: 0 16px; }
+  .assistant-form label { font-size: .8rem; font-weight: 600; }
+  .assistant-input-row { display: flex; gap: 6px; margin-top: 5px; }
+  .assistant-input-row input { min-width: 0; flex: 1; width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font-size: 16px; }
+  .assistant-input-row button { border: 0; border-radius: 8px; background: var(--accent); color: white; padding: 10px 12px; font-weight: 600; cursor: pointer; }
+  .assistant-note { font-size: .7rem; line-height: 1.45; color: var(--ink-soft); padding: 10px 16px 14px; }
+  @keyframes robot-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px) rotate(-2deg); } }
+  @keyframes robot-blink { 0%,42%,48%,100% { transform: scaleY(1); } 45% { transform: scaleY(.12); } }
+  @keyframes robot-wave { 0%,100% { transform: rotate(0); } 50% { transform: rotate(18deg); } }
+  @media (max-width: 47.99rem) { .assistant-panel { right: 12px; } .robot-label { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .robot-body, .robot-eyes, .robot-arm { animation: none !important; } .robot-launch { transition: none; } }
+
+  .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }

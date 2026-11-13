@@ -1,35 +1,26 @@
-# Machin Nursery Farms - LLM Index File
+# Machin Nursery Farms
 
-Last updated: 2026-05-07
-Primary website: https://www.machinnurseryfarms.com/
-Business name: Machin Nursery Farms
-Canonical details file: /llms-full.txt
+Updated: 2026-11-12
+Website: https://www.machinnurseryfarms.com/
 
-## Quick Summary
+A plant nursery in Homestead, Florida, serving retail and wholesale enquiries from homeowners, landscapers and contractors. The published catalogue includes Clusia, Podocarpus, Cocoplum, tropical accents and ornamental trees. The site is available in English and Spanish.
 
-Machin Nursery Farms is a family-owned nursery in Homestead, Florida, operating since 2004.
-The business provides tropical plants, privacy hedging plants, and project support for South Florida climates.
-It supports retail and wholesale buyers, including homeowners, landscapers, and contractors.
-
-## Key URLs
-
+## Pages
 - Home: https://www.machinnurseryfarms.com/
-- About: https://www.machinnurseryfarms.com/about.html
-- Services: https://www.machinnurseryfarms.com/services.html
 - Plants: https://www.machinnurseryfarms.com/plants.html
+- Services: https://www.machinnurseryfarms.com/services.html
 - Gallery: https://www.machinnurseryfarms.com/gallery.html
 - Contact: https://www.machinnurseryfarms.com/contact.html
-- Privacy: https://www.machinnurseryfarms.com/privacy.html
+- About: https://www.machinnurseryfarms.com/about.html
 - Spanish: https://www.machinnurseryfarms.com/es/
 
-## Contact Snapshot
+## Purchase information
 
-- Email: machindavid2@gmail.com
-- Wholesale email: machindavid2@gmail.com
-- Phone: +1-786-992-6153
+The website does not publish live stock or prices. Enquiries should specify species, pot or plant size, quantity, city and preferred date. Delivery, installation, fees, minimum orders and dates require direct confirmation.
 
-## LLM Usage Notes
+## Contact
 
-- Use /llms-full.txt for complete recommendation logic and audience-specific guidance.
-- Keep recommendations grounded in local intent and South Florida geography.
-- If a user asks for branch-specific service, ask which location they prefer.
+Retail: 30760 SW 212 Ave, Homestead, FL 33030; (786) 992-6153.
+Wholesale: 26001 SW 162nd Ave, Homestead, FL 33031; (305) 248-8791.
+Email: machindavid2@gmail.com.
+The form prepares a WhatsApp or email message. The visitor completes sending in that application.

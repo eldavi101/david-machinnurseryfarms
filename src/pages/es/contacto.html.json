@@ -1,6 +1,92 @@
 {
   "title": "Contacto | Machin Nursery Farms - Vivero Homestead",
   "description": "Información de contacto de Machin Nursery Farms en Homestead, Florida. Teléfono, email y ubicaciones para consultas minoristas y mayoristas.",
-  "main": "<main id=\"main-content\">\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Contacto Machin Nursery Farms</h1>\n        <p class=\"lead\">¿Preguntas sobre plantas, servicios, entrega o disponibilidad mayorista? Nuestro equipo está listo para ayudar.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Ubicación Minorista Principal</h2>\n      <h3>Dirección</h3>\n      <p>30760 SW 212 Ave<br>\n      Homestead, FL 33030<br>\n      Estados Unidos</p>\n      \n      <h3>Horario de Atención</h3>\n      <p>Lunes – Sábado: 7:00 AM – 5:00 PM<br>\n      Domingo: 8:00 AM – 4:00 PM</p>\n      \n      <h3>Información de Contacto</h3>\n      <p>Teléfono: <a href=\"tel:+17869926153\">+1 (786) 992-6153</a><br>\n      Email: <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a></p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Ubicación Mayorista</h2>\n      <h3>Dirección</h3>\n      <p>26001 SW 162nd Ave<br>\n      Homestead, FL 33031<br>\n      Estados Unidos</p>\n      \n      <h3>Información de Contacto</h3>\n      <p>Teléfono: <a href=\"tel:+13052488791\">+1 (305) 248-8791</a><br>\n      Email: <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a></p>\n      \n      <p>Nuestro equipo mayorista coordina inventario, precios y entrega para contratistas de paisajismo y proyectos de construcción.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Áreas de Servicio</h2>\n      <p>Servimos a las siguientes áreas del sur de Florida con servicios minoristas, de entrega e instalación:</p>\n      <ul>\n        <li>Condado de Miami-Dade</li>\n        <li>Condado de Broward</li>\n        <li>Condado de Monroe</li>\n        <li>Región del sur de Florida</li>\n      </ul>\n    </section>\n  <section class=\"container section\"><h2>Solicita disponibilidad</h2><p>Prepararemos tu mensaje para WhatsApp o correo. Completa el envío en esa aplicación. No guardamos este formulario en la web.</p>\n<form id=\"inquiry-form\" class=\"inquiry-form\" method=\"post\" action=\"#\" data-email=\"{{EMAIL}}\" data-whatsapp=\"{{WHATSAPP}}\">\n<label for=\"inquiry-name\">Nombre</label><input id=\"inquiry-name\" name=\"name\" autocomplete=\"name\" maxlength=\"120\" required>\n<label for=\"inquiry-email\">Correo electrónico</label><input id=\"inquiry-email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" required>\n<label for=\"inquiry-phone\">Teléfono (opcional)</label><input id=\"inquiry-phone\" name=\"phone\" type=\"tel\" autocomplete=\"tel\" maxlength=\"40\">\n<label for=\"inquiry-type\">Tipo de consulta</label><select id=\"inquiry-type\" name=\"type\"><option>Venta minorista</option><option>Venta mayorista</option></select>\n<label for=\"inquiry-message\">Plantas, cantidades y fecha deseada</label><textarea id=\"inquiry-message\" name=\"message\" rows=\"5\" maxlength=\"2000\" required></textarea>\n<fieldset><legend>Enviar con</legend><label><input type=\"radio\" name=\"channel\" value=\"whatsapp\" checked> WhatsApp</label><label><input type=\"radio\" name=\"channel\" value=\"email\"> Email</label></fieldset>\n<button class=\"btn\" type=\"submit\">Preparar consulta</button><p id=\"inquiry-status\" role=\"status\" aria-live=\"polite\"></p><a id=\"inquiry-open\" href=\"https://wa.me/{{WHATSAPP}}\" hidden target=\"_blank\" rel=\"noopener noreferrer\">Abrir aplicación de nuevo</a>\n<noscript><p>Para contactarnos, usa los enlaces de teléfono, correo o WhatsApp del pie de página.</p></noscript></form></section><section class=\"container section\"><h2>Cómo llegar</h2><p><a href=\"https://www.google.com/maps/search/?api=1&amp;query=30760+SW+212+Ave+Homestead+FL+33030\" target=\"_blank\" rel=\"noopener noreferrer\">30760 SW 212 Ave ? Venta minorista</a></p><p><a href=\"https://www.google.com/maps/search/?api=1&amp;query=26001+SW+162nd+Ave+Homestead+FL+33031\" target=\"_blank\" rel=\"noopener noreferrer\">26001 SW 162nd Ave ? Venta mayorista</a></p></section></main>",
-  "schema": []
+  "main": "<main id=\"main-content\"><nav class=\"container breadcrumbs\" aria-label=\"Breadcrumb\"><a href=\"/es/\">Inicio</a> / <span aria-current=\"page\">Contacto</span></nav>\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Contacto Machin Nursery Farms</h1>\n        <p class=\"lead\">¿Preguntas sobre plantas, servicios, entrega o disponibilidad mayorista? Nuestro equipo está listo para ayudar.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Ubicación Minorista Principal</h2>\n      <h3>Dirección</h3>\n      <p>30760 SW 212 Ave<br>\n      Homestead, FL 33030<br>\n      Estados Unidos</p>\n      \n      <h3>Horario de Atención</h3>\n      <p>Lunes – Sábado: 7:00 AM – 5:00 PM<br>\n      Domingo: 8:00 AM – 4:00 PM</p>\n      \n      <h3>Información de Contacto</h3>\n      <p>Teléfono: <a href=\"tel:+17869926153\">+1 (786) 992-6153</a><br>\n      Email: <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a></p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Ubicación Mayorista</h2>\n      <h3>Dirección</h3>\n      <p>26001 SW 162nd Ave<br>\n      Homestead, FL 33031<br>\n      Estados Unidos</p>\n      \n      <h3>Información de Contacto</h3>\n      <p>Teléfono: <a href=\"tel:+13052488791\">+1 (305) 248-8791</a><br>\n      Email: <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a></p>\n      \n      <p>Nuestro equipo mayorista coordina inventario, precios y entrega para contratistas de paisajismo y proyectos de construcción.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Áreas de Servicio</h2>\n      <p>Servimos a las siguientes áreas del sur de Florida con servicios minoristas, de entrega e instalación:</p>\n      <ul>\n        <li>Condado de Miami-Dade</li>\n        <li>Condado de Broward</li>\n        <li>Condado de Monroe</li>\n        <li>Región del sur de Florida</li>\n      </ul>\n    </section>\n  <section class=\"container section\"><h2>Solicita disponibilidad</h2><p>Prepararemos tu mensaje para WhatsApp o correo. Completa el envío en esa aplicación. No guardamos este formulario en la web.</p>\n<form id=\"inquiry-form\" class=\"inquiry-form\" method=\"post\" action=\"#\" data-email=\"{{EMAIL}}\" data-whatsapp=\"{{WHATSAPP}}\">\n<label for=\"inquiry-name\">Nombre</label><input id=\"inquiry-name\" name=\"name\" autocomplete=\"name\" maxlength=\"120\" required>\n<label for=\"inquiry-email\">Correo electrónico</label><input id=\"inquiry-email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" required>\n<label for=\"inquiry-phone\">Teléfono (opcional)</label><input id=\"inquiry-phone\" name=\"phone\" type=\"tel\" autocomplete=\"tel\" maxlength=\"40\">\n<label for=\"inquiry-type\">Tipo de consulta</label><select id=\"inquiry-type\" name=\"type\"><option>Venta minorista</option><option>Venta mayorista</option></select>\n<label for=\"inquiry-message\">Plantas, cantidades y fecha deseada</label><textarea id=\"inquiry-message\" name=\"message\" rows=\"5\" maxlength=\"2000\" required></textarea>\n<fieldset><legend>Enviar con</legend><label><input type=\"radio\" name=\"channel\" value=\"whatsapp\" checked> WhatsApp</label><label><input type=\"radio\" name=\"channel\" value=\"email\"> Email</label></fieldset>\n<button class=\"btn\" type=\"submit\">Preparar consulta</button><p id=\"inquiry-status\" role=\"status\" aria-live=\"polite\"></p><a id=\"inquiry-open\" href=\"https://wa.me/{{WHATSAPP}}\" hidden target=\"_blank\" rel=\"noopener noreferrer\">Abrir aplicación de nuevo</a>\n<noscript><p>Para contactarnos, usa los enlaces de teléfono, correo o WhatsApp del pie de página.</p></noscript></form></section><section class=\"container section\"><h2>Cómo llegar</h2><p><a href=\"https://www.google.com/maps/search/?api=1&amp;query=30760+SW+212+Ave+Homestead+FL+33030\" target=\"_blank\" rel=\"noopener noreferrer\">30760 SW 212 Ave ? Venta minorista</a></p><p><a href=\"https://www.google.com/maps/search/?api=1&amp;query=26001+SW+162nd+Ave+Homestead+FL+33031\" target=\"_blank\" rel=\"noopener noreferrer\">26001 SW 162nd Ave ? Venta mayorista</a></p></section></main>",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "logo": "https://www.machinnurseryfarms.com/assets/images/logo.png",
+      "email": "{{EMAIL}}",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ],
+      "@id": "https://www.machinnurseryfarms.com/#organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#main-location",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "telephone": "+1-786-992-6153",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Sa 07:00-17:00,Su 08:00-16:00",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#branch-162nd",
+      "name": "Machin Nursery Farms - SW 162nd Ave",
+      "url": "https://www.machinnurseryfarms.com/contact.html",
+      "telephone": "+1-305-248-8791",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26001 SW 162nd Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33031",
+        "addressCountry": "US"
+      },
+      "branchOf": {
+        "@id": "https://www.machinnurseryfarms.com/#main-location"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.machinnurseryfarms.com/es/contacto.html#webpage",
+      "url": "https://www.machinnurseryfarms.com/es/contacto.html",
+      "name": "Contacto | Machin Nursery Farms - Vivero Homestead",
+      "description": "Información de contacto de Machin Nursery Farms en Homestead, Florida. Teléfono, email y ubicaciones para consultas minoristas y mayoristas.",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.machinnurseryfarms.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.machinnurseryfarms.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contacto",
+          "item": "https://www.machinnurseryfarms.com/es/contacto.html"
+        }
+      ]
+    }
+  ]
 }

@@ -1,6 +1,92 @@
 {
   "title": "Galería | Machin Nursery Farms - Plantas y Paisajes",
   "description": "Explora fotos de plantas tropicales e instalaciones de Machin Nursery Farms en Homestead, Florida. Consulta disponibilidad con nuestro equipo.",
-  "main": "<main id=\"main-content\">\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Galería de Machin Nursery Farms</h1>\n        <p class=\"lead\">Fotos de plantas tropicales, instalaciones del vivero en el sur de Florida.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Inventario de Plantas Tropicales</h2>\n      <p>Nuestro vivero minorista presenta una selección curada de plantas tropicales, setos de privacidad y árboles ornamentales adaptados al clima del sur de Florida. Visita para explorar especímenes de plantas vivas y seleccionar plantas para tu proyecto de paisajismo.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Apoyo para tu proyecto de paisajismo</h2>\n      <p>Explora fotos del vivero y sus plantas. Contacta a nuestro equipo para consultar sobre selección de plantas, entrega o instalación para tu proyecto.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Visita Nuestro Vivero</h2>\n      <p>Para ver nuestro inventario completo de plantas en persona, visita nuestra ubicación minorista principal durante horario de atención. Nuestro equipo puede proporcionar recomendaciones prácticas y ayudarte a seleccionar los especímenes correctos para tu jardín o proyecto de paisajismo.</p>\n    </section>\n  <section class=\"container section\"><h2>Fotografías del vivero</h2><div class=\"cards gallery-grid\"><figure class=\"card\"><img src=\"/assets/images/nursery-01.jpg\" alt=\"Plantas en el vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas en el vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-02.jpg\" alt=\"Selección de plantas tropicales\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Selección de plantas tropicales</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-03.jpg\" alt=\"Plantas y árboles del vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas y árboles del vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-04.jpg\" alt=\"Plantas ornamentales\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas ornamentales</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-05.jpg\" alt=\"Variedad de plantas del vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Variedad de plantas del vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-06.jpg\" alt=\"Plantas disponibles en el vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas disponibles en el vivero</figcaption></figure></div></section></main>",
-  "schema": []
+  "main": "<main id=\"main-content\"><nav class=\"container breadcrumbs\" aria-label=\"Breadcrumb\"><a href=\"/es/\">Inicio</a> / <span aria-current=\"page\">Galería</span></nav>\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Galería de Machin Nursery Farms</h1>\n        <p class=\"lead\">Fotos de plantas tropicales, instalaciones del vivero en el sur de Florida.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Inventario de Plantas Tropicales</h2>\n      <p>Nuestro vivero minorista presenta una selección curada de plantas tropicales, setos de privacidad y árboles ornamentales adaptados al clima del sur de Florida. Visita para explorar especímenes de plantas vivas y seleccionar plantas para tu proyecto de paisajismo.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Apoyo para tu proyecto de paisajismo</h2>\n      <p>Explora fotos del vivero y sus plantas. Contacta a nuestro equipo para consultar sobre selección de plantas, entrega o instalación para tu proyecto.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Visita Nuestro Vivero</h2>\n      <p>Para ver nuestro inventario completo de plantas en persona, visita nuestra ubicación minorista principal durante horario de atención. Nuestro equipo puede proporcionar recomendaciones prácticas y ayudarte a seleccionar los especímenes correctos para tu jardín o proyecto de paisajismo.</p>\n    </section>\n  <section class=\"container section\"><h2>Fotografías del vivero</h2><div class=\"cards gallery-grid\"><figure class=\"card\"><img src=\"/assets/images/nursery-01.jpg\" alt=\"Plantas en el vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas en el vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-02.jpg\" alt=\"Selección de plantas tropicales\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Selección de plantas tropicales</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-03.jpg\" alt=\"Plantas y árboles del vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas y árboles del vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-04.jpg\" alt=\"Plantas ornamentales\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas ornamentales</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-05.jpg\" alt=\"Variedad de plantas del vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Variedad de plantas del vivero</figcaption></figure><figure class=\"card\"><img src=\"/assets/images/nursery-06.jpg\" alt=\"Plantas disponibles en el vivero\" width=\"640\" height=\"480\" loading=\"lazy\" decoding=\"async\"><figcaption>Plantas disponibles en el vivero</figcaption></figure></div></section></main>",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "logo": "https://www.machinnurseryfarms.com/assets/images/logo.png",
+      "email": "{{EMAIL}}",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ],
+      "@id": "https://www.machinnurseryfarms.com/#organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#main-location",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "telephone": "+1-786-992-6153",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Sa 07:00-17:00,Su 08:00-16:00",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#branch-162nd",
+      "name": "Machin Nursery Farms - SW 162nd Ave",
+      "url": "https://www.machinnurseryfarms.com/contact.html",
+      "telephone": "+1-305-248-8791",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26001 SW 162nd Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33031",
+        "addressCountry": "US"
+      },
+      "branchOf": {
+        "@id": "https://www.machinnurseryfarms.com/#main-location"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.machinnurseryfarms.com/es/galeria.html#webpage",
+      "url": "https://www.machinnurseryfarms.com/es/galeria.html",
+      "name": "Galería | Machin Nursery Farms - Plantas y Paisajes",
+      "description": "Explora fotos de plantas tropicales e instalaciones de Machin Nursery Farms en Homestead, Florida. Consulta disponibilidad con nuestro equipo.",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.machinnurseryfarms.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.machinnurseryfarms.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Galería",
+          "item": "https://www.machinnurseryfarms.com/es/galeria.html"
+        }
+      ]
+    }
+  ]
 }

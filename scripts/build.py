@@ -39,6 +39,7 @@ def build(output):
         raise ValueError("Invalid contact email")
     esc = html.escape
     script_hash = digest((ROOT / "main.js").read_bytes())
+    assistant_hash = digest((ROOT / "assistant.js").read_bytes())
     style_hash = digest((ROOT / "main.css").read_bytes())
     script_version = script_hash.removeprefix("sha256-")[:12].replace("/", "_").replace("+", "-")
     style_version = style_hash.removeprefix("sha256-")[:12].replace("/", "_").replace("+", "-")
@@ -65,9 +66,11 @@ def build(output):
             schema_data = json.loads(json.dumps(page["schema"]).replace("{{EMAIL}}", config["email"]))
             schemas = "\n".join('<script type="application/ld+json">' + json.dumps(s, ensure_ascii=False).replace("<", "\\u003c") + '</script>' for s in schema_data)
             inline_scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", schemas + tracking, re.S)
-            csp = policy(script_hash, inline_scripts, bool(config["analytics_id"]))
+            csp = policy(script_hash, inline_scripts, bool(config["analytics_id"]), extra_hashes=(assistant_hash,))
             document = (ROOT / "src/layout.html").read_text(encoding="utf-8")
             values = {
+                "ASSISTANT": (ROOT / f"src/assistant-{lang}.html").read_text(encoding="utf-8"),
+                "ASSISTANT_HASH": assistant_hash, "ASSISTANT_VERSION": assistant_hash[7:19].replace("/", "_").replace("+", "-"),
                 "LANG": lang, "TITLE": esc(page["title"]), "DESCRIPTION": esc(page["description"]),
                 "CANONICAL": base + route_url(path), "EN_URL": base + route_url(pair[0]),
                 "ES_URL": base + route_url(pair[1]), "BASE": base,

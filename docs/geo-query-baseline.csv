@@ -1,0 +1,8 @@
+date_local,timezone,query,platform,status,brand_mention,linked_citation,explicit_recommendation,evidence
+2026-11-12,America/New_York,plant nursery Homestead Clusia,Bing web,low_relevance,0,0,NA,geo-evidence/bing-query.txt
+2026-11-12,America/New_York,plant nursery Homestead,Google Search,blocked_captcha,NA,NA,NA,geo-evidence/google-query.txt
+2026-11-12,America/New_York,Who sells privacy hedge plants in Homestead?,ChatGPT Search,not_tested_no_valid_platform_session,NA,NA,NA,geo-ai-audit-2026-11-12.md
+2026-11-12,America/New_York,Who sells privacy hedge plants in Homestead?,Google AI Overviews,not_tested_no_valid_platform_session,NA,NA,NA,geo-ai-audit-2026-11-12.md
+2026-11-12,America/New_York,Who sells privacy hedge plants in Homestead?,Gemini,not_tested_no_valid_platform_session,NA,NA,NA,geo-ai-audit-2026-11-12.md
+2026-11-12,America/New_York,Who sells privacy hedge plants in Homestead?,Perplexity,not_tested_no_valid_platform_session,NA,NA,NA,geo-ai-audit-2026-11-12.md
+2026-11-12,America/New_York,Who sells privacy hedge plants in Homestead?,Bing Copilot,not_tested_no_valid_platform_session,NA,NA,NA,geo-ai-audit-2026-11-12.md

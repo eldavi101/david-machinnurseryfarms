@@ -1,0 +1,7 @@
+Date: 2026-11-12 America/New_York
+Query: plant nursery Homestead Clusia
+Platform: Bing web (not Copilot)
+Method: gstack browse
+Observed sources in SERP: Wikipedia Plant, Britannica Plant, USDA PLANTS Database, dictionary and generic plant pages.
+Relevance: low; no reliable local nursery comparison or AI recommendation can be inferred. The response retained the query URL, but did not meaningfully answer the commercial/local modifiers.
+Evidence was inspected in browser; source pages were not audited.

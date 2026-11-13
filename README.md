@@ -73,3 +73,7 @@ Las pruebas comprueban títulos/descripciones únicos, robots/noindex, canónica
 ## Contador de visitas
 
 Contador propio con API en `/api/visits` y almacenamiento SQLite persistente. No usa proveedores de medición, cuentas ni tokens. Ejecutar `python scripts/package_site.py` y `python scripts/serve.py --port 8002` para probarlo. GitHub Pages no puede ejecutar este backend: el dominio necesita un servidor con Python y almacenamiento persistente. Ver [ejecución, alojamiento y privacidad](docs/visit-counter.md). Pruebas: `node --test tests/visits.test.cjs` y `python -m unittest discover -s tests -p 'test_*.py'`.
+
+## Machi y auditoría SEO/IA (12 de noviembre de 2026)
+
+Guía local bilingüe con personaje SVG, sin modelo generativo ni proveedor de IA. Respuestas en `assistant.js`, plantillas en `src/assistant-en.html` y `src/assistant-es.html`. No envía ni guarda conversaciones. El script conserva CSP/SRI y se empaqueta sin publicar fuentes. Pruebas: `node --test tests/assistant.test.cjs`. Ver [auditoría, matriz y medición](docs/geo-ai-audit-2026-11-12.md) y [línea base](docs/geo-query-baseline.csv).

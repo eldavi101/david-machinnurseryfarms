@@ -18,6 +18,8 @@ jobs:
       - run: python scripts/build.py
       - run: python scripts/check_site.py
       - run: node --check main.js
+      - run: node --check assistant.js
+      - run: node --test tests/assistant.test.cjs
       - run: node --test tests/contact.test.cjs
       - run: node --test tests/visits.test.cjs
       - run: python scripts/package_site.py

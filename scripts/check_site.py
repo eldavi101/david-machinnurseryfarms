@@ -1,5 +1,6 @@
 """Check page links, SEO identity, JSON-LD, images and generated output."""
 import json
+import html
 import re
 import tempfile
 from html.parser import HTMLParser
@@ -104,10 +105,17 @@ def check():
             assert 'name="referrer" content="no-referrer"' in text
             for asset, integrity in page.asset_integrities:
                 assert digest((ROOT / urlsplit(asset).path.lstrip('/')).read_bytes()) == integrity, f"{path}: broken SRI for {asset}"
-            assert len(page.asset_integrities) == 2, f"{path}: stylesheet/script integrity missing"
+            assert len(page.asset_integrities) == 3, f"{path}: stylesheet/script integrity missing"
             assert page.canonical == [base + route_url(path)], f"{path}: canonical mismatch"
             assert page.alternates.get("en") == base + route_url(pair[0])
             assert page.alternates.get("es") == base + route_url(pair[1])
+            visible = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", main[1])).split())
+            for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S):
+                node = json.loads(block)
+                if node.get("@type") == "FAQPage":
+                    for question in node["mainEntity"]:
+                        assert " ".join(question["name"].split()) in visible, f"{path}: FAQ question not visible"
+                        assert " ".join(question["acceptedAnswer"]["text"].split()) in visible, f"{path}: FAQ answer not visible"
             parsed[path] = page
     for path, page in parsed.items():
         for ref in page.refs:

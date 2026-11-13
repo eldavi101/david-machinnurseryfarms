@@ -1,0 +1,6 @@
+return await (async () => {
+  const paths=['/','/plants.html','/es/plantas.html','/services.html','/es/servicios.html','/contact.html','/robots.txt','/sitemap.xml','/geo-missing-page/'];
+  const results=[];
+  for(const path of paths){const r=await fetch(path);const html=await r.text();const d=new DOMParser().parseFromString(html,'text/html');const nodes=[...d.querySelectorAll('script[type="application/ld+json"]')].map(x=>JSON.parse(x.textContent));results.push({path,status:r.status,url:r.url,canonical:d.querySelector('link[rel="canonical"]')?.href,robots:d.querySelector('meta[name="robots"]')?.content,xRobots:r.headers.get('x-robots-tag'),h1:[...d.querySelectorAll('h1')].map(x=>x.textContent),mainTextLength:d.querySelector('main')?.textContent.length,assistant:!!d.querySelector('[data-site-assistant]'),schemaTypes:nodes.map(x=>x['@type']),guide:!!d.querySelector('#plant-planning,#buying-guide'),text:path.endsWith('.txt')||path.endsWith('.xml')?html:undefined});}
+  return JSON.stringify({checkedAt:new Date().toISOString(),origin:location.origin,results},null,2);
+})();

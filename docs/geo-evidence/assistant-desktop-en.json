@@ -1,0 +1,46 @@
+﻿{
+  "url": "http://127.0.0.1:8003/services.html",
+  "open": true,
+  "expanded": "true",
+  "focused": "assistant-question",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "panel": {
+    "left": 1032,
+    "right": 1422,
+    "top": 282,
+    "bottom": 882
+  },
+  "horizontalOverflow": false,
+  "launcher": {
+    "left": 1230.546875,
+    "right": 1422,
+    "width": 191.453125
+  },
+  "messages": [
+    "Hi! I’m Machi. I can help you find plants, services and answers on this website. What would you like to explore?",
+    "wholesale plant delivery",
+    "We welcome enquiries from contractors and landscape teams. Include species, pot sizes, quantities and the date needed. Minimum order, trade terms and volume pricing need confirmation from the team.Explore nursery servicesAsk about delivery or installation for your address and plant list. Confirm service area, access, fees and schedule before ordering. I cannot reserve stock or book a delivery.Plan the service scope"
+  ],
+  "links": [
+    {
+      "text": "Explore nursery services",
+      "path": "/services.html#buying-guide"
+    },
+    {
+      "text": "Plan the service scope",
+      "path": "/services.html#buying-guide"
+    }
+  ],
+  "inputCleared": true,
+  "reducedMotion": false,
+  "networkSinceLoad": [
+    "http://127.0.0.1:8003/main.css?v=oXGG4_4geZF_",
+    "http://127.0.0.1:8003/assets/images/logo.png",
+    "http://127.0.0.1:8003/assistant.js?v=KDCN5IfRSz7K",
+    "http://127.0.0.1:8003/main.js?v=ZUwex5yTVlHf",
+    "http://127.0.0.1:8003/api/visits"
+  ]
+}

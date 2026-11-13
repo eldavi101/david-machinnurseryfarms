@@ -10,8 +10,8 @@ def digest(content):
     return "sha256-" + base64.b64encode(hashlib.sha256(content).digest()).decode("ascii")
 
 
-def policy(script_hash, inline_scripts=(), analytics=False):
-    scripts = [f"'{script_hash}'"] + [f"'{digest(s.encode('utf-8'))}'" for s in inline_scripts]
+def policy(script_hash, inline_scripts=(), analytics=False, extra_hashes=()):
+    scripts = [f"'{value}'" for value in (script_hash, *extra_hashes)] + [f"'{digest(s.encode('utf-8'))}'" for s in inline_scripts]
     if analytics:
         scripts.append("https://www.googletagmanager.com")
     connections = "'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com" if analytics else "'self'"

@@ -1,0 +1,5 @@
+Checked: 2026-11-12 America/New_York
+Source: https://developers.openai.com/api/docs/bots
+Method: gstack browse goto (HTTP 200), text inspection
+Short excerpt: OAI-SearchBot is for search.
+Audit notes (paraphrase): Verified: separate controls for OAI-SearchBot search and GPTBot training; ChatGPT-User is user-initiated. See audit report for implications.

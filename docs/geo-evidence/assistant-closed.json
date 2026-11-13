@@ -1,0 +1,49 @@
+﻿{
+  "url": "http://127.0.0.1:8003/es/plantas.html",
+  "open": false,
+  "expanded": "false",
+  "focused": "launcher",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "panel": {
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 0
+  },
+  "horizontalOverflow": false,
+  "launcher": {
+    "left": 298,
+    "right": 372,
+    "width": 74
+  },
+  "messages": [
+    "¡Hola! Soy Machi. Le ayudo a encontrar plantas, servicios y respuestas dentro de esta web. ¿Qué quiere explorar?",
+    "¿Cuánto cuesta Clusia?",
+    "El precio depende de especie, tamaño de maceta y planta, cantidad y posibles trabajos de entrega o instalación. No hay una tarifa en tiempo real. Envíe su lista y fecha para confirmar.Preparar una consultaClusia, Podocarpus y Cocoplum aparecen en el catálogo del vivero. Valore con el equipo sol, drenaje, espacio y altura deseada. La separación y cantidad requieren una recomendación para el lugar concreto.Comparar plantas para su proyecto"
+  ],
+  "links": [
+    {
+      "text": "Preparar una consulta",
+      "path": "/es/contacto.html"
+    },
+    {
+      "text": "Comparar plantas para su proyecto",
+      "path": "/es/plantas.html#plant-planning"
+    }
+  ],
+  "inputCleared": true,
+  "reducedMotion": false,
+  "networkSinceLoad": [
+    "http://127.0.0.1:8003/main.css?v=oXGG4_4geZF_",
+    "http://127.0.0.1:8003/assets/images/logo.png",
+    "http://127.0.0.1:8003/assistant.js?v=KDCN5IfRSz7K",
+    "http://127.0.0.1:8003/main.js?v=ZUwex5yTVlHf",
+    "http://127.0.0.1:8003/api/visits",
+    "http://127.0.0.1:8003/assets/images/clusia.jpg",
+    "http://127.0.0.1:8003/assets/images/cocoplum.jpg",
+    "http://127.0.0.1:8003/assets/images/podocarpus.png"
+  ]
+}

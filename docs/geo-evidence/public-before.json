@@ -1,0 +1,137 @@
+﻿{
+  "checkedAt": "2026-11-13T03:50:03.268Z",
+  "origin": "https://www.machinnurseryfarms.com",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/",
+      "canonical": "https://www.machinnurseryfarms.com/",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Plant Nursery In Homestead, Florida"
+      ],
+      "mainTextLength": 3665,
+      "assistant": false,
+      "schemaTypes": [
+        "Organization",
+        "GardenStore",
+        "GardenStore",
+        "FAQPage"
+      ],
+      "guide": false
+    },
+    {
+      "path": "/plants.html",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/plants.html",
+      "canonical": "https://www.machinnurseryfarms.com/plants.html",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Tropical Plants and Trees for South Florida"
+      ],
+      "mainTextLength": 2414,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    },
+    {
+      "path": "/es/plantas.html",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/es/plantas.html",
+      "canonical": "https://www.machinnurseryfarms.com/es/plantas.html",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Plantas Tropicales para el Sur de Florida"
+      ],
+      "mainTextLength": 1485,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    },
+    {
+      "path": "/services.html",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/services.html",
+      "canonical": "https://www.machinnurseryfarms.com/services.html",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Our Nursery Services in South Florida"
+      ],
+      "mainTextLength": 2474,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    },
+    {
+      "path": "/es/servicios.html",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/es/servicios.html",
+      "canonical": "https://www.machinnurseryfarms.com/es/servicios.html",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Nuestros Servicios de Vivero"
+      ],
+      "mainTextLength": 1812,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    },
+    {
+      "path": "/contact.html",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/contact.html",
+      "canonical": "https://www.machinnurseryfarms.com/contact.html",
+      "robots": "index,follow,max-image-preview:large",
+      "xRobots": null,
+      "h1": [
+        "Contact Machin Nursery Farms"
+      ],
+      "mainTextLength": 1529,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/robots.txt",
+      "xRobots": null,
+      "h1": [],
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false,
+      "text": "User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://www.machinnurseryfarms.com/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "url": "https://www.machinnurseryfarms.com/sitemap.xml",
+      "xRobots": null,
+      "h1": [],
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false,
+      "text": "<?xml version='1.0' encoding='utf-8'?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://www.machinnurseryfarms.com/</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/about.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/nosotros.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/services.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/servicios.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/plants.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/plantas.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/gallery.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/galeria.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/contact.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/contacto.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/privacy.html</loc>\n  </url>\n  <url>\n    <loc>https://www.machinnurseryfarms.com/es/privacidad.html</loc>\n  </url>\n</urlset>"
+    },
+    {
+      "path": "/geo-missing-page/",
+      "status": 404,
+      "url": "https://www.machinnurseryfarms.com/geo-missing-page/",
+      "robots": "noindex,follow",
+      "xRobots": null,
+      "h1": [
+        "Page not found"
+      ],
+      "mainTextLength": 296,
+      "assistant": false,
+      "schemaTypes": [],
+      "guide": false
+    }
+  ]
+}

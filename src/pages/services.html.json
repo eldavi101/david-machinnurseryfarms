@@ -1,6 +1,123 @@
 {
   "title": "Services | Machin Nursery Farms - Homestead Plant Nursery",
   "description": "Machin Nursery Farms services include retail plant sales, wholesale supply, landscape design, plant delivery, installation, and expert plant consultation for South Florida.",
-  "main": "<main id=\"main-content\">\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Our Nursery Services in South Florida</h1>\n        <p class=\"lead\">Complete plant and landscape solutions for homeowners, contractors, and landscaping professionals.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Local Plant Nursery Sales - Retail and Wholesale</h2>\n      <p>We stock a curated selection of tropical plants, native Florida species, and ornamental trees adapted to South Florida conditions. Whether you're shopping for a single plant or planning a large landscape project, our team helps you select species that will thrive in your specific site conditions. We serve retail homeowners, contractors, and landscaping professionals with wholesale pricing on volume orders.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Professional Landscape Design and Consultation</h2>\n      <p>Our experts provide landscape design services tailored to your site's sun exposure, soil conditions, and maintenance preferences. We recommend plant combinations that create visual appeal, structural integrity, and long-term performance. Whether you need a privacy hedge, a color-focused accent planting, or a complete garden redesign, we guide you through species selection and site preparation.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Plant Delivery and Professional Installation</h2>\n      <p>We provide complete delivery and installation service throughout South Florida, including Miami-Dade, Broward, and Monroe counties. Our installation team ensures plants are correctly positioned, properly planted at the right depth, and established with appropriate irrigation. Professional installation improves plant survival rates and gets your landscape off to the right start.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Expert Plant Consultation and Care Guidance</h2>\n      <p>Our team brings over two decades of hands-on experience growing and maintaining tropical plants in South Florida. We provide personalized guidance on plant selection, establishment care, seasonal maintenance, and troubleshooting for common plant stress issues. Whether you're new to tropical gardening or managing a large commercial landscape, we're available for consultation before and after purchase.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Wholesale and Contractor Support</h2>\n      <p>We specialize in supporting landscape contractors and construction teams with project-specific inventory, coordination of delivery windows, and quantity pricing. Our wholesale location offers efficient ordering for recurring projects and can accommodate special orders for specific species and sizes. Contact our wholesale team for volume pricing and project planning.</p>\n    </section>\n  </main>",
-  "schema": []
+  "main": "<main id=\"main-content\"><nav class=\"container breadcrumbs\" aria-label=\"Breadcrumb\"><a href=\"/\">Home</a> / <span aria-current=\"page\">Services</span></nav>\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Our Nursery Services in South Florida</h1>\n        <p class=\"lead\">Complete plant and landscape solutions for homeowners, contractors, and landscaping professionals.</p>\n      </div>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Local Plant Nursery Sales - Retail and Wholesale</h2>\n      <p>We stock a curated selection of tropical plants, native Florida species, and ornamental trees adapted to South Florida conditions. Whether you're shopping for a single plant or planning a large landscape project, our team helps you select species that will thrive in your specific site conditions. We serve retail homeowners, contractors, and landscaping professionals with wholesale pricing on volume orders.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Professional Landscape Design and Consultation</h2>\n      <p>Our experts provide landscape design services tailored to your site's sun exposure, soil conditions, and maintenance preferences. We recommend plant combinations that create visual appeal, structural integrity, and long-term performance. Whether you need a privacy hedge, a color-focused accent planting, or a complete garden redesign, we guide you through species selection and site preparation.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Plant Delivery and Professional Installation</h2>\n      <p>We provide complete delivery and installation service throughout South Florida, including Miami-Dade, Broward, and Monroe counties. Our installation team ensures plants are correctly positioned, properly planted at the right depth, and established with appropriate irrigation. Professional installation improves plant survival rates and gets your landscape off to the right start.</p>\n    </section>\n\n    <section class=\"container section alt\">\n      <h2>Expert Plant Consultation and Care Guidance</h2>\n      <p>Our team brings over two decades of hands-on experience growing and maintaining tropical plants in South Florida. We provide personalized guidance on plant selection, establishment care, seasonal maintenance, and troubleshooting for common plant stress issues. Whether you're new to tropical gardening or managing a large commercial landscape, we're available for consultation before and after purchase.</p>\n    </section>\n\n    <section class=\"container section\">\n      <h2>Wholesale and Contractor Support</h2>\n      <p>We specialize in supporting landscape contractors and construction teams with project-specific inventory, coordination of delivery windows, and quantity pricing. Our wholesale location offers efficient ordering for recurring projects and can accommodate special orders for specific species and sizes. Contact our wholesale team for volume pricing and project planning.</p>\n    </section>\n  <section class=\"container section alt\" id=\"buying-guide\"><h2>Before arranging nursery services</h2><p>Compare plant supply, delivery and installation as separate items. Machin Nursery Farms welcomes retail and wholesale enquiries; scope and timing must be confirmed for each address and plant list.</p><h3>Can contractors request wholesale pricing?</h3><p>Yes. Send species, sizes, quantities and the project date. Ask the team to confirm minimum order, volume pricing, payment terms and any substitutions before ordering; these terms are not published as fixed policies here.</p><h3>Do delivery and installation cover my address?</h3><p>The site describes service in South Florida. Give the exact project address, plant list and access conditions so the team can confirm coverage, fees and feasibility. Listing a county does not guarantee service or a delivery date for every address.</p><h3>How long does an order or installation take?</h3><p>No standard lead time is published. Confirm current stock, preparation time, transport and any installation work separately. Request written confirmation of dates, included work and exclusions before committing.</p><p><a href=\"/gallery.html\">View nursery photographs</a> · <a href=\"/contact.html\">Request availability and a quote</a></p></section></main>",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can contractors request wholesale pricing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Send species, sizes, quantities and the project date. Ask the team to confirm minimum order, volume pricing, payment terms and any substitutions before ordering; these terms are not published as fixed policies here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do delivery and installation cover my address?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The site describes service in South Florida. Give the exact project address, plant list and access conditions so the team can confirm coverage, fees and feasibility. Listing a county does not guarantee service or a delivery date for every address."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an order or installation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No standard lead time is published. Confirm current stock, preparation time, transport and any installation work separately. Request written confirmation of dates, included work and exclusions before committing."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "logo": "https://www.machinnurseryfarms.com/assets/images/logo.png",
+      "email": "{{EMAIL}}",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ],
+      "@id": "https://www.machinnurseryfarms.com/#organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#main-location",
+      "name": "Machin Nursery Farms",
+      "url": "https://www.machinnurseryfarms.com/",
+      "telephone": "+1-786-992-6153",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30760 SW 212 Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33030",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Sa 07:00-17:00,Su 08:00-16:00",
+      "sameAs": [
+        "https://www.facebook.com/MachinNurseryFarms",
+        "https://www.instagram.com/machin_nursery_farms"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "@id": "https://www.machinnurseryfarms.com/#branch-162nd",
+      "name": "Machin Nursery Farms - SW 162nd Ave",
+      "url": "https://www.machinnurseryfarms.com/contact.html",
+      "telephone": "+1-305-248-8791",
+      "email": "{{EMAIL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26001 SW 162nd Ave",
+        "addressLocality": "Homestead",
+        "addressRegion": "FL",
+        "postalCode": "33031",
+        "addressCountry": "US"
+      },
+      "branchOf": {
+        "@id": "https://www.machinnurseryfarms.com/#main-location"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.machinnurseryfarms.com/services.html#webpage",
+      "url": "https://www.machinnurseryfarms.com/services.html",
+      "name": "Services | Machin Nursery Farms - Homestead Plant Nursery",
+      "description": "Machin Nursery Farms services include retail plant sales, wholesale supply, landscape design, plant delivery, installation, and expert plant consultation for South Florida.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.machinnurseryfarms.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.machinnurseryfarms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.machinnurseryfarms.com/services.html"
+        }
+      ]
+    }
+  ]
 }

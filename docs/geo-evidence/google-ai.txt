@@ -1,0 +1,5 @@
+Checked: 2026-11-12 America/New_York
+Source: https://developers.google.com/search/docs/appearance/ai-features
+Method: gstack browse goto (HTTP 200), text inspection
+Short excerpt: There are no additional technical requirements.
+Audit notes (paraphrase): Verified: indexed pages eligible for snippets can qualify; no special AI file or markup is required; no inclusion guarantee.

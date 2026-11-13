@@ -1,0 +1,5 @@
+Checked: 2026-11-12 America/New_York
+Source: https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a
+Method: gstack browse goto (HTTP 200), text inspection
+Short excerpt: SEO Fundamentals Still Apply to Grounding and AI Experiences
+Audit notes (paraphrase): Verified: Bing/Copilot share crawl and index foundations; original content, discoverable URLs, accurate schema and no AI manipulation.

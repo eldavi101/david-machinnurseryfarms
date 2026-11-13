@@ -1,0 +1,39 @@
+<div class="site-assistant" data-site-assistant data-lang="es">
+  <button class="robot-launch" type="button" data-assistant-launch aria-haspopup="dialog" aria-expanded="false" aria-controls="machin-assistant" hidden>
+    <span class="robot-label">¿Le ayudo?</span>
+    <svg class="robot" viewBox="0 0 88 96" width="66" height="72" aria-hidden="true" focusable="false">
+      <ellipse class="robot-shadow" cx="44" cy="89" rx="24" ry="4" fill="#161a18" opacity=".13" />
+      <g class="robot-body">
+        <path d="M44 13V7" stroke="#95592b" stroke-width="3"/><circle cx="44" cy="6" r="4" fill="#1d6b6d"/>
+        <rect x="14" y="19" width="60" height="43" rx="17" fill="#f4f0e8" stroke="#95592b" stroke-width="2.5"/>
+        <rect x="8" y="33" width="8" height="17" rx="4" fill="#c98f56"/><rect x="72" y="33" width="8" height="17" rx="4" fill="#c98f56"/>
+        <rect x="22" y="28" width="44" height="25" rx="10" fill="#262927"/>
+        <g class="robot-eyes" fill="#a6e8dd"><ellipse cx="33" cy="39" rx="4" ry="5"/><ellipse cx="55" cy="39" rx="4" ry="5"/></g>
+        <path d="M39 47q5 4 10 0" fill="none" stroke="#a6e8dd" stroke-width="2" stroke-linecap="round"/>
+        <rect x="29" y="63" width="30" height="17" rx="8" fill="#1d6b6d"/>
+        <path d="M33 80v5m22-5v5" stroke="#95592b" stroke-width="6" stroke-linecap="round"/>
+        <path d="M27 68l-8 5" stroke="#95592b" stroke-width="5" stroke-linecap="round"/>
+        <g class="robot-arm"><path d="M61 68l9-10 3-6" stroke="#95592b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="74" cy="49" r="5" fill="#c98f56"/></g>
+        <path d="m39 70 5-4 5 4v6H39z" fill="#f4f0e8"/>
+      </g>
+    </svg>
+    <span class="visually-hidden">Abrir asistente de navegación Machi</span>
+  </button>
+  <dialog id="machin-assistant" class="assistant-panel" aria-labelledby="assistant-title">
+    <header class="assistant-head">
+      <div><strong id="assistant-title">Machi, su guía</strong><p>Encuentre las plantas que busca</p></div>
+      <button type="button" class="assistant-close" data-assistant-close aria-label="Cerrar asistente">×</button>
+    </header>
+    <div class="assistant-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversación con Machi" data-assistant-log>
+      <p class="assistant-message">¡Hola! Soy Machi. Le ayudo a encontrar plantas, servicios y respuestas dentro de esta web. ¿Qué quiere explorar?</p>
+    </div>
+    <div class="assistant-suggestions" aria-label="Preguntas sugeridas">
+      <button type="button" data-assistant-suggestion>Ver plantas</button><button type="button" data-assistant-suggestion>Precio y disponibilidad</button><button type="button" data-assistant-suggestion>Ubicaciones</button><button type="button" data-assistant-suggestion>Hablar con el equipo</button>
+    </div>
+    <form class="assistant-form" data-assistant-form>
+      <label for="assistant-question">¿Qué busca?</label>
+      <div class="assistant-input-row"><input id="assistant-question" name="question" type="text" maxlength="300" autocomplete="off" placeholder="Ej.: Clusia para un seto" required /><button type="submit">Enviar</button></div>
+    </form>
+    <p class="assistant-note">Guía automática local, sin IA generativa. Solo usa información del sitio. No envía ni guarda su conversación.</p>
+  </dialog>
+</div>

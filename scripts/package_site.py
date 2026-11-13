@@ -11,7 +11,7 @@ if output.exists():
     shutil.rmtree(output)
 output.mkdir()
 build(output)
-for name in ("main.css", "main.js", "robots.txt", "llms.txt", "llms-full.txt", "CNAME", ".nojekyll"):
+for name in ("main.css", "main.js", "assistant.js", "robots.txt", "llms.txt", "llms-full.txt", "CNAME", ".nojekyll"):
     shutil.copy2(ROOT / name, output / name)
 shutil.copytree(ROOT / "assets", output / "assets", dirs_exist_ok=True)
 write_edge_policy(output, ROOT)

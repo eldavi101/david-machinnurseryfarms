@@ -1,0 +1,5 @@
+Checked: 2026-11-12 America/New_York
+Source: https://docs.perplexity.ai/guides/bots
+Method: gstack browse goto (HTTP 200), text inspection
+Short excerpt: PerplexityBot is designed to surface and link websites in search results on Perplexity.
+Audit notes (paraphrase): Verified: PerplexityBot is not a foundation-model training crawler; user-requested fetching has different robots behavior; WAF/IP access matters.

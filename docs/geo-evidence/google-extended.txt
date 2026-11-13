@@ -1,0 +1,5 @@
+Checked: 2026-11-12 America/New_York
+Source: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
+Method: gstack browse goto (HTTP 200), text inspection
+Short excerpt: Google-Extended does not impact a site's inclusion in Google Search
+Audit notes (paraphrase): Verified: Google-Extended governs future Gemini training and specified grounding uses; does not govern Search inclusion or ranking.
